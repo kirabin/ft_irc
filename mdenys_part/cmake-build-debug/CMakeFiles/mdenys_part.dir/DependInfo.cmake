@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/client.cpp" "/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles/mdenys_part.dir/client.cpp.o"
   "/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/main.cpp" "/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles/mdenys_part.dir/main.cpp.o"
+  "/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/server.cpp" "/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles/mdenys_part.dir/server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

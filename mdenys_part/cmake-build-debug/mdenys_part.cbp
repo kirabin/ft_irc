@@ -86,6 +86,12 @@
 		<Unit filename="/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/main.cpp">
 			<Option target="mdenys_part"/>
 		</Unit>
+		<Unit filename="/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/server.cpp">
+			<Option target="mdenys_part"/>
+		</Unit>
+		<Unit filename="/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/server.h">
+			<Option target="mdenys_part"/>
+		</Unit>
 		<Unit filename="/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

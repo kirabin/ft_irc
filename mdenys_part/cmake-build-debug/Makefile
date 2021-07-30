@@ -196,6 +196,33 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+server.o: server.cpp.o
+
+.PHONY : server.o
+
+# target to build an object file
+server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/server.cpp.o
+.PHONY : server.cpp.o
+
+server.i: server.cpp.i
+
+.PHONY : server.i
+
+# target to preprocess a source file
+server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/server.cpp.i
+.PHONY : server.cpp.i
+
+server.s: server.cpp.s
+
+.PHONY : server.s
+
+# target to generate assembly for a file
+server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/server.cpp.s
+.PHONY : server.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -211,6 +238,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 .PHONY : help
 
 

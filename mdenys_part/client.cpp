@@ -15,7 +15,6 @@
 #include <sys/types.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
-
 #include <arpa/inet.h>
 
 #define PORT "3490" // the port client will be connecting to

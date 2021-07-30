@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/mdenys_part.dir/client.cpp.o"
   "CMakeFiles/mdenys_part.dir/main.cpp.o"
+  "CMakeFiles/mdenys_part.dir/server.cpp.o"
   "mdenys_part"
   "mdenys_part.pdb"
 )
