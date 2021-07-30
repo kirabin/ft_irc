@@ -142,6 +142,33 @@ mdenys_part/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/build
 .PHONY : mdenys_part/fast
 
+client.o: client.cpp.o
+
+.PHONY : client.o
+
+# target to build an object file
+client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/client.cpp.o
+.PHONY : client.cpp.o
+
+client.i: client.cpp.i
+
+.PHONY : client.i
+
+# target to preprocess a source file
+client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/client.cpp.i
+.PHONY : client.cpp.i
+
+client.s: client.cpp.s
+
+.PHONY : client.s
+
+# target to generate assembly for a file
+client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/client.cpp.s
+.PHONY : client.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -178,6 +205,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mdenys_part"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
