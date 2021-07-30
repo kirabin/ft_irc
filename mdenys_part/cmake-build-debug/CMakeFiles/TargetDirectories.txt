@@ -1,3 +1,0 @@
-/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles/mdenys_part.dir
