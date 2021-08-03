@@ -15,7 +15,6 @@ void Server::init() {
         fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(_rv));
         exit(1);
     }
-
     // loop through all the results and bind to the first we can
     for(_p = _servinfo; _p != NULL; _p = _p->ai_next)
     {
@@ -37,19 +36,15 @@ void Server::init() {
         }
         break;
     }
-
     if (_p == NULL)  {
         std::cerr << "server: failed to bind" << std::endl;
         exit(1);
     }
-
     freeaddrinfo(_servinfo); // all done with this structure
-
     if (listen(_sockfd, BACKLOG) == -1) {
         std::cerr << "listen";
         exit(1);
     }
-
     _sa.sa_handler = sigchld_handler; // reap all dead processes
     sigemptyset(&_sa.sa_mask);
     _sa.sa_flags = SA_RESTART;
@@ -59,7 +54,7 @@ void Server::init() {
     }
 }
 
-void Server::get_connect() {
+_Noreturn void Server::get_connect() {
     printf("server: waiting for connections...\n");
 
     while(1) {  // main accept() loop
@@ -69,19 +64,10 @@ void Server::get_connect() {
              std::cerr << "accept";
             continue;
         }
-
-        inet_ntop(_their_addr.ss_family,
-                  get_in_addr((struct sockaddr *)&_their_addr),
-                  _s, sizeof _s);
+        inet_ntop(_their_addr.ss_family, get_in_addr((struct sockaddr *)&_their_addr), _s, sizeof _s);
         printf("server: got connection from %s\n", _s);
-
-        if (!fork()) { // this is the child process
-            close(_sockfd); // child doesn't need the listener
-            if (send(_new_fd, "Hello, world!", 13, 0) == -1)
-                 std::cerr << "send";
-            close(_new_fd);
-            exit(0);
-        }
+        if (send(_new_fd, "Hello, world!", 13, 0) == -1)
+             std::cerr << "send";
         close(_new_fd);  // parent doesn't need this
     }
 }
@@ -90,11 +76,9 @@ Server::Server() {
     _yes = 1;
 }
 
-
 const char *Server::CustomException::what() const throw() {
     return exception::what();
 }
-
 
 void sigchld_handler(int s)
 {
@@ -105,6 +89,5 @@ void *get_in_addr(struct sockaddr *sa){
 if (sa->sa_family == AF_INET) {
     return &(((struct sockaddr_in*)sa)->sin_addr);
 }
-
 return &(((struct sockaddr_in6*)sa)->sin6_addr);
 }

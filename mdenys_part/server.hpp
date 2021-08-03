@@ -35,7 +35,7 @@ private:
 public:
     Server();
     void     init(); // иницилизация сервера
-    void     get_connect(); // ожидание подключений
+    _Noreturn void     get_connect(); // ожидание подключений
     class CustomException : public std::exception {
         const char* what() const throw();
     };
