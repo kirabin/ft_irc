@@ -2,8 +2,8 @@
 // Created by Matthos Denys on 7/30/21.
 //
 
-#ifndef MDENYS_PART_SERVER_H
-#define MDENYS_PART_SERVER_H
+#ifndef MDENYS_PART_SERVER_HPP
+#define MDENYS_PART_SERVER_HPP
 
 
 #include <stdio.h>
@@ -35,15 +35,12 @@ private:
 public:
     Server();
     void     init(); // иницилизация сервера
-    void     get_connect();
+    void     get_connect(); // ожидание подключений
     class CustomException : public std::exception {
         const char* what() const throw();
     };
 };
-
-
 void sigchld_handler(int s);
-
 void *get_in_addr(struct sockaddr *sa);
 
-#endif //MDENYS_PART_SERVER_H
+#endif //MDENYS_PART_SERVER_HPP
