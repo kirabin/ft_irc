@@ -12,7 +12,7 @@ void Server::init() {
     _hints.ai_flags = AI_PASSIVE; // use my IP
 
     if ((_rv = getaddrinfo(NULL, PORT, &_hints, &_servinfo)) != 0) {
-        fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(_rv));
+        std::cerr << "getaddrinfo:" << gai_strerror(_rv) << std::endl;
         exit(1);
     }
     // loop through all the results and bind to the first we can
@@ -26,7 +26,8 @@ void Server::init() {
         if (setsockopt(_sockfd, SOL_SOCKET, SO_REUSEADDR, &_yes, sizeof(int)) == -1)
         {
              std::cerr << "setsockopt";
-            exit(1);
+            return;
+            // здесь был exit
         }
         if (bind(_sockfd, _p->ai_addr, _p->ai_addrlen) == -1)
         {
@@ -38,24 +39,19 @@ void Server::init() {
     }
     if (_p == NULL)  {
         std::cerr << "server: failed to bind" << std::endl;
-        exit(1);
+        return;
+        // здесь был exit
     }
     freeaddrinfo(_servinfo); // all done with this structure
     if (listen(_sockfd, BACKLOG) == -1) {
         std::cerr << "listen";
-        exit(1);
-    }
-    _sa.sa_handler = sigchld_handler; // reap all dead processes
-    sigemptyset(&_sa.sa_mask);
-    _sa.sa_flags = SA_RESTART;
-    if (sigaction(SIGCHLD, &_sa, NULL) == -1) {
-        std::cerr << "sigaction";
-        exit(1);
+        return;
+      // здесь был exit
     }
 }
 
 _Noreturn void Server::get_connect() {
-    printf("server: waiting for connections...\n");
+    std::cout << "server: waiting for connections..." << std::endl;
 
     while(1) {  // main accept() loop
         _sin_size = sizeof _their_addr;
@@ -65,9 +61,8 @@ _Noreturn void Server::get_connect() {
             continue;
         }
         inet_ntop(_their_addr.ss_family, get_in_addr((struct sockaddr *)&_their_addr), _s, sizeof _s);
-        printf("server: got connection from %s\n", _s);
-        if (send(_new_fd, "Hello, world!", 13, 0) == -1)
-             std::cerr << "send";
+        std::cout << "server: got connection from" << _s << std::endl;
+        this->send_message("hello world");
         close(_new_fd);  // parent doesn't need this
     }
 }
@@ -76,14 +71,15 @@ Server::Server() {
     _yes = 1;
 }
 
+void Server::send_message(std::string str) {
+    if (send(this->_new_fd, str.c_str(), str.length(), 0) == -1)
+        std::cerr << "send";
+}
+
 const char *Server::CustomException::what() const throw() {
     return exception::what();
 }
 
-void sigchld_handler(int s)
-{
-    while(waitpid(-1, NULL, WNOHANG) > 0);
-}
 
 void *get_in_addr(struct sockaddr *sa){
 if (sa->sa_family == AF_INET) {

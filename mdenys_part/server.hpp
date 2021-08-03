@@ -10,7 +10,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <errno.h>
-#include <string.h>
+#include <string>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -28,7 +28,6 @@ private:
     int _sockfd, _new_fd;
     struct addrinfo _hints, *_servinfo, *_p;
     struct sockaddr_storage _their_addr;
-    struct sigaction _sa;
     socklen_t _sin_size;
     char _s[INET6_ADDRSTRLEN];
     int _rv;
@@ -39,8 +38,10 @@ public:
     class CustomException : public std::exception {
         const char* what() const throw();
     };
+    void send_message(std::string str);
 };
-void sigchld_handler(int s);
+
+
 void *get_in_addr(struct sockaddr *sa);
 
 #endif //MDENYS_PART_SERVER_HPP
