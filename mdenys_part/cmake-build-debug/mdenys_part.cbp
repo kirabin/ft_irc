@@ -80,9 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/client.cpp">
-			<Option target="mdenys_part"/>
-		</Unit>
 		<Unit filename="/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/main.cpp">
 			<Option target="mdenys_part"/>
 		</Unit>

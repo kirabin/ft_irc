@@ -93,12 +93,12 @@ clean: CMakeFiles/mdenys_part.dir/clean
 CMakeFiles/mdenys_part.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target mdenys_part"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target mdenys_part"
 .PHONY : CMakeFiles/mdenys_part.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mdenys_part.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mdenys_part.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/mdenys_part.dir/rule
