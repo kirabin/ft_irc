@@ -6,10 +6,10 @@ SRCS =	main.c init_env.c clean_fd.c get_opt.c x.c main_loop.c \
 
 OBJS = ${SRCS:.c=.o}
 
-NAME = bircd
+NAME = bircd.out
 
 CFLAGS = -I. -g3 -Wall -Werror
-LDFLAGS = 
+LDFLAGS =
 
 CC = gcc
 RM = rm -f

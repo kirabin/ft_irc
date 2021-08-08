@@ -5,6 +5,8 @@ SRC		=	source_files
 INC		=	include_files
 OBJ		=	$(SRC:.cpp=.o)
 
+.PHONY: bircd
+
 all: $(NAME)
 
 %.o: %.cpp $(INC)
@@ -22,6 +24,6 @@ fclean: clean
 
 re: fclean all
 
-start_bircd:
+bircd:
 	make -C bircd/
-	
+	./bircd/bircd.out 6667
