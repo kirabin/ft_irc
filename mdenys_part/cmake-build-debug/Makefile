@@ -67,10 +67,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mdenys/Desktop/irca/ft_irc/mdenys_part
+CMAKE_SOURCE_DIR = /Users/mdenys/Documents/ft_irc/mdenys_part
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mdenys/Documents/ft_irc/mdenys_part/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles /Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Documents/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles /Users/mdenys/Documents/ft_irc/mdenys_part/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Documents/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -130,17 +130,152 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named mdenys_part
+# Target rules for targets named irc_server
 
 # Build rule for target.
-mdenys_part: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mdenys_part
-.PHONY : mdenys_part
+irc_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 irc_server
+.PHONY : irc_server
 
 # fast build rule for target.
-mdenys_part/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/build
-.PHONY : mdenys_part/fast
+irc_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/build
+.PHONY : irc_server/fast
+
+lib/Channel/Channel.Class.o: lib/Channel/Channel.Class.cpp.o
+
+.PHONY : lib/Channel/Channel.Class.o
+
+# target to build an object file
+lib/Channel/Channel.Class.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.o
+.PHONY : lib/Channel/Channel.Class.cpp.o
+
+lib/Channel/Channel.Class.i: lib/Channel/Channel.Class.cpp.i
+
+.PHONY : lib/Channel/Channel.Class.i
+
+# target to preprocess a source file
+lib/Channel/Channel.Class.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.i
+.PHONY : lib/Channel/Channel.Class.cpp.i
+
+lib/Channel/Channel.Class.s: lib/Channel/Channel.Class.cpp.s
+
+.PHONY : lib/Channel/Channel.Class.s
+
+# target to generate assembly for a file
+lib/Channel/Channel.Class.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.s
+.PHONY : lib/Channel/Channel.Class.cpp.s
+
+lib/Executor/Executor.Class.o: lib/Executor/Executor.Class.cpp.o
+
+.PHONY : lib/Executor/Executor.Class.o
+
+# target to build an object file
+lib/Executor/Executor.Class.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.o
+.PHONY : lib/Executor/Executor.Class.cpp.o
+
+lib/Executor/Executor.Class.i: lib/Executor/Executor.Class.cpp.i
+
+.PHONY : lib/Executor/Executor.Class.i
+
+# target to preprocess a source file
+lib/Executor/Executor.Class.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.i
+.PHONY : lib/Executor/Executor.Class.cpp.i
+
+lib/Executor/Executor.Class.s: lib/Executor/Executor.Class.cpp.s
+
+.PHONY : lib/Executor/Executor.Class.s
+
+# target to generate assembly for a file
+lib/Executor/Executor.Class.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.s
+.PHONY : lib/Executor/Executor.Class.cpp.s
+
+lib/Server/Server.Class.o: lib/Server/Server.Class.cpp.o
+
+.PHONY : lib/Server/Server.Class.o
+
+# target to build an object file
+lib/Server/Server.Class.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.o
+.PHONY : lib/Server/Server.Class.cpp.o
+
+lib/Server/Server.Class.i: lib/Server/Server.Class.cpp.i
+
+.PHONY : lib/Server/Server.Class.i
+
+# target to preprocess a source file
+lib/Server/Server.Class.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.i
+.PHONY : lib/Server/Server.Class.cpp.i
+
+lib/Server/Server.Class.s: lib/Server/Server.Class.cpp.s
+
+.PHONY : lib/Server/Server.Class.s
+
+# target to generate assembly for a file
+lib/Server/Server.Class.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.s
+.PHONY : lib/Server/Server.Class.cpp.s
+
+lib/User/User.Class.o: lib/User/User.Class.cpp.o
+
+.PHONY : lib/User/User.Class.o
+
+# target to build an object file
+lib/User/User.Class.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.o
+.PHONY : lib/User/User.Class.cpp.o
+
+lib/User/User.Class.i: lib/User/User.Class.cpp.i
+
+.PHONY : lib/User/User.Class.i
+
+# target to preprocess a source file
+lib/User/User.Class.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.i
+.PHONY : lib/User/User.Class.cpp.i
+
+lib/User/User.Class.s: lib/User/User.Class.cpp.s
+
+.PHONY : lib/User/User.Class.s
+
+# target to generate assembly for a file
+lib/User/User.Class.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.s
+.PHONY : lib/User/User.Class.cpp.s
+
+lib/Utils/utils.o: lib/Utils/utils.cpp.o
+
+.PHONY : lib/Utils/utils.o
+
+# target to build an object file
+lib/Utils/utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Utils/utils.cpp.o
+.PHONY : lib/Utils/utils.cpp.o
+
+lib/Utils/utils.i: lib/Utils/utils.cpp.i
+
+.PHONY : lib/Utils/utils.i
+
+# target to preprocess a source file
+lib/Utils/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Utils/utils.cpp.i
+.PHONY : lib/Utils/utils.cpp.i
+
+lib/Utils/utils.s: lib/Utils/utils.cpp.s
+
+.PHONY : lib/Utils/utils.s
+
+# target to generate assembly for a file
+lib/Utils/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Utils/utils.cpp.s
+.PHONY : lib/Utils/utils.cpp.s
 
 main.o: main.cpp.o
 
@@ -148,7 +283,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -157,7 +292,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -166,35 +301,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-server.o: server.cpp.o
-
-.PHONY : server.o
-
-# target to build an object file
-server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/server.cpp.o
-.PHONY : server.cpp.o
-
-server.i: server.cpp.i
-
-.PHONY : server.i
-
-# target to preprocess a source file
-server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/server.cpp.i
-.PHONY : server.cpp.i
-
-server.s: server.cpp.s
-
-.PHONY : server.s
-
-# target to generate assembly for a file
-server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/server.cpp.s
-.PHONY : server.cpp.s
 
 # Help Target
 help:
@@ -204,13 +312,25 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... mdenys_part"
+	@echo "... irc_server"
+	@echo "... lib/Channel/Channel.Class.o"
+	@echo "... lib/Channel/Channel.Class.i"
+	@echo "... lib/Channel/Channel.Class.s"
+	@echo "... lib/Executor/Executor.Class.o"
+	@echo "... lib/Executor/Executor.Class.i"
+	@echo "... lib/Executor/Executor.Class.s"
+	@echo "... lib/Server/Server.Class.o"
+	@echo "... lib/Server/Server.Class.i"
+	@echo "... lib/Server/Server.Class.s"
+	@echo "... lib/User/User.Class.o"
+	@echo "... lib/User/User.Class.i"
+	@echo "... lib/User/User.Class.s"
+	@echo "... lib/Utils/utils.o"
+	@echo "... lib/Utils/utils.i"
+	@echo "... lib/Utils/utils.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
 .PHONY : help
 
 

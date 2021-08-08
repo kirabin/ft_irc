@@ -63,16 +63,16 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mdenys/Desktop/irca/ft_irc/mdenys_part
+CMAKE_SOURCE_DIR = /Users/mdenys/Documents/ft_irc/mdenys_part
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mdenys/Documents/ft_irc/mdenys_part/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/mdenys_part.dir/all
+all: CMakeFiles/irc_server.dir/all
 
 .PHONY : all
 
@@ -82,36 +82,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/mdenys_part.dir/clean
+clean: CMakeFiles/irc_server.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/mdenys_part.dir
+# Target rules for target CMakeFiles/irc_server.dir
 
 # All Build rule for target.
-CMakeFiles/mdenys_part.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target mdenys_part"
-.PHONY : CMakeFiles/mdenys_part.dir/all
+CMakeFiles/irc_server.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mdenys/Documents/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target irc_server"
+.PHONY : CMakeFiles/irc_server.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/mdenys_part.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mdenys_part.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Desktop/irca/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/mdenys_part.dir/rule
+CMakeFiles/irc_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Documents/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/irc_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Documents/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/irc_server.dir/rule
 
 # Convenience name for target.
-mdenys_part: CMakeFiles/mdenys_part.dir/rule
+irc_server: CMakeFiles/irc_server.dir/rule
 
-.PHONY : mdenys_part
+.PHONY : irc_server
 
 # clean rule for target.
-CMakeFiles/mdenys_part.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mdenys_part.dir/build.make CMakeFiles/mdenys_part.dir/clean
-.PHONY : CMakeFiles/mdenys_part.dir/clean
+CMakeFiles/irc_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/clean
+.PHONY : CMakeFiles/irc_server.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,0 +1,4 @@
+Compile files:
+    clang++ lib/*/*.cpp  lib/*/*.hpp main.cpp
+Run:
+    ./a.out 127.0.0.1:6444:23
