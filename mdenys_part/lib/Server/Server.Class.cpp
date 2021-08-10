@@ -104,7 +104,7 @@ int				Server::acceptOK()
 	static int	i;
 	i++;
 
-	Channel	*randChannel = _channels.at(i % 2);
+	Channel	*randChannel = _channels.at(0);
 	User	*newUser = new User("test", client_d, inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port), randChannel);
 	_users.push_back(newUser);
 	randChannel->addUser(newUser);
@@ -253,7 +253,7 @@ int				Server::createSocket()
 	hints.ai_flags    = AI_PASSIVE;
 	if (getaddrinfo(_host.c_str(), _port.c_str(), &hints, &servinfo) != 0)
 		throw std::runtime_error("error: getaddrinfo");
-	
+
 	addrinfo	*p;
 	int			sock;
 	int			yes = 1;
@@ -263,7 +263,7 @@ int				Server::createSocket()
 
 		if (sock == -1)
 			continue;
-		
+
 		if (setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1)	// Choose Socket option
 		{
 			close(sock);

@@ -27,6 +27,7 @@ class Channel
 		void			addUser(User *newUser);
 		void			removeUser(User *user);
 
+		void			sendMessageToUser(User* user, std::string message);
 		void			sendMessageToChannel(User *sender, std::string message);
 		void			sendServiceMessageToChannel(std::string message);
 

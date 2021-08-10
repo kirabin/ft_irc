@@ -34,26 +34,22 @@ void				Channel::removeUser(User *user)
 		if (tmp == user)
 		{
 			std::cout << "The user *" << tmp->getName();
-			std::cout << "* has been removed from the channel *" << this->_name << "*" << std::endl; 
+			std::cout << "* has been removed from the channel *" << this->_name << "*" << std::endl;
 			_users.erase(iter);
 			break ;
 		}
 	}
 }
 
-void				Channel::sendMessageToChannel(User *sender, std::string message)
-{
-	
-	std::string	fMessage(sender->getSign());
-	fMessage.append(" :");
-	fMessage.append(message);
+void	Channel::sendMessageToUser(User* user, std::string message) {
+	send(user->getSockFd(), message.c_str(), message.length(), SEND_OPT);
+}
 
-	// std::cout << fMessage.length() << " * Fmessage : " << fMessage;
-
+void	Channel::sendMessageToChannel(User *sender, std::string message) {
 	for (std::vector<User *>::iterator iter = _users.begin(); iter != _users.end(); iter++)
 	{
 		if (*iter != sender && (*iter)->getEnter())
-			send((*iter)->getSockFd(), fMessage.c_str(), fMessage.length(), SEND_OPT);
+			sendMessageToUser(*iter, sender->getSign() + " :" + message);
 	}
 }
 
@@ -90,7 +86,7 @@ void			Channel::printFullInfo()const
 		std::cout << i++ << ") ";
 		(*iter)->printShortInfo();
 	}
-	
+
 	std::cout << std::endl << "**************** End    info ****************" << std::endl;
 	std::cout << std::endl;
 }
