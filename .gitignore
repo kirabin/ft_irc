@@ -1,6 +1,4 @@
 **/.DS_Store
-**/*cmake-build-debug
-**/*.idea
-**/*CMakeLists.txt
 **/*.out
+**/*.gch
 bircd/bircd

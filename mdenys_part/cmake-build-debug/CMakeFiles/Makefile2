@@ -63,10 +63,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mdenys/Documents/ft_irc/mdenys_part
+CMAKE_SOURCE_DIR = /Users/denisnadey/projects/ft_irc/mdenys_part
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mdenys/Documents/ft_irc/mdenys_part/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/denisnadey/projects/ft_irc/mdenys_part/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -93,14 +93,14 @@ clean: CMakeFiles/irc_server.dir/clean
 CMakeFiles/irc_server.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/mdenys/Documents/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target irc_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/denisnadey/projects/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target irc_server"
 .PHONY : CMakeFiles/irc_server.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/irc_server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Documents/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/denisnadey/projects/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/irc_server.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/mdenys/Documents/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/denisnadey/projects/ft_irc/mdenys_part/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/irc_server.dir/rule
 
 # Convenience name for target.
