@@ -144,24 +144,33 @@ void			Server::action()
 				std::advance(itUser, std::distance(_pollfds.begin(), itPollfd) - 1);
 
 				ssize_t byteRecved = recvMsg(*itUser);
-				if (byteRecved == -1)
-				{
-					throw std::runtime_error("error: recv");
-				}
-				else if (byteRecved == 0)
-				{
-					this->removeUser(std::distance(_pollfds.begin(), itPollfd));
-					break ;
-				}
-				else if (byteRecved > 2)
-				{
-					if ((*itUser)->getEnter())
-					{
-						_executor->processData(*itUser, (*itUser)->getMessage());
-					}
-					else
-						validEnter(*itUser);
-				}
+                if ((*itUser)->getEnter())
+                {
+                    _executor->processData(*itUser, (*itUser)->getMessage());
+                }
+                else
+                {
+                    validEnter(*itUser);
+                }
+
+//				if (byteRecved == -1)
+//				{
+//					throw std::runtime_error("error: recv");
+//				}
+//				else if (byteRecved == 0)
+//				{
+//					this->removeUser(std::distance(_pollfds.begin(), itPollfd));
+//					break ;
+//				}
+//				else if (byteRecved > 2)
+//				{
+//					if ((*itUser)->getEnter())
+//					{
+//						_executor->processData(*itUser, (*itUser)->getMessage());
+//					}
+//					else
+//						validEnter(*itUser);
+//				}
 			}
 		}
 	}
