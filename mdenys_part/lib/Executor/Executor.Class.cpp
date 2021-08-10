@@ -18,11 +18,11 @@ void			Executor::setServer(Server *server) { _server = server; }
 
 // * **************** Class function **************** * //
 
-void			Executor::processMessage()
-{
-	_sender->setMessage(_msg);
-	_sender->sendMessageToChannel();
-}
+// void			Executor::processMessage()
+// {
+// 	// _sender->setMessage(_msg);
+// 	_sender->sendMessageToChannel();
+// }
 
 void			Executor::processCommand()
 {
@@ -58,16 +58,21 @@ void			Executor::processCommand()
 	clearArgv();
 }
 
-void			Executor::processData(User *sender, std::string msg)
+void			Executor::processData(User *sender, std::string data)
 {
 	_sender = sender;
-	_msg = msg;
+	_msg = data;
 
+	if (data[0] == '/') {  // .isCommand()
+		processCommand();
+	} else {
+		sender->sendMessageToChannel(data);
+	}
 
 	// COUT(_msg[0]);
 	// printLog(_sender, _msg);
 
-	_msg[0] == '/' ? processCommand() : processMessage();
+	// _msg[0] == '/' ? processCommand() : processMessage();
 }
 
 // * **************** Other Class function **************** * //
@@ -80,7 +85,7 @@ void			printLog(User *user, std::string cmd)
 void			Executor::help()
 {
 	printLog(_sender, HELP);
-	
+
 	if (_argv.size() > 1)
 	{
 		_sender->getReply(_server->getSign() + SPC + (ERR_TOOMANYPARAMS(_sender->getName(), _argv[0])));
@@ -92,7 +97,7 @@ void			Executor::help()
 	};
 
 	_sender->getReply(_server->getSign() + SPC + HELP);
-	
+
 	for (int i = 0; i < CMD_SIZE; i++) {
 		_sender->getReply(discribe[i]);
 	}
@@ -112,18 +117,18 @@ void			Executor::nick()
 		_sender->getReply(_server->getSign() + SPC + (ERR_TOOMANYPARAMS(_sender->getName(), _argv[0])));
 		return ;
 	}
-	
+
 	if (_server->getUser(_argv[1]) != nullptr)
 	{
 		_sender->getReply(_server->getSign() + SPC + (ERR_NICKNAMEINUSE(_sender->getName(), _argv[0])));
 		return ;
 	}
-	
+
 	std::string newName = _argv[1];
 	std::string oldName = _sender->getName();
 
 	_sender->setName(newName);
-	_sender->sendMessageToChannel();
+	_sender->sendMessageToChannel(_msg);
 	_sender->getChannel()->sendServiceMessageToChannel(oldName + " change name to " + newName);
 }
 
@@ -192,7 +197,7 @@ void			Executor::leave()
 		_sender->getReply(_server->getSign() + SPC + (ERR_NOSUCHCHANNEL(_sender->getName(), _argv[0], _argv[1])));
 		return ;
 	}
-	
+
 	_sender->setChannel(nullptr);
 	_sender->removeUserFromChannel();
 }
@@ -240,7 +245,7 @@ void			Executor::kick()
 	// else if (!chan->isUser(_sender))
 	// 	return sendErrorReply(ERR_NOSUCHCHANNEL(_sender->getName(), _argv[0], _argv[0]));
 
-	
+
 
 }
 

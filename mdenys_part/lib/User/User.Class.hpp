@@ -12,7 +12,7 @@ class User
 		std::string			_name;
 		bool				_enter;
 		int					_sockFd;
-		int					_port;		// Зачем нам это тут?		
+		int					_port;		// Зачем нам это тут?
 		std::string			_host;		// Зачем нам это тут #2
 		std::string			_nick;
 		std::string			_message;
@@ -46,7 +46,7 @@ class User
 		void			appendMessage(std::string message);
 		void			clearMessage();
 
-		void			sendMessageToChannel();
+		void			sendMessageToChannel(std::string message);
 		void			getReply(std::string message);
 
 		void			printShortInfo()const;

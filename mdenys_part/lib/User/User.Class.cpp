@@ -57,10 +57,10 @@ void			User::clearMessage()
 	_message.clear();
 }
 
-void			User::sendMessageToChannel()
+void			User::sendMessageToChannel(std::string message)
 {
 	if (_channel != nullptr)
-		_channel->sendMessageToChannel(this, _message);
+		_channel->sendMessageToChannel(this, message);
 }
 
 void			User::getReply(std::string message)
@@ -92,7 +92,7 @@ void			User::printFullInfo()const
 	out << std::endl;
 	out << "**************** User info ****************" << std::endl;
 
-	out << "Name: " << _nick << std::endl; 
+	out << "Name: " << _nick << std::endl;
 	out << "SockFf: " << _sockFd << std::endl;
 	out << "Port: " << _port << std::endl;
 	out << "Host: " << _host << std::endl;

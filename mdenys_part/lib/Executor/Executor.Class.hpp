@@ -15,7 +15,7 @@ class Executor
 		std::vector<std::string>	_argv;
 
 		void			processCommand();
-		void			processMessage();
+		// void			processMessage();
 
 		void			help();
 		void			nick();
@@ -23,7 +23,7 @@ class Executor
 		void			leave();
 		void			who();
 		void			kick();
-		
+
 		void			sendErrorReply(std::string info);
 		void			commandNotFound();
 		void			clearArgv();
@@ -33,7 +33,7 @@ class Executor
 		~Executor();
 
 		void			setServer(Server *server);
-				
+
 		std::string		getMessage()const;
 		User			*getSender()const;
 
