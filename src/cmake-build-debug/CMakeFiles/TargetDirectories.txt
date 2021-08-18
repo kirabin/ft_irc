@@ -1,0 +1,3 @@
+/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/irc_server.dir
