@@ -1,4 +1,10 @@
 #include "Executor.Class.hpp"
+#include "NickCommand.hpp"
+#include "HelpCommand.hpp"
+#include "JoinCommand.hpp"
+#include "KickCommand.hpp"
+#include "LeaveCommand.hpp"
+#include "WhoCommand.hpp"
 
 Executor::Executor(Server *server) : _server(server)
 {
