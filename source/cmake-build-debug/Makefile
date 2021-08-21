@@ -129,101 +129,101 @@ irc_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/build
 .PHONY : irc_server/fast
 
-lib/Channel/Channel.Class.o: lib/Channel/Channel.Class.cpp.o
-.PHONY : lib/Channel/Channel.Class.o
+lib/Channel/Channel.o: lib/Channel/Channel.cpp.o
+.PHONY : lib/Channel/Channel.o
 
 # target to build an object file
-lib/Channel/Channel.Class.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.o
-.PHONY : lib/Channel/Channel.Class.cpp.o
+lib/Channel/Channel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.o
+.PHONY : lib/Channel/Channel.cpp.o
 
-lib/Channel/Channel.Class.i: lib/Channel/Channel.Class.cpp.i
-.PHONY : lib/Channel/Channel.Class.i
+lib/Channel/Channel.i: lib/Channel/Channel.cpp.i
+.PHONY : lib/Channel/Channel.i
 
 # target to preprocess a source file
-lib/Channel/Channel.Class.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.i
-.PHONY : lib/Channel/Channel.Class.cpp.i
+lib/Channel/Channel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.i
+.PHONY : lib/Channel/Channel.cpp.i
 
-lib/Channel/Channel.Class.s: lib/Channel/Channel.Class.cpp.s
-.PHONY : lib/Channel/Channel.Class.s
+lib/Channel/Channel.s: lib/Channel/Channel.cpp.s
+.PHONY : lib/Channel/Channel.s
 
 # target to generate assembly for a file
-lib/Channel/Channel.Class.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.s
-.PHONY : lib/Channel/Channel.Class.cpp.s
+lib/Channel/Channel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.s
+.PHONY : lib/Channel/Channel.cpp.s
 
-lib/Executor/Executor.Class.o: lib/Executor/Executor.Class.cpp.o
-.PHONY : lib/Executor/Executor.Class.o
+lib/Executor/Executor.o: lib/Executor/Executor.cpp.o
+.PHONY : lib/Executor/Executor.o
 
 # target to build an object file
-lib/Executor/Executor.Class.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.o
-.PHONY : lib/Executor/Executor.Class.cpp.o
+lib/Executor/Executor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.o
+.PHONY : lib/Executor/Executor.cpp.o
 
-lib/Executor/Executor.Class.i: lib/Executor/Executor.Class.cpp.i
-.PHONY : lib/Executor/Executor.Class.i
+lib/Executor/Executor.i: lib/Executor/Executor.cpp.i
+.PHONY : lib/Executor/Executor.i
 
 # target to preprocess a source file
-lib/Executor/Executor.Class.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.i
-.PHONY : lib/Executor/Executor.Class.cpp.i
+lib/Executor/Executor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.i
+.PHONY : lib/Executor/Executor.cpp.i
 
-lib/Executor/Executor.Class.s: lib/Executor/Executor.Class.cpp.s
-.PHONY : lib/Executor/Executor.Class.s
+lib/Executor/Executor.s: lib/Executor/Executor.cpp.s
+.PHONY : lib/Executor/Executor.s
 
 # target to generate assembly for a file
-lib/Executor/Executor.Class.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.s
-.PHONY : lib/Executor/Executor.Class.cpp.s
+lib/Executor/Executor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.s
+.PHONY : lib/Executor/Executor.cpp.s
 
-lib/Server/Server.Class.o: lib/Server/Server.Class.cpp.o
-.PHONY : lib/Server/Server.Class.o
+lib/Server/Server.o: lib/Server/Server.cpp.o
+.PHONY : lib/Server/Server.o
 
 # target to build an object file
-lib/Server/Server.Class.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.o
-.PHONY : lib/Server/Server.Class.cpp.o
+lib/Server/Server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Server/Server.cpp.o
+.PHONY : lib/Server/Server.cpp.o
 
-lib/Server/Server.Class.i: lib/Server/Server.Class.cpp.i
-.PHONY : lib/Server/Server.Class.i
+lib/Server/Server.i: lib/Server/Server.cpp.i
+.PHONY : lib/Server/Server.i
 
 # target to preprocess a source file
-lib/Server/Server.Class.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.i
-.PHONY : lib/Server/Server.Class.cpp.i
+lib/Server/Server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Server/Server.cpp.i
+.PHONY : lib/Server/Server.cpp.i
 
-lib/Server/Server.Class.s: lib/Server/Server.Class.cpp.s
-.PHONY : lib/Server/Server.Class.s
+lib/Server/Server.s: lib/Server/Server.cpp.s
+.PHONY : lib/Server/Server.s
 
 # target to generate assembly for a file
-lib/Server/Server.Class.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.s
-.PHONY : lib/Server/Server.Class.cpp.s
+lib/Server/Server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Server/Server.cpp.s
+.PHONY : lib/Server/Server.cpp.s
 
-lib/User/User.Class.o: lib/User/User.Class.cpp.o
-.PHONY : lib/User/User.Class.o
+lib/User/User.o: lib/User/User.cpp.o
+.PHONY : lib/User/User.o
 
 # target to build an object file
-lib/User/User.Class.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.o
-.PHONY : lib/User/User.Class.cpp.o
+lib/User/User.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/User/User.cpp.o
+.PHONY : lib/User/User.cpp.o
 
-lib/User/User.Class.i: lib/User/User.Class.cpp.i
-.PHONY : lib/User/User.Class.i
+lib/User/User.i: lib/User/User.cpp.i
+.PHONY : lib/User/User.i
 
 # target to preprocess a source file
-lib/User/User.Class.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.i
-.PHONY : lib/User/User.Class.cpp.i
+lib/User/User.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/User/User.cpp.i
+.PHONY : lib/User/User.cpp.i
 
-lib/User/User.Class.s: lib/User/User.Class.cpp.s
-.PHONY : lib/User/User.Class.s
+lib/User/User.s: lib/User/User.cpp.s
+.PHONY : lib/User/User.s
 
 # target to generate assembly for a file
-lib/User/User.Class.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.s
-.PHONY : lib/User/User.Class.cpp.s
+lib/User/User.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/User/User.cpp.s
+.PHONY : lib/User/User.cpp.s
 
 lib/Utils/utils.o: lib/Utils/utils.cpp.o
 .PHONY : lib/Utils/utils.o
@@ -282,18 +282,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... irc_server"
-	@echo "... lib/Channel/Channel.Class.o"
-	@echo "... lib/Channel/Channel.Class.i"
-	@echo "... lib/Channel/Channel.Class.s"
-	@echo "... lib/Executor/Executor.Class.o"
-	@echo "... lib/Executor/Executor.Class.i"
-	@echo "... lib/Executor/Executor.Class.s"
-	@echo "... lib/Server/Server.Class.o"
-	@echo "... lib/Server/Server.Class.i"
-	@echo "... lib/Server/Server.Class.s"
-	@echo "... lib/User/User.Class.o"
-	@echo "... lib/User/User.Class.i"
-	@echo "... lib/User/User.Class.s"
+	@echo "... lib/Channel/Channel.o"
+	@echo "... lib/Channel/Channel.i"
+	@echo "... lib/Channel/Channel.s"
+	@echo "... lib/Executor/Executor.o"
+	@echo "... lib/Executor/Executor.i"
+	@echo "... lib/Executor/Executor.s"
+	@echo "... lib/Server/Server.o"
+	@echo "... lib/Server/Server.i"
+	@echo "... lib/Server/Server.s"
+	@echo "... lib/User/User.o"
+	@echo "... lib/User/User.i"
+	@echo "... lib/User/User.s"
 	@echo "... lib/Utils/utils.o"
 	@echo "... lib/Utils/utils.i"
 	@echo "... lib/Utils/utils.s"
@@ -313,4 +313,3 @@ help:
 cmake_check_build_system:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
-

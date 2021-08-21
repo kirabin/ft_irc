@@ -1,7 +1,7 @@
 #ifndef IRCSERV_HPP
 # define IRCSERV_HPP
 
-// include.cpp 
+// include.cpp
 # include <iostream>
 # include <sstream>
 # include <iomanip>
@@ -19,7 +19,7 @@
 # include <poll.h>
 
 // class.hpp
-// #include "Server.Class.hpp"
+// #include "Server.hpp"
 
 # define ENDL		"\r\n"
 # define SPC		" * "
@@ -59,7 +59,7 @@
 # define ERR_NEEDMOREPARAMS(nick, cmd)			("461 * " + nick + "  " + cmd + ": Not enough parameters")		// - Returned when you try use any commands with not enough parameters
 
 // PASS
-# define ERR_PASSWDMISMATCH(nick, cmd)			("464 * " + nick + "  " + cmd + ": Password incorrect") 
+# define ERR_PASSWDMISMATCH(nick, cmd)			("464 * " + nick + "  " + cmd + ": Password incorrect")
 
 // NICK
 // # define ERR_NONICKNAMEGIVEN(nick, cmd)		("431 * " + nick + "  " + cmd + ": No nickname given")				// - Returned when a nickname parameter expected for a command and isn't found.
@@ -70,7 +70,7 @@
 // ERR_NEEDMOREPARAMS
 # define ERR_TOOMANYCHANNELS(nick, cmd, chan)	("405 * " + nick + "  " + cmd + " " + chan + ": You have joined too many channels")	// - Returned when you connect to more then one channel
 # define ERR_BANNEDFROMCHAN(nick, cmd, chan)	("474 * " + nick + "  " + cmd + " " + chan + ": Cannot join channel (+b)")	// - Returned when you was kicked from channel
-# define ERR_BADCHANMASK(nick, cmd, chan)		("476 * " + nick + "  " + cmd + " " + chan + ": No such channel")		// - Returned when you try connect to channel which starts no from #,& 
+# define ERR_BADCHANMASK(nick, cmd, chan)		("476 * " + nick + "  " + cmd + " " + chan + ": No such channel")		// - Returned when you try connect to channel which starts no from #,&
 
 // KICK
 // ERR_NEEDMOREPARAMS

@@ -78,28 +78,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.Class.cpp">
+		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.Class.hpp">
+		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.Class.cpp">
+		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.Class.hpp">
+		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.Class.cpp">
+		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.Class.hpp">
+		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.Class.cpp">
+		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.Class.hpp">
+		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.hpp">
 			<Option target="irc_server"/>
 		</Unit>
 		<Unit filename="/Users/vitmarkha/Desktop/ft_irc/src/lib/Utils/ircserv.hpp">

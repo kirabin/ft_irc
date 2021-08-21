@@ -4,51 +4,51 @@
 
 #IncludeRegexComplain: ^$
 
-#IncludeRegexTransform: 
+#IncludeRegexTransform:
 
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.Class.cpp
-Channel.Class.hpp
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.Class.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.cpp
+Channel.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.hpp
 
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.Class.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.hpp
 ../Utils/ircserv.hpp
 /Users/vitmarkha/Desktop/ft_irc/src/lib/Utils/ircserv.hpp
-../User/User.Class.hpp
-/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.Class.hpp
+../User/User.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.hpp
 
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.Class.cpp
-Executor.Class.hpp
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.Class.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.cpp
+Executor.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.hpp
 
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.Class.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.hpp
 ../Utils/ircserv.hpp
 /Users/vitmarkha/Desktop/ft_irc/src/lib/Utils/ircserv.hpp
-../Server/Server.Class.hpp
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.Class.hpp
+../Server/Server.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.hpp
 
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.Class.cpp
-Server.Class.hpp
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.Class.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.cpp
+Server.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.hpp
 
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.Class.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.hpp
 ../Utils/ircserv.hpp
 /Users/vitmarkha/Desktop/ft_irc/src/lib/Utils/ircserv.hpp
-../User/User.Class.hpp
-/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.Class.hpp
-../Channel/Channel.Class.hpp
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.Class.hpp
-../Executor/Executor.Class.hpp
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.Class.hpp
+../User/User.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.hpp
+../Channel/Channel.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.hpp
+../Executor/Executor.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.hpp
 
-/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.Class.cpp
-User.Class.hpp
-/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.Class.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.cpp
+User.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.hpp
 
-/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.Class.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.hpp
 ../Utils/ircserv.hpp
 /Users/vitmarkha/Desktop/ft_irc/src/lib/Utils/ircserv.hpp
-../Channel/Channel.Class.hpp
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.Class.hpp
+../Channel/Channel.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.hpp
 
 /Users/vitmarkha/Desktop/ft_irc/src/lib/Utils/ircserv.hpp
 iostream
@@ -81,12 +81,11 @@ poll.h
 /Users/vitmarkha/Desktop/ft_irc/src/lib/Utils/utils.cpp
 ircserv.hpp
 /Users/vitmarkha/Desktop/ft_irc/src/lib/Utils/ircserv.hpp
-../Server/Server.Class.hpp
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.Class.hpp
+../Server/Server.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.hpp
 
 /Users/vitmarkha/Desktop/ft_irc/src/main.cpp
 lib/Utils/ircserv.hpp
 /Users/vitmarkha/Desktop/ft_irc/src/lib/Utils/ircserv.hpp
-lib/Server/Server.Class.hpp
-/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.Class.hpp
-
+lib/Server/Server.hpp
+/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.hpp

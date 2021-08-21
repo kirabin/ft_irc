@@ -4,7 +4,7 @@
 class User;
 
 # include "../Utils/ircserv.hpp"
-# include "../Channel/Channel.Class.hpp"
+# include "../Channel/Channel.hpp"
 
 class User
 {

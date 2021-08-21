@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.o"
-  "CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.o"
-  "CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.o"
-  "CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.o"
+  "CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.o"
+  "CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.o"
+  "CMakeFiles/irc_server.dir/lib/Server/Server.cpp.o"
+  "CMakeFiles/irc_server.dir/lib/User/User.cpp.o"
   "CMakeFiles/irc_server.dir/lib/Utils/utils.cpp.o"
   "CMakeFiles/irc_server.dir/main.cpp.o"
   "irc_server"

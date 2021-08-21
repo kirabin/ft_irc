@@ -1,4 +1,4 @@
-#include "Channel.Class.hpp"
+#include "Channel.hpp"
 
 // * **************** Constructor & Destructor **************** * //
 

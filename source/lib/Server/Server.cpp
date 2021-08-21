@@ -1,4 +1,4 @@
-#include "Server.Class.hpp"
+#include "Server.hpp"
 
 int				createSocket(const char *port);
 

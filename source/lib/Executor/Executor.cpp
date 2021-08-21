@@ -1,4 +1,4 @@
-#include "Executor.Class.hpp"
+#include "Executor.hpp"
 #include "NickCommand.hpp"
 #include "HelpCommand.hpp"
 #include "JoinCommand.hpp"

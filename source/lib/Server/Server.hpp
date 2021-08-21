@@ -4,9 +4,9 @@
 class Server;
 
 # include "../Utils/ircserv.hpp"
-# include "../User/User.Class.hpp"
-# include "../Channel/Channel.Class.hpp"
-# include "../Executor/Executor.Class.hpp"
+# include "../User/User.hpp"
+# include "../Channel/Channel.hpp"
+# include "../Executor/Executor.hpp"
 
 # define MAX_CONNECTION				1000
 # define RECV_FLAGS					0
@@ -48,7 +48,7 @@ class Server
 		std::string		getServname()const;
 
 		Channel			*addChannel(std::string name, User *admin);
-		
+
 		User			*getUser(int sock);
 		User			*getUser(std::string userName);
 		Channel			*getChannel(std::string chanName);

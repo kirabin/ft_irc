@@ -66,31 +66,31 @@ include CMakeFiles/irc_server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/irc_server.dir/flags.make
 
-CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.o: CMakeFiles/irc_server.dir/flags.make
-CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.o: ../lib/Channel/Channel.Class.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.o -c /Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.Class.cpp
+CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.o: CMakeFiles/irc_server.dir/flags.make
+CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.o: ../lib/Channel/Channel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.o -c /Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.cpp
 
-CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.Class.cpp > CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.i
+CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.cpp > CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.i
 
-CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.Class.cpp -o CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.s
+CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.cpp -o CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.s
 
-CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.o: CMakeFiles/irc_server.dir/flags.make
-CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.o: ../lib/Executor/Executor.Class.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.o -c /Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.Class.cpp
+CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.o: CMakeFiles/irc_server.dir/flags.make
+CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.o: ../lib/Executor/Executor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.o -c /Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.cpp
 
-CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.Class.cpp > CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.i
+CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.cpp > CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.i
 
-CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.Class.cpp -o CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.s
+CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.cpp -o CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.s
 
 CMakeFiles/irc_server.dir/main.cpp.o: CMakeFiles/irc_server.dir/flags.make
 CMakeFiles/irc_server.dir/main.cpp.o: ../main.cpp
@@ -105,31 +105,31 @@ CMakeFiles/irc_server.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vitmarkha/Desktop/ft_irc/src/main.cpp -o CMakeFiles/irc_server.dir/main.cpp.s
 
-CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.o: CMakeFiles/irc_server.dir/flags.make
-CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.o: ../lib/Server/Server.Class.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.o -c /Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.Class.cpp
+CMakeFiles/irc_server.dir/lib/Server/Server.cpp.o: CMakeFiles/irc_server.dir/flags.make
+CMakeFiles/irc_server.dir/lib/Server/Server.cpp.o: ../lib/Server/Server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/irc_server.dir/lib/Server/Server.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/lib/Server/Server.cpp.o -c /Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.cpp
 
-CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.Class.cpp > CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.i
+CMakeFiles/irc_server.dir/lib/Server/Server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/lib/Server/Server.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.cpp > CMakeFiles/irc_server.dir/lib/Server/Server.cpp.i
 
-CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.Class.cpp -o CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.s
+CMakeFiles/irc_server.dir/lib/Server/Server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/lib/Server/Server.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.cpp -o CMakeFiles/irc_server.dir/lib/Server/Server.cpp.s
 
-CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.o: CMakeFiles/irc_server.dir/flags.make
-CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.o: ../lib/User/User.Class.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.o -c /Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.Class.cpp
+CMakeFiles/irc_server.dir/lib/User/User.cpp.o: CMakeFiles/irc_server.dir/flags.make
+CMakeFiles/irc_server.dir/lib/User/User.cpp.o: ../lib/User/User.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/irc_server.dir/lib/User/User.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/lib/User/User.cpp.o -c /Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.cpp
 
-CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.Class.cpp > CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.i
+CMakeFiles/irc_server.dir/lib/User/User.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/lib/User/User.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.cpp > CMakeFiles/irc_server.dir/lib/User/User.cpp.i
 
-CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.Class.cpp -o CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.s
+CMakeFiles/irc_server.dir/lib/User/User.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/lib/User/User.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.cpp -o CMakeFiles/irc_server.dir/lib/User/User.cpp.s
 
 CMakeFiles/irc_server.dir/lib/Utils/utils.cpp.o: CMakeFiles/irc_server.dir/flags.make
 CMakeFiles/irc_server.dir/lib/Utils/utils.cpp.o: ../lib/Utils/utils.cpp
@@ -146,21 +146,21 @@ CMakeFiles/irc_server.dir/lib/Utils/utils.cpp.s: cmake_force
 
 # Object files for target irc_server
 irc_server_OBJECTS = \
-"CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.o" \
-"CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.o" \
+"CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.o" \
+"CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.o" \
 "CMakeFiles/irc_server.dir/main.cpp.o" \
-"CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.o" \
-"CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.o" \
+"CMakeFiles/irc_server.dir/lib/Server/Server.cpp.o" \
+"CMakeFiles/irc_server.dir/lib/User/User.cpp.o" \
 "CMakeFiles/irc_server.dir/lib/Utils/utils.cpp.o"
 
 # External object files for target irc_server
 irc_server_EXTERNAL_OBJECTS =
 
-irc_server: CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.o
-irc_server: CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.o
+irc_server: CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.o
+irc_server: CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.o
 irc_server: CMakeFiles/irc_server.dir/main.cpp.o
-irc_server: CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.o
-irc_server: CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.o
+irc_server: CMakeFiles/irc_server.dir/lib/Server/Server.cpp.o
+irc_server: CMakeFiles/irc_server.dir/lib/User/User.cpp.o
 irc_server: CMakeFiles/irc_server.dir/lib/Utils/utils.cpp.o
 irc_server: CMakeFiles/irc_server.dir/build.make
 irc_server: CMakeFiles/irc_server.dir/link.txt
@@ -178,4 +178,3 @@ CMakeFiles/irc_server.dir/clean:
 CMakeFiles/irc_server.dir/depend:
 	cd /Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/vitmarkha/Desktop/ft_irc/src /Users/vitmarkha/Desktop/ft_irc/src /Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug /Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug /Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/irc_server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/irc_server.dir/depend
-

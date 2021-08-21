@@ -1,4 +1,4 @@
-#include "User.Class.hpp"
+#include "User.hpp"
 
 // * **************** Constructor & Destructor **************** * //
 

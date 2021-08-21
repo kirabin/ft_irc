@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.Class.cpp" "/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Channel/Channel.Class.cpp.o"
-  "/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.Class.cpp" "/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Executor/Executor.Class.cpp.o"
-  "/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.Class.cpp" "/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Server/Server.Class.cpp.o"
-  "/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.Class.cpp" "/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/irc_server.dir/lib/User/User.Class.cpp.o"
+  "/Users/vitmarkha/Desktop/ft_irc/src/lib/Channel/Channel.cpp" "/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Channel/Channel.cpp.o"
+  "/Users/vitmarkha/Desktop/ft_irc/src/lib/Executor/Executor.cpp" "/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Executor/Executor.cpp.o"
+  "/Users/vitmarkha/Desktop/ft_irc/src/lib/Server/Server.cpp" "/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Server/Server.cpp.o"
+  "/Users/vitmarkha/Desktop/ft_irc/src/lib/User/User.cpp" "/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/irc_server.dir/lib/User/User.cpp.o"
   "/Users/vitmarkha/Desktop/ft_irc/src/lib/Utils/utils.cpp" "/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Utils/utils.cpp.o"
   "/Users/vitmarkha/Desktop/ft_irc/src/main.cpp" "/Users/vitmarkha/Desktop/ft_irc/src/cmake-build-debug/CMakeFiles/irc_server.dir/main.cpp.o"
   )

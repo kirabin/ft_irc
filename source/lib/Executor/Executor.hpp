@@ -5,8 +5,8 @@ class Executor;
 
 # include "Command.hpp"
 # include "../Utils/ircserv.hpp"
-# include "../Server/Server.Class.hpp"
-# include "../User/User.Class.hpp"
+# include "../Server/Server.hpp"
+# include "../User/User.hpp"
 # include <deque>
 # include <vector>
 # include <string>

@@ -1,3 +1,2 @@
 #include "ircserv.hpp"
-#include "../Server/Server.Class.hpp"
-
+#include "../Server/Server.hpp"

@@ -6,8 +6,8 @@ class Command;
 # include <iostream>
 # include <string>
 # include <deque>
-# include "../Server/Server.Class.hpp"
-# include "../User/User.Class.hpp"
+# include "../Server/Server.hpp"
+# include "../User/User.hpp"
 # include "../Utils/ircserv.hpp"
 
 using namespace std;
