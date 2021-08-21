@@ -52,15 +52,17 @@ void			User::appendMessage(std::string message)
 	_message.append("\n");
 }
 
-void			User::clearMessage()
+void	User::clearMessage()
 {
 	_message.clear();
 }
 
-void			User::sendMessageToChannel(std::string message)
+void	User::sendMessageToChannel(std::string message)
 {
 	if (_channel != nullptr)
 		_channel->sendMessageToChannel(this, message);
+	else
+		std::cout << "Channel is unknown" << std::endl;
 }
 
 void			User::getReply(std::string message)

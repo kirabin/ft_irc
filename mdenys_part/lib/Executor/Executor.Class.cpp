@@ -16,14 +16,6 @@ User			*Executor::getSender()const { return _sender; }
 
 void			Executor::setServer(Server *server) { _server = server; }
 
-// * **************** Class function **************** * //
-
-// void			Executor::processMessage()
-// {
-// 	// _sender->setMessage(_msg);
-// 	_sender->sendMessageToChannel();
-// }
-
 void			Executor::processCommand()
 {
 	std::stringstream	ssMsg(_msg);
@@ -63,16 +55,11 @@ void			Executor::processData(User *sender, std::string data)
 	_sender = sender;
 	_msg = data;
 
-	if (data[0] == '/') {  // .isCommand()
+	if (data[0] == '/') {  // data.isCommand()
 		processCommand();
 	} else {
 		sender->sendMessageToChannel(data);
 	}
-
-	// COUT(_msg[0]);
-	// printLog(_sender, _msg);
-
-	// _msg[0] == '/' ? processCommand() : processMessage();
 }
 
 // * **************** Other Class function **************** * //
