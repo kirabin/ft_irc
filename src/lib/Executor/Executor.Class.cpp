@@ -7,6 +7,12 @@ void			printLog(User *user, std::string cmd);
 Executor::Executor(Server *server)
 {
 	_server = server;
+	_commands.push_back(new HelpCommand("/help"));
+	_commands.push_back(new NickCommand("/nick"));
+	_commands.push_back(new JoinCommand("/join"));
+	_commands.push_back(new LeaveCommand("/leave"));
+	_commands.push_back(new WhoCommand("/who"));
+	_commands.push_back(new KickCommand("/kick"));
 }
 
 // * **************** Standart Getter/Setter **************** * //
@@ -27,25 +33,14 @@ void			Executor::processCommand()
 		_argv.push_back(av);
 	}
 
-	void	(Executor::*fExec[CMD_SIZE])(void) = {
-		&Executor::help, &Executor::nick, &Executor::join, &Executor::leave, &Executor::who, &Executor::kick
-	};
+	std::string		commandName = _argv[0];
 
-	std::string		commands[CMD_SIZE] = {
-		HELP, NICK, JOIN, LEAVE, WHO, KICK
-	};
-
-	COUT(_argv[0]);
-
-	for (int i = 0; i < CMD_SIZE; i++)
-	{
-		if (_argv[0] == commands[i])
-		{
-			(this->*fExec[i])();
-			break ;
+	std::cout << commandName << std::endl;
+	for (size_t i = 0; i < _commands.size(); i++) {
+		if (commandName == _commands[i]->getName()) {
+			_commands[i]->execute();
+			break;
 		}
-		if (i + 1 == CMD_SIZE)
-			this->commandNotFound();
 	}
 	clearArgv();
 }
@@ -235,9 +230,6 @@ void			Executor::kick()
 
 
 }
-
-void			Executor::commandNotFound()
-{}
 
 void			Executor::sendErrorReply(std::string info)
 {

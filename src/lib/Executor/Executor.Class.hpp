@@ -5,6 +5,7 @@ class Executor;
 
 # include "../Utils/ircserv.hpp"
 # include "../Server/Server.Class.hpp"
+# include "Command.hpp"
 
 class Executor
 {
@@ -13,9 +14,9 @@ class Executor
 		User						*_sender;
 		std::string					_msg;
 		std::vector<std::string>	_argv;
+		std::vector<Command*>		_commands;
 
 		void			processCommand();
-		// void			processMessage();
 
 		void			help();
 		void			nick();
@@ -25,7 +26,6 @@ class Executor
 		void			kick();
 
 		void			sendErrorReply(std::string info);
-		void			commandNotFound();
 		void			clearArgv();
 
 	public:
