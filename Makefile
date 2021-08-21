@@ -1,8 +1,8 @@
 NAME	=	a.out
 COMPILER=	clang++
 FLAGS	=	-Wall -Wextra
-SRC		=	mdenys_part/lib/*/*.cpp  mdenys_part/lib/*/*.hpp mdenys_part/main.cpp
-INC		=	mdenys_part/include_files
+SRC		=	src/lib/*/*.cpp  src/lib/*/*.hpp src/main.cpp
+INC		=	src/include_files
 # OBJ		=	$(SRC:.cpp=.o)
 
 .PHONY: bircd
