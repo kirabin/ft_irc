@@ -20,10 +20,10 @@ class User
 
 	public:
 		User(int sockFd, int port);
-		User(std::string nick, int sockFd, char *host, int port, Channel *channel);
+		User(std::string nick, int sockFd, char *host, int port);
 		~User();
 
-		bool 			getEnter()const;
+		bool 			isAuthorized()const;
 		int				getSockFd()const;
 		int				getPort()const;
 		std::string		getnick()const;

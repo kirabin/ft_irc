@@ -12,13 +12,13 @@ User::User(int sockFd, int port)
 	_enter = false;
 }
 
-User::User(std::string nick, int sockFd, char *host, int port, Channel *channel)
+User::User(std::string nick, int sockFd, char *host, int port)
 {
 	_nick = nick;
 	_sockFd = sockFd;
 	_host = host;
 	_port = port;
-	_channel = channel;
+	_channel = nullptr;
 	_enter = false;
 }
 
@@ -27,7 +27,7 @@ User::~User()
 
 // * **************** Standart Getter/Setter **************** * //
 
-bool 			User::getEnter()const { return _enter; }
+bool 			User::isAuthorized()const { return _enter; }
 int				User::getSockFd()const { return _sockFd; }
 int				User::getPort()const { return _port; }
 std::string		User::getName()const { return _nick; }

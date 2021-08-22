@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/denisnadey/projects/ft_irc/source/cmake-build-debug"/>
+				<Option working_dir="/Users/denisnadey/projects/ft_irc/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/denisnadey/projects/ft_irc/source/cmake-build-debug"/>
+				<Option working_dir="/Users/denisnadey/projects/ft_irc/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/denisnadey/projects/ft_irc/source/cmake-build-debug"/>
+				<Option working_dir="/Users/denisnadey/projects/ft_irc/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="irc_server">
-				<Option output="/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/irc_server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/denisnadey/projects/ft_irc/source/cmake-build-debug"/>
+				<Option output="/Users/denisnadey/projects/ft_irc/cmake-build-debug/irc_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/denisnadey/projects/ft_irc/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -51,15 +51,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 irc_server"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 irc_server"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="irc_server/fast">
-				<Option output="/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/irc_server" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/denisnadey/projects/ft_irc/source/cmake-build-debug"/>
+				<Option output="/Users/denisnadey/projects/ft_irc/cmake-build-debug/irc_server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/denisnadey/projects/ft_irc/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -71,89 +71,89 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 irc_server/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/source/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 irc_server/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/denisnadey/projects/ft_irc/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Channel/Channel.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Channel/Channel.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Channel/Channel.hpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Channel/Channel.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/Command.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/Command.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/Command.hpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/Command.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/HelpCommand.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/HelpCommand.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/HelpCommand.hpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/HelpCommand.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/Invoker.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/Invoker.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/Invoker.hpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/Invoker.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/JoinCommand.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/JoinCommand.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/JoinCommand.hpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/JoinCommand.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/KickCommand.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/KickCommand.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/KickCommand.hpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/KickCommand.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/LeaveCommand.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/LeaveCommand.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/LeaveCommand.hpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/LeaveCommand.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/NickCommand.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/NickCommand.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/NickCommand.hpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/NickCommand.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/WhoCommand.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/WhoCommand.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Invoker/WhoCommand.hpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/WhoCommand.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Server/Server.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Server/Server.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Server/Server.hpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Server/Server.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/User/User.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/User/User.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/User/User.hpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/User/User.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Utils/ircserv.hpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Utils/ircserv.hpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/lib/Utils/utils.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Utils/utils.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/main.cpp">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/main.cpp">
 			<Option target="irc_server"/>
 		</Unit>
-		<Unit filename="/Users/denisnadey/projects/ft_irc/source/CMakeLists.txt">
+		<Unit filename="/Users/denisnadey/projects/ft_irc/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

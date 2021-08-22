@@ -7,17 +7,12 @@ int				createSocket(const char *port);
 Server::Server(std::string host, std::string port, std::string password) : _host(host), _port(port), _password(password + "\n")
 {
 	_sock = createSocket();
-	_channels.push_back(new Channel("#room1", nullptr));
-	_channels.push_back(new Channel("#room2", nullptr));
+//	_channels.push_back(new Channel("#room1", nullptr));
+//	_channels.push_back(new Channel("#room2", nullptr));
 	_servname = _host + ":" + _port;
 }
 
-// Server::Server(std::string host, std::string port, std::string password) : _host(host), _port(port), _password(password + "\n")
-// {
-//     _sock = createSocket();
-//     _channels.push_back(new Channel("#room1", nullptr));
-//     _channels.push_back(new Channel("#room2", nullptr));
-// }
+
 
 Server::~Server() { }
 
@@ -104,12 +99,13 @@ int				Server::acceptOK()
 	static int	i;
 	i++;
 
-	Channel	*randChannel = _channels.at(0);
-	User	*newUser = new User("test", client_d, inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port), randChannel);
+	User	*newUser = new User("user_example", client_d, inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
 	_users.push_back(newUser);
-	randChannel->addUser(newUser);
 
-	std::cout << "New client " << newUser->getName() << "@" << newUser->getHost() << ":" << newUser->getPort() << " комната " << newUser->getChannel()->getName() << std::endl;
+// TODO Убрать добавление в рандомный чат
+	//randChannel->addUser(newUser);
+
+	std::cout << "New client " << newUser->getName() << "@" << newUser->getHost() << ":" << newUser->getPort() << std::endl;
 	return client_d;
 }
 
@@ -142,10 +138,9 @@ void			Server::action()
 			{
 				std::vector<User *>::iterator	itUser = _users.begin();
 				std::advance(itUser, std::distance(_pollfds.begin(), itPollfd) - 1);
-
-				// ssize_t byteRecved = recvMsg(*itUser);
-				recvMsg(*itUser);
-                if ((*itUser)->getEnter())
+				ssize_t byteRecved;
+                byteRecved = recvMsg(*itUser);
+                if ((*itUser)->isAuthorized())
                 {
                     _Invoker->processData(*itUser, (*itUser)->getMessage());
                 }
@@ -154,26 +149,11 @@ void			Server::action()
                     validEnter(*itUser);
                 }
 
-//				if (byteRecved == -1)
-//				{
-//					throw std::runtime_error("error: recv");
-//				}
-//				else if (byteRecved == 0)
-//				{
-//					this->removeUser(std::distance(_pollfds.begin(), itPollfd));
-//					break ;
-//				}
-//				else if (byteRecved > 2)
-//				{
-//					if ((*itUser)->getEnter())
-//					{
-//						_Invoker->processData(*itUser, (*itUser)->getMessage());
-//					}
-//					else
-//						validEnter(*itUser);
-//				}
 			}
 		}
+
+
+
 	}
 }
 
