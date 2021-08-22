@@ -6,8 +6,7 @@
 #include "LeaveCommand.hpp"
 #include "WhoCommand.hpp"
 
-Invoker::Invoker(Server *server) : _server(server)
-{
+Invoker::Invoker(Server *server) : _server(server) {
 	_commands.push_back(new HelpCommand("/help"));
 	_commands.push_back(new NickCommand("/nick"));
 	_commands.push_back(new JoinCommand("/join"));
@@ -16,21 +15,22 @@ Invoker::Invoker(Server *server) : _server(server)
 	_commands.push_back(new KickCommand("/kick"));
 }
 
-void	Invoker::processCommand(User* sender, deque<string> arguments)
-{
-	string commandName = arguments[0];
-	arguments.pop_front();
+void	Invoker::processCommand(User* sender, deque<string> args) {
+	string commandName = args[0];
+	args.pop_front();
 	std::cout << commandName << std::endl;
 	for (size_t i = 0; i < _commands.size(); i++) {
 		if (commandName == _commands[i]->getName()) {
-			_commands[i]->execute(_server, sender, arguments);
+			_commands[i]->setServer(_server);
+			_commands[i]->setSender(sender);
+			_commands[i]->setArgs(args);
+			_commands[i]->execute();
 			break;
 		}
 	}
 }
 
-void	Invoker::processData(User *sender, std::string data)
-{
+void	Invoker::processData(User *sender, std::string data) {
 	if (data[0] == '/') {  // data.isCommand()
 		// split
 		stringstream	ssMsg(data);
@@ -53,10 +53,3 @@ void	Invoker::processData(User *sender, std::string data)
 void Invoker::sendErrorReply(std::string info) {
 
 }
-
-
-// void			Invoker::sendErrorReply(std::string info)
-// {
-// 	std::string	msgReply = _server->getSign() + SPC + info + ENDL;
-// 	send(_sender->getSockFd(), msgReply.c_str(), msgReply.length(), SEND_OPT);
-// }

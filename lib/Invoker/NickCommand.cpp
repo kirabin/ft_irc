@@ -4,21 +4,20 @@ NickCommand::NickCommand(string name) : Command(name) {}
 
 NickCommand::~NickCommand() {}
 
-void NickCommand::execute(Server* server, User* sender, deque<string> args) {
-    Command::execute(server, sender, args);
+void NickCommand::execute() {
 
-    if (args.size() < 1) {
-        sender->getReply(server->getSign() + SPC + (ERR_NEEDMOREPARAMS(sender->getName(), args[0])));
-    } else if (args.size() > 1) {
-        sender->getReply(server->getSign() + SPC + (ERR_TOOMANYPARAMS(sender->getName(), args[0])));
-    } else if (server->getUser(args[0]) != nullptr) {
-        sender->getReply(server->getSign() + SPC + (ERR_NICKNAMEINUSE(sender->getName(), args[0])));
+    if (_args.size() < 1) {
+        _sender->getReply(_server->getSign() + SPC + (ERR_NEEDMOREPARAMS(_sender->getName(), _args[0])));
+    } else if (_args.size() > 1) {
+        _sender->getReply(_server->getSign() + SPC + (ERR_TOOMANYPARAMS(_sender->getName(), _args[0])));
+    } else if (_server->getUser(_args[0]) != nullptr) {
+        _sender->getReply(_server->getSign() + SPC + (ERR_NICKNAMEINUSE(_sender->getName(), _args[0])));
     } else {
-        std::string newName = args[0];
-        std::string oldName = sender->getName();
+        std::string newName = _args[0];
+        std::string oldName = _sender->getName();
 
-        sender->setName(newName);
-        // sender->sendMessageToChannel(_msg);
-        sender->getChannel()->sendServiceMessageToChannel(oldName + " change name to " + newName);
+        _sender->setName(newName);
+        // _sender->sendMessageToChannel(_msg);
+        _sender->getChannel()->sendServiceMessageToChannel(oldName + " change name to " + newName);
     }
 }

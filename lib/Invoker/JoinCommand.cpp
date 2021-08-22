@@ -4,27 +4,25 @@ JoinCommand::JoinCommand(string name) : Command(name) {}
 
 JoinCommand::~JoinCommand() {}
 
-void JoinCommand::execute(Server* server, User* sender, deque<string> args) {
-	Command::execute(server, sender, args);
+void JoinCommand::execute() {
 
-	if (args.size() < 1) {
-		sender->getReply(server->getSign() + SPC + (ERR_NEEDMOREPARAMS(sender->getName(), "/join")));
-	} else if (args.size() > 1) {
-		sender->getReply(server->getSign() + SPC + (ERR_TOOMANYPARAMS(sender->getName(), "/join")));
-	} else if (sender->getChannel() != nullptr) {
-		sender->getReply(server->getSign() + SPC + (ERR_TOOMANYCHANNELS(sender->getName(), "/join", args[0])));
-	} else if (args[0].size() < 2 || args[0][0] != '#') {
-		sender->getReply(server->getSign() + SPC + (ERR_BADCHANMASK(sender->getName(), "/join", args[0])));
+	if (_args.size() < 1) {
+		_sender->getReply(_server->getSign() + SPC + (ERR_NEEDMOREPARAMS(_sender->getName(), "/join")));
+	} else if (_args.size() > 1) {
+		_sender->getReply(_server->getSign() + SPC + (ERR_TOOMANYPARAMS(_sender->getName(), "/join")));
+	} else if (_sender->getChannel() != nullptr) {
+		_sender->getReply(_server->getSign() + SPC + (ERR_TOOMANYCHANNELS(_sender->getName(), "/join", _args[0])));
+	} else if (_args[0].size() < 2 || _args[0][0] != '#') {
+		_sender->getReply(_server->getSign() + SPC + (ERR_BADCHANMASK(_sender->getName(), "/join", _args[0])));
 	} else {
-		Channel *existChan = server->getChannel(args[0]);
+		Channel *existChan = _server->getChannel(_args[0]);
 		if (existChan != nullptr) {
-			sender->setChannel(existChan);
-			existChan->addUser(sender);
+			_sender->setChannel(existChan);
+			existChan->addUser(_sender);
 		} else {
-			Channel	*newChannel = server->addChannel(args[0], sender);
-			sender->setChannel(newChannel);
-			sender->getChannel()->sendServiceMessageToChannel(sender->getName() + " join to channel " + newChannel->getName());
+			Channel	*newChannel = _server->addChannel(_args[0], _sender);
+			_sender->setChannel(newChannel);
+			_sender->getChannel()->sendServiceMessageToChannel(_sender->getName() + " join to channel " + newChannel->getName());
 		}
-
 	}
 }

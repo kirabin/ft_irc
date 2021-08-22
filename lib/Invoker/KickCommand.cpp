@@ -4,8 +4,7 @@ KickCommand::KickCommand(string name) : Command(name) {}
 
 KickCommand::~KickCommand() {}
 
-void KickCommand::execute(Server* server, User* sender, deque<string> args) {
-	Command::execute(server, sender, args);
+void KickCommand::execute() {
 
 	// Channel	*chan = server->getChannel(args[1]);
 

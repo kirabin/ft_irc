@@ -1,15 +1,21 @@
 #include "Command.hpp"
 
-Command::Command(string name) : _name(name) {}
+Command::Command(string name) : _name(name), _server(NULL), _sender(NULL) {}
+
 Command::~Command() {}
 
-void Command::execute(Server* server, User* user, deque<string> args) {
-	cout << "Executing " << _name << endl;
-	(void)server;
-	(void)user;
-	(void)args;
+string Command::getName() const {
+	return _name;
 }
 
-string Command::getName() {
-	return _name;
+void Command::setSender(User* sender) {
+	_sender = sender;
+}
+
+void Command::setServer(Server* server) {
+	_server = server;
+}
+
+void Command::setArgs(deque<string> args) {
+	_args = args;
 }
