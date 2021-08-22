@@ -3,31 +3,19 @@
 
 LeaveCommand::LeaveCommand(string name) : Command(name) {}
 LeaveCommand::~LeaveCommand() {}
-void LeaveCommand::execute(Server* server, User* user, deque<string> args) {
-	Command::execute(server, user, args);
+void LeaveCommand::execute(Server* server, User* sender, deque<string> args) {
+	Command::execute(server, sender, args);
 
-	// 	if (_argv.size() < 2)
-// 	{
-// 		_sender->getReply(_server->getSign() + SPC + (ERR_NEEDMOREPARAMS(_sender->getName(), _argv[0])));
-// 		return ;
-// 	}
-// 	else if (_argv.size() > 2)
-// 	{
-// 		_sender->getReply(_server->getSign() + SPC + (ERR_TOOMANYPARAMS(_sender->getName(), _argv[0])));
-// 		return ;
-// 	}
-
-// 	if (_sender->getChannel() == nullptr)
-// 	{
-// 		_sender->getReply(_server->getSign() + SPC + (ERR_NOTONCHANNEL(_sender->getName(), _argv[0], _argv[1])));
-// 		return ;
-// 	}
-// 	if (_sender->getChannel()->getName() != _argv[1])
-// 	{
-// 		_sender->getReply(_server->getSign() + SPC + (ERR_NOSUCHCHANNEL(_sender->getName(), _argv[0], _argv[1])));
-// 		return ;
-// 	}
-
-// 	_sender->setChannel(nullptr);
-// 	_sender->removeUserFromChannel();
+	if (args.size() < 1) {
+		sender->getReply(server->getSign() + SPC + (ERR_NEEDMOREPARAMS(sender->getName(), this->_name)));
+	} else if (args.size() > 1) {
+		sender->getReply(server->getSign() + SPC + (ERR_TOOMANYPARAMS(sender->getName(), this->_name)));
+	} else if (sender->getChannel() == nullptr) {
+		sender->getReply(server->getSign() + SPC + (ERR_NOTONCHANNEL(sender->getName(), this->_name, args[0])));
+	} else if (sender->getChannel()->getName() != args[0]) {
+		sender->getReply(server->getSign() + SPC + (ERR_NOSUCHCHANNEL(sender->getName(), this->_name, args[0])));
+	} else {
+		sender->setChannel(nullptr);
+		sender->removeUserFromChannel();
+	}
 }

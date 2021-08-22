@@ -78,12 +78,14 @@ void			Channel::printFullInfo()const
 	std::cout << "**************** Channel info ****************" << std::endl;
 
 	std::cout << "Name: " << std::setw(10) << _name << ", users: " << _users.size() << std::endl;
-	std::cout << "User info: " << std::endl;
+	if (_users.size() > 0) {
+		std::cout << "User info: " << std::endl;
+	}
 
 	int i = 0;
-	for (std::vector<User *>::const_iterator iter = _users.begin(); iter != _users.end(); iter++)
+	for (std::vector<User *>::const_iterator iter = _users.begin(); iter != _users.end(); iter++, i++)
 	{
-		std::cout << i++ << ") ";
+		std::cout << i << ") ";
 		(*iter)->printShortInfo();
 	}
 

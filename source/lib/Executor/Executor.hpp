@@ -20,13 +20,6 @@ class Executor
 		User						*_sender;
 		std::vector<Command*>		_commands;
 
-		// void			help();
-		// void			nick();
-		// void			join();
-		// void			leave();
-		// void			who();
-		// void			kick();
-
 		void			sendErrorReply(std::string info);
 
 	public:

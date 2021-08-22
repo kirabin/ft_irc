@@ -143,7 +143,8 @@ void			Server::action()
 				std::vector<User *>::iterator	itUser = _users.begin();
 				std::advance(itUser, std::distance(_pollfds.begin(), itPollfd) - 1);
 
-				ssize_t byteRecved = recvMsg(*itUser);
+				// ssize_t byteRecved = recvMsg(*itUser);
+				recvMsg(*itUser);
                 if ((*itUser)->getEnter())
                 {
                     _executor->processData(*itUser, (*itUser)->getMessage());
