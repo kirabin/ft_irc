@@ -72,7 +72,7 @@ void			Server::start()
 
 	std::vector<pollfd>::iterator	iter;
 	_pollfds.push_back(newPollfd);
-	_executor = new Executor(this);
+	_Invoker = new Invoker(this);
 
 	std::cout << "server created!" << std::endl;
 	while (true) {
@@ -147,7 +147,7 @@ void			Server::action()
 				recvMsg(*itUser);
                 if ((*itUser)->getEnter())
                 {
-                    _executor->processData(*itUser, (*itUser)->getMessage());
+                    _Invoker->processData(*itUser, (*itUser)->getMessage());
                 }
                 else
                 {
@@ -167,7 +167,7 @@ void			Server::action()
 //				{
 //					if ((*itUser)->getEnter())
 //					{
-//						_executor->processData(*itUser, (*itUser)->getMessage());
+//						_Invoker->processData(*itUser, (*itUser)->getMessage());
 //					}
 //					else
 //						validEnter(*itUser);

@@ -1,8 +1,9 @@
 #include "LeaveCommand.hpp"
 
-
 LeaveCommand::LeaveCommand(string name) : Command(name) {}
+
 LeaveCommand::~LeaveCommand() {}
+
 void LeaveCommand::execute(Server* server, User* sender, deque<string> args) {
 	Command::execute(server, sender, args);
 

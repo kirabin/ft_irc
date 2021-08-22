@@ -1,4 +1,4 @@
-#include "Executor.hpp"
+#include "Invoker.hpp"
 #include "NickCommand.hpp"
 #include "HelpCommand.hpp"
 #include "JoinCommand.hpp"
@@ -6,7 +6,7 @@
 #include "LeaveCommand.hpp"
 #include "WhoCommand.hpp"
 
-Executor::Executor(Server *server) : _server(server)
+Invoker::Invoker(Server *server) : _server(server)
 {
 	_commands.push_back(new HelpCommand("/help"));
 	_commands.push_back(new NickCommand("/nick"));
@@ -16,7 +16,7 @@ Executor::Executor(Server *server) : _server(server)
 	_commands.push_back(new KickCommand("/kick"));
 }
 
-void	Executor::processCommand(User* sender, deque<string> arguments)
+void	Invoker::processCommand(User* sender, deque<string> arguments)
 {
 	string commandName = arguments[0];
 	arguments.pop_front();
@@ -29,7 +29,7 @@ void	Executor::processCommand(User* sender, deque<string> arguments)
 	}
 }
 
-void	Executor::processData(User *sender, std::string data)
+void	Invoker::processData(User *sender, std::string data)
 {
 	if (data[0] == '/') {  // data.isCommand()
 		// split
@@ -51,7 +51,7 @@ void	Executor::processData(User *sender, std::string data)
 }
 
 
-// void			Executor::sendErrorReply(std::string info)
+// void			Invoker::sendErrorReply(std::string info)
 // {
 // 	std::string	msgReply = _server->getSign() + SPC + info + ENDL;
 // 	send(_sender->getSockFd(), msgReply.c_str(), msgReply.length(), SEND_OPT);

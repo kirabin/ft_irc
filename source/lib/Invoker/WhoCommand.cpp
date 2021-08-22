@@ -1,8 +1,9 @@
 #include "WhoCommand.hpp"
 
-
 WhoCommand::WhoCommand(string name) : Command(name) {}
+
 WhoCommand::~WhoCommand() {}
+
 void WhoCommand::execute(Server* server, User* sender, deque<string> args) {
 	Command::execute(server, sender, args);
 

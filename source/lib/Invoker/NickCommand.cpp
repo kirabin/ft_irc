@@ -1,7 +1,9 @@
 #include "NickCommand.hpp"
 
 NickCommand::NickCommand(string name) : Command(name) {}
+
 NickCommand::~NickCommand() {}
+
 void NickCommand::execute(Server* server, User* sender, deque<string> args) {
     Command::execute(server, sender, args);
 

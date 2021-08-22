@@ -1,7 +1,9 @@
 #include "JoinCommand.hpp"
 
 JoinCommand::JoinCommand(string name) : Command(name) {}
+
 JoinCommand::~JoinCommand() {}
+
 void JoinCommand::execute(Server* server, User* sender, deque<string> args) {
 	Command::execute(server, sender, args);
 

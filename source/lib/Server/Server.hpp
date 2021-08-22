@@ -6,7 +6,7 @@ class Server;
 # include "../Utils/ircserv.hpp"
 # include "../User/User.hpp"
 # include "../Channel/Channel.hpp"
-# include "../Executor/Executor.hpp"
+# include "../Invoker/Invoker.hpp"
 
 # define MAX_CONNECTION				1000
 # define RECV_FLAGS					0
@@ -24,7 +24,7 @@ class Server
 		std::vector<pollfd>		_pollfds;
 		std::vector<User *>		_users;
 		std::vector<Channel *>	_channels;
-		Executor				*_executor;
+		Invoker				*_Invoker;
 
 		Server();
 		int				createSocket();

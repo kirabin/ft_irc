@@ -1,7 +1,7 @@
-#ifndef EXECUTOR_CLASS_HPP
-# define EXECUTOR_CLASS_HPP
+#ifndef Invoker_CLASS_HPP
+# define Invoker_CLASS_HPP
 
-class Executor;
+class Invoker;
 
 # include "Command.hpp"
 # include "../Utils/ircserv.hpp"
@@ -13,7 +13,7 @@ class Executor;
 
 using namespace std;
 
-class Executor
+class Invoker
 {
 	private:
 		Server						*_server;
@@ -23,8 +23,8 @@ class Executor
 		void			sendErrorReply(std::string info);
 
 	public:
-		Executor(Server *server);
-		~Executor();
+		Invoker(Server *server);
+		~Invoker();
 
 		void			processData(User *sender, std::string msg);
 		void			processCommand(User *sender, deque<string> arguments);
