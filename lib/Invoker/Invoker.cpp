@@ -18,7 +18,7 @@ Invoker::Invoker(Server *server) : _server(server) {
 void	Invoker::processCommand(User* sender, deque<string> args) {
 	string commandName = args[0];
 	args.pop_front();
-	std::cout << commandName << std::endl;
+	std::cout << commandName << " @" << sender->getName() << std::endl;
 	for (size_t i = 0; i < _commands.size(); i++) {
 		if (commandName == _commands[i]->getName()) {
 			_commands[i]->setServer(_server);
