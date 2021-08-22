@@ -3,6 +3,7 @@
 
 class Server;
 
+# include <vector>
 # include "../Utils/ircserv.hpp"
 # include "../User/User.hpp"
 # include "../Channel/Channel.hpp"
@@ -52,7 +53,7 @@ class Server
 		User			*getUser(int sock);
 		User			*getUser(std::string userName);
 		Channel			*getChannel(std::string chanName);
-		vector<Channel*> getChannels();
+		std::vector<Channel*> getChannels();
 };
 
 #endif

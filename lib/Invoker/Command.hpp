@@ -6,6 +6,7 @@ class Command;
 # include <iostream>
 # include <string>
 # include <deque>
+# include <vector>
 # include "../Server/Server.hpp"
 # include "../User/User.hpp"
 # include "../Utils/ircserv.hpp"

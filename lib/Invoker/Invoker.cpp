@@ -5,6 +5,7 @@
 #include "KickCommand.hpp"
 #include "LeaveCommand.hpp"
 #include "WhoCommand.hpp"
+#include "ListCommand.hpp"
 
 Invoker::Invoker(Server *server) : _server(server) {
 	_commands.push_back(new HelpCommand("/help"));
@@ -13,6 +14,7 @@ Invoker::Invoker(Server *server) : _server(server) {
 	_commands.push_back(new LeaveCommand("/leave"));
 	_commands.push_back(new WhoCommand("/who"));
 	_commands.push_back(new KickCommand("/kick"));
+	_commands.push_back(new ListCommand("/list"));
 }
 
 void	Invoker::processCommand(User* sender, deque<string> args) {
