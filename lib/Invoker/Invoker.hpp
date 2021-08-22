@@ -17,7 +17,6 @@ class Invoker
 {
 	private:
 		Server						*_server;
-		User						*_sender;
 		std::vector<Command*>		_commands;
 
 		void			sendErrorReply(std::string info);

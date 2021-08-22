@@ -15,10 +15,10 @@ void JoinCommand::execute() {
 	} else if (_args[0].size() < 2 || _args[0][0] != '#') {
 		_sender->getReply(_server->getSign() + SPC + (ERR_BADCHANMASK(_sender->getName(), "/join", _args[0])));
 	} else {
-		Channel *existChan = _server->getChannel(_args[0]);
-		if (existChan != nullptr) {
-			_sender->setChannel(existChan);
-			existChan->addUser(_sender);
+		Channel *existingChan = _server->getChannel(_args[0]);
+		if (existingChan != nullptr) {
+			_sender->setChannel(existingChan);
+			existingChan->addUser(_sender);
 		} else {
 			Channel	*newChannel = _server->addChannel(_args[0], _sender);
 			_sender->setChannel(newChannel);
