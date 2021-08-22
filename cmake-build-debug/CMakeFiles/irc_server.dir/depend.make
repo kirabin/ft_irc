@@ -31,6 +31,7 @@ CMakeFiles/irc_server.dir/lib/Invoker/Invoker.cpp.o: ../lib/Invoker/Invoker.hpp
 CMakeFiles/irc_server.dir/lib/Invoker/Invoker.cpp.o: ../lib/Invoker/JoinCommand.hpp
 CMakeFiles/irc_server.dir/lib/Invoker/Invoker.cpp.o: ../lib/Invoker/KickCommand.hpp
 CMakeFiles/irc_server.dir/lib/Invoker/Invoker.cpp.o: ../lib/Invoker/LeaveCommand.hpp
+CMakeFiles/irc_server.dir/lib/Invoker/Invoker.cpp.o: ../lib/Invoker/ListCommand.hpp
 CMakeFiles/irc_server.dir/lib/Invoker/Invoker.cpp.o: ../lib/Invoker/NickCommand.hpp
 CMakeFiles/irc_server.dir/lib/Invoker/Invoker.cpp.o: ../lib/Invoker/WhoCommand.hpp
 CMakeFiles/irc_server.dir/lib/Invoker/Invoker.cpp.o: ../lib/Server/Server.hpp
@@ -63,6 +64,15 @@ CMakeFiles/irc_server.dir/lib/Invoker/LeaveCommand.cpp.o: ../lib/Invoker/LeaveCo
 CMakeFiles/irc_server.dir/lib/Invoker/LeaveCommand.cpp.o: ../lib/Server/Server.hpp
 CMakeFiles/irc_server.dir/lib/Invoker/LeaveCommand.cpp.o: ../lib/User/User.hpp
 CMakeFiles/irc_server.dir/lib/Invoker/LeaveCommand.cpp.o: ../lib/Utils/ircserv.hpp
+
+CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.o: ../lib/Channel/Channel.hpp
+CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.o: ../lib/Invoker/Command.hpp
+CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.o: ../lib/Invoker/Invoker.hpp
+CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.o: ../lib/Invoker/ListCommand.cpp
+CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.o: ../lib/Invoker/ListCommand.hpp
+CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.o: ../lib/Server/Server.hpp
+CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.o: ../lib/User/User.hpp
+CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.o: ../lib/Utils/ircserv.hpp
 
 CMakeFiles/irc_server.dir/lib/Invoker/NickCommand.cpp.o: ../lib/Channel/Channel.hpp
 CMakeFiles/irc_server.dir/lib/Invoker/NickCommand.cpp.o: ../lib/Invoker/Command.hpp

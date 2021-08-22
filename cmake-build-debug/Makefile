@@ -331,6 +331,33 @@ lib/Invoker/LeaveCommand.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Invoker/LeaveCommand.cpp.s
 .PHONY : lib/Invoker/LeaveCommand.cpp.s
 
+lib/Invoker/ListCommand.o: lib/Invoker/ListCommand.cpp.o
+
+.PHONY : lib/Invoker/ListCommand.o
+
+# target to build an object file
+lib/Invoker/ListCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.o
+.PHONY : lib/Invoker/ListCommand.cpp.o
+
+lib/Invoker/ListCommand.i: lib/Invoker/ListCommand.cpp.i
+
+.PHONY : lib/Invoker/ListCommand.i
+
+# target to preprocess a source file
+lib/Invoker/ListCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.i
+.PHONY : lib/Invoker/ListCommand.cpp.i
+
+lib/Invoker/ListCommand.s: lib/Invoker/ListCommand.cpp.s
+
+.PHONY : lib/Invoker/ListCommand.s
+
+# target to generate assembly for a file
+lib/Invoker/ListCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.s
+.PHONY : lib/Invoker/ListCommand.cpp.s
+
 lib/Invoker/NickCommand.o: lib/Invoker/NickCommand.cpp.o
 
 .PHONY : lib/Invoker/NickCommand.o
@@ -523,6 +550,9 @@ help:
 	@echo "... lib/Invoker/LeaveCommand.o"
 	@echo "... lib/Invoker/LeaveCommand.i"
 	@echo "... lib/Invoker/LeaveCommand.s"
+	@echo "... lib/Invoker/ListCommand.o"
+	@echo "... lib/Invoker/ListCommand.i"
+	@echo "... lib/Invoker/ListCommand.s"
 	@echo "... lib/Invoker/NickCommand.o"
 	@echo "... lib/Invoker/NickCommand.i"
 	@echo "... lib/Invoker/NickCommand.s"

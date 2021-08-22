@@ -32,6 +32,7 @@ CMakeFiles/irc_server.dir/lib/Invoker/Invoker.cpp.o
  /Users/denisnadey/projects/ft_irc/lib/Invoker/JoinCommand.hpp
  /Users/denisnadey/projects/ft_irc/lib/Invoker/KickCommand.hpp
  /Users/denisnadey/projects/ft_irc/lib/Invoker/LeaveCommand.hpp
+ /Users/denisnadey/projects/ft_irc/lib/Invoker/ListCommand.hpp
  /Users/denisnadey/projects/ft_irc/lib/Invoker/NickCommand.hpp
  /Users/denisnadey/projects/ft_irc/lib/Invoker/WhoCommand.hpp
  /Users/denisnadey/projects/ft_irc/lib/Server/Server.hpp
@@ -61,6 +62,15 @@ CMakeFiles/irc_server.dir/lib/Invoker/LeaveCommand.cpp.o
  /Users/denisnadey/projects/ft_irc/lib/Invoker/Invoker.hpp
  /Users/denisnadey/projects/ft_irc/lib/Invoker/LeaveCommand.cpp
  /Users/denisnadey/projects/ft_irc/lib/Invoker/LeaveCommand.hpp
+ /Users/denisnadey/projects/ft_irc/lib/Server/Server.hpp
+ /Users/denisnadey/projects/ft_irc/lib/User/User.hpp
+ /Users/denisnadey/projects/ft_irc/lib/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.o
+ /Users/denisnadey/projects/ft_irc/lib/Channel/Channel.hpp
+ /Users/denisnadey/projects/ft_irc/lib/Invoker/Command.hpp
+ /Users/denisnadey/projects/ft_irc/lib/Invoker/Invoker.hpp
+ /Users/denisnadey/projects/ft_irc/lib/Invoker/ListCommand.cpp
+ /Users/denisnadey/projects/ft_irc/lib/Invoker/ListCommand.hpp
  /Users/denisnadey/projects/ft_irc/lib/Server/Server.hpp
  /Users/denisnadey/projects/ft_irc/lib/User/User.hpp
  /Users/denisnadey/projects/ft_irc/lib/Utils/ircserv.hpp

@@ -127,6 +127,7 @@ void			Server::action()
 	for (std::vector<pollfd>::iterator itPollfd = _pollfds.begin(); itPollfd != _pollfds.end(); itPollfd++)
 	{
 		curPollfd = *itPollfd;
+
 		if ((curPollfd.revents & POLLIN) == POLLIN)
 		{
 			if (curPollfd.fd == _sock)
@@ -136,7 +137,7 @@ void			Server::action()
 			}
 			else
 			{
-				std::vector<User *>::iterator	itUser = _users.begin();
+                std::vector<User *>::iterator	itUser = _users.begin();
 				std::advance(itUser, std::distance(_pollfds.begin(), itPollfd) - 1);
 				ssize_t byteRecved;
                 byteRecved = recvMsg(*itUser);
@@ -151,7 +152,26 @@ void			Server::action()
 
 			}
 		}
+		if ((curPollfd.revents & POLLHUP) == POLLHUP)
+        {
+            std::vector<User *>::iterator	itUser = _users.begin();
+            std::advance(itUser, std::distance(_pollfds.begin(), itPollfd) - 1);
 
+            if ((*itUser)->isAuthorized() && ((*itUser)->getName() != "user_example"))
+            {
+                std::cout << "disconnect @" << (*itUser)->getName() << std::endl;
+                this->removeUser((*itUser)->getSockFd());
+                std::cout << "and deleted from server" << std::endl;
+            }
+            else
+            {
+                std::cout << "disconnect not registered user" << std::endl;
+            }
+
+            close(curPollfd.fd);
+            break;
+
+        }
 
 
 	}
@@ -199,18 +219,23 @@ void			Server::validEnter(User *user)
 
 void			Server::removeUser(int i)
 {
-	// remove User[i] - first
-	std::vector<User *>::iterator iterUser = _users.begin();
-	std::advance(iterUser, i - 1);
+//	// remove User[i] - first
+//	std::vector<User *>::iterator iterUser = _users.begin();
+//	std::advance(iterUser, i - 1);
+//
+////	(*iterUser)->removeUserFromChannel();
+//	_users.erase(iterUser);
+//
+//	// remove Pollfd[i] - second
+//	std::vector<pollfd>::iterator iterPollfd = _pollfds.begin();
+//	std::advance(iterPollfd, i);
+//
+//	_pollfds.erase(iterPollfd);
 
-	(*iterUser)->removeUserFromChannel();
-	_users.erase(iterUser);
 
-	// remove Pollfd[i] - second
-	std::vector<pollfd>::iterator iterPollfd = _pollfds.begin();
-	std::advance(iterPollfd, i);
+    //TODO Имплементировать удаление с сервера пользователя
 
-	_pollfds.erase(iterPollfd);
+    std::cout << "представье что удаление произошло это пришло с Server::removeUser(int i)" << std::endl;
 }
 
 Channel			*Server::addChannel(std::string name, User *admin)

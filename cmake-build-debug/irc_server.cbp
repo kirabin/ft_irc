@@ -120,6 +120,12 @@
 		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/LeaveCommand.hpp">
 			<Option target="irc_server"/>
 		</Unit>
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/ListCommand.cpp">
+			<Option target="irc_server"/>
+		</Unit>
+		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/ListCommand.hpp">
+			<Option target="irc_server"/>
+		</Unit>
 		<Unit filename="/Users/denisnadey/projects/ft_irc/lib/Invoker/NickCommand.cpp">
 			<Option target="irc_server"/>
 		</Unit>
