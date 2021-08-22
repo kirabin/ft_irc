@@ -1,8 +1,8 @@
 NAME	=	a.out
 COMPILER=	clang++
 FLAGS	=	-Wall -Wextra -g
-SRC		=	source/lib/*/*.cpp source/lib/*/*.hpp source/main.cpp
-INC		=	source/include_files
+SRC		=	lib/*/*.cpp lib/*/*.hpp main.cpp
+INC		=	include_files
 
 .PHONY: bircd
 
