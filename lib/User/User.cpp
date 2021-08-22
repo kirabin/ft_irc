@@ -59,10 +59,11 @@ void	User::clearMessage()
 
 void	User::sendMessageToChannel(std::string message)
 {
-	if (_channel != nullptr)
-		_channel->sendMessageToChannel(this, message);
-	else
-		std::cout << "Channel is unknown" << std::endl;
+	if (!message.empty())
+    {
+        if (_channel != nullptr)
+            _channel->sendMessageToChannel(this, message);
+    }
 }
 
 void			User::getReply(std::string message)
