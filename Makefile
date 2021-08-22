@@ -14,6 +14,12 @@ $(NAME): $(SRC)
 clean:
 	rm -f */*.o
 	rm -f *.o
+	rm -f */*.out
+	rm -f *.out
+	rm -f */*.gch
+	rm -f *.gch
+	rm -rf *.dSYM
+	rm -rf */*.dSYM
 
 fclean: clean
 	rm -f $(NAME)
