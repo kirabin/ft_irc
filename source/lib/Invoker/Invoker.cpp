@@ -50,6 +50,10 @@ void	Invoker::processData(User *sender, std::string data)
 	}
 }
 
+void Invoker::sendErrorReply(std::string info) {
+
+}
+
 
 // void			Invoker::sendErrorReply(std::string info)
 // {
