@@ -40,7 +40,7 @@ class Server
 		int				acceptOK();
 		void			greeting(int client_d)const;
 		void			action();
-
+        void            log(std::string text);
 		int				getSock()const;
 		std::string		getPort()const;
 		std::string		getSign()const;
@@ -52,6 +52,7 @@ class Server
 		User			*getUser(int sock);
 		User			*getUser(std::string userName);
 		Channel			*getChannel(std::string chanName);
+		vector<Channel*> getChannels();
 };
 
 #endif

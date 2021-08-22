@@ -268,3 +268,12 @@ int				Server::createSocket()
 
 	return sock;
 }
+
+void Server::log(std::string text) {
+    std::cout << text << std::endl;
+}
+
+vector<Channel *> Server::getChannels() {
+    return _channels;
+}
+
