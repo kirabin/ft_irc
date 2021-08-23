@@ -12,8 +12,6 @@ Server::Server(std::string host, std::string port, std::string password) : _host
 	_servname = _host + ":" + _port;
 }
 
-
-
 Server::~Server() { }
 
 // * ************** Getter & Setter ************** * //
@@ -212,26 +210,6 @@ void			Server::validEnter(User *user)
 
 void			Server::removeUser(std::string id)
 {
-//	// remove User[i] - first
-//	std::vector<User *>::iterator iterUser = _users.begin();
-//	std::advance(iterUser, i - 1);
-//
-////	(*iterUser)->removeUserFromChannel();
-//	_users.erase(iterUser);
-//
-//	// remove Pollfd[i] - second
-//	std::vector<pollfd>::iterator iterPollfd = _pollfds.begin();
-//	std::advance(iterPollfd, i);
-//
-//	_pollfds.erase(iterPollfd);
-
-
-
-
-	this->show_pollfd();
-
-
-    //TODO Имплементировать удаление с сервера пользователя
     std::cout << "id: " << id << " nickname: " << this->getUserById(id)->getNick() << std::endl;
     std::cout << "socket fd: " << this->getUserById(id)->getSockFd() << std::endl;
     this->removeUserFromPoll(id);
