@@ -25,26 +25,6 @@
 # define SPC		" * "
 # define SEND_OPT	0
 
-// ----==== Command description ====---- //
-
-# define HELP		"/help"
-# define NICK		"/nick"
-# define JOIN		"/join"
-# define LEAVE		"/leave"
-# define WHO		"/who"
-# define KICK		"/kick"
-# define PASS		"/pass"
-# define USER		"/user"
-
-# define HELP_DIS		"/help - show a list of available commands"
-# define NICK_DIS		"/nick <nick> - сhange your nickname"
-# define JOIN_DIS		"/join <#channel> - join or create a channel"
-# define LEAVE_DIS		"/leave - leave channel"
-# define WHO_DIS		"/who <#channel> - show the list of users on channel"
-# define KICK_DIS		"/kick <user> <#channel> - kick a user from channel"
-# define PASS_DIS		"/pass <passwordtoserver> - kick a user from channel"
-# define USER_DIS		"/user <username> <hostname> <servername> <realname> - used at the beginning of connection to specify you on server"
-
 # define WELCOME_MSG(servname, commands)	("Welcome to our server " + servname + ", Dude!\nBefore you start, you have to do a simple authorization in a few steps: " + commands )
 # define LEAVE_SERVER	" leave server"
 

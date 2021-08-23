@@ -37,11 +37,10 @@ void	Channel::sendMessageToUser(User* user, std::string message) {
 
 void	Channel::sendMessageToChannel(User *sender, std::string message) {
 
-
 	for (std::vector<User *>::iterator iter = _users.begin(); iter != _users.end(); iter++)
 	{
-		if (*iter != sender && (*iter)->isAuthorized())
-			sendMessageToUser(*iter, sender->getSign() + " :" + message);
+		if (*iter != sender)
+			sendMessageToUser(*iter, sender->getSign() + " :" + message + "\n");
 	}
 }
 
