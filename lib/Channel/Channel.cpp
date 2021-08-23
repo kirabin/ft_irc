@@ -1,15 +1,8 @@
 #include "Channel.hpp"
 
-// * **************** Constructor & Destructor **************** * //
+Channel::Channel(std::string name, User* admin) : _name(name), _admin(admin) {}
 
-Channel::Channel(std::string name, User *admin)
-{
-	_name = name;
-	_admin = admin;
-}
-
-Channel::~Channel()
-{ }
+Channel::~Channel() {}
 
 // * **************** Standart Getter/Setter **************** * //
 
@@ -18,8 +11,7 @@ User				*Channel::getAdmin()const { return _admin; }
 
 // * **************** Class Function **************** * //
 
-void				Channel::addUser(User *newUser)
-{
+void				Channel::addUser(User *newUser) {
 	_users.push_back(newUser);
 }
 
@@ -105,3 +97,4 @@ bool			Channel::isUser(User *user)const
 	}
 	return false;
 }
+

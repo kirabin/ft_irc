@@ -19,6 +19,7 @@ void JoinCommand::execute() {
 		if (existingChan != nullptr) {
 			_sender->setChannel(existingChan);
 			existingChan->addUser(_sender);
+			// existingChan->setOperator(_sender);
 		} else {
 			Channel	*newChannel = _server->addChannel(_args[0], _sender);
 			_sender->setChannel(newChannel);

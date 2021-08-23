@@ -13,12 +13,13 @@ class Channel
 	private:
 		std::string			_name;
 		std::vector<User *>	_users;
-		User				*_admin;
+		User*				_admin;
+
 
 		Channel();
 
 	public:
-		Channel(std::string name, User *admin);
+		Channel(std::string name, User* admin);
 		~Channel();
 
 		std::string		getName()const;

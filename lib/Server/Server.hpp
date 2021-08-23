@@ -20,12 +20,12 @@ class Server
 		int						_sock;
 		const std::string		_host;
 		const std::string		_port;
-        const std::string		_password;
+		const std::string		_password;
 		std::string				_servname;
 		std::vector<pollfd>		_pollfds;
 		std::vector<User *>		_users;
 		std::vector<Channel *>	_channels;
-		Invoker				*_Invoker;
+		Invoker					*_Invoker;
 
 		Server();
 		int				createSocket();
@@ -41,7 +41,7 @@ class Server
 		int				acceptOK();
 		void			greeting(int client_d)const;
 		void			action();
-        void            log(std::string text);
+		void			log(std::string text);
 		int				getSock()const;
 		std::string		getPort()const;
 		std::string		getSign()const;
