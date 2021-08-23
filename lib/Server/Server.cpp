@@ -19,7 +19,6 @@ Server::~Server() { }
 int				Server::getSock()const { return _sock; }
 std::string		Server::getHost()const { return _host; }
 std::string		Server::getPort()const { return _port; }
-std::string		Server::getSign()const { return _port; }
 std::string		Server::getServname()const { return _servname; }
 
 User			*Server::getUser(std::string userName)
