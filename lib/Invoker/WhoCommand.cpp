@@ -1,6 +1,9 @@
 #include "WhoCommand.hpp"
 
-WhoCommand::WhoCommand(string name) : Command(name) {}
+WhoCommand::WhoCommand() {
+	_name = "/who";
+	_description = "/who <#channel> - show the list of users on channel";
+}
 
 WhoCommand::~WhoCommand() {}
 

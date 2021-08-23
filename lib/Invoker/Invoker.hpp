@@ -21,7 +21,7 @@ class Invoker
 
 	public:
 		Invoker(Server *server);
-		~Invoker();
+		virtual ~Invoker();
 
 		void			processData(User *sender, std::string msg);
 		void			processCommand(User *sender, deque<string> arguments);

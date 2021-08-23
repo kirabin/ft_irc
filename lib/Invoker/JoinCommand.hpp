@@ -6,7 +6,7 @@ using namespace std;
 
 class JoinCommand: public Command {
 	public:
-		JoinCommand(string name);
+		JoinCommand();
 		virtual ~JoinCommand();
 		void execute();
 };

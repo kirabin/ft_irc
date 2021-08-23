@@ -6,7 +6,7 @@ using namespace std;
 
 class ListCommand: public Command {
 	public:
-		ListCommand(string name);
+		ListCommand();
 		virtual ~ListCommand();
 		void execute();
 };

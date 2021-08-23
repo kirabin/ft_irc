@@ -6,7 +6,7 @@ using namespace std;
 
 class NickCommand: public Command {
 	public:
-		NickCommand(string name);
+		NickCommand();
 		virtual ~NickCommand();
 		void execute();
 };

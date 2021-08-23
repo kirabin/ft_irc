@@ -1,6 +1,9 @@
 #include "LeaveCommand.hpp"
 
-LeaveCommand::LeaveCommand(string name) : Command(name) {}
+LeaveCommand::LeaveCommand() {
+	_name = "/leave";
+	_description = "/leave - leave channel";
+}
 
 LeaveCommand::~LeaveCommand() {}
 

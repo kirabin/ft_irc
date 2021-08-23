@@ -1,11 +1,15 @@
 #include "Command.hpp"
 
-Command::Command(string name) : _name(name), _server(NULL), _sender(NULL) {}
+Command::Command() : _name(""), _description(""), _server(NULL), _sender(NULL) {}
 
 Command::~Command() {}
 
 string Command::getName() const {
 	return _name;
+}
+
+string Command::getDescription() const {
+	return _description;
 }
 
 void Command::setSender(User* sender) {

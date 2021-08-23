@@ -1,6 +1,9 @@
 #include "KickCommand.hpp"
 
-KickCommand::KickCommand(string name) : Command(name) {}
+KickCommand::KickCommand() {
+	_name = "/kick";
+	_description = "/kick <user> <#channel> - kick a user from channel";
+}
 
 KickCommand::~KickCommand() {}
 
