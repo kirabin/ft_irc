@@ -20,7 +20,6 @@ Invoker::Invoker(Server *server) : _server(server) {
 void	Invoker::processCommand(User* sender, deque<string> args) {
 	string commandName = args[0];
 	args.pop_front();
-	std::cout << commandName << " @" << sender->getName() << std::endl;
 	for (size_t i = 0; i < _commands.size(); i++) {
 		if (commandName == _commands[i]->getName()) {
 			_commands[i]->setServer(_server);
@@ -29,7 +28,7 @@ void	Invoker::processCommand(User* sender, deque<string> args) {
 			try {
 				_commands[i]->execute();
 			} catch(const char* message) {
-				sender->getReply("Error" + string(message));
+				sender->getReply("Error: " + string(message));
 			}
 			break;
 		}
@@ -37,6 +36,9 @@ void	Invoker::processCommand(User* sender, deque<string> args) {
 }
 
 void	Invoker::processData(User *sender, std::string data) {
+
+	std::cout << "@" << sender->getName() << " " << data;
+
 	if (data[0] == '/') {  // data.isCommand()
 		// split
 		stringstream	ssMsg(data);
@@ -52,7 +54,7 @@ void	Invoker::processData(User *sender, std::string data) {
 
 		processCommand(sender, arguments);
 	} else {
-		cout << "seding message" << endl;
 		sender->sendMessageToChannel(data);
 	}
+	
 }

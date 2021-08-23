@@ -17,4 +17,5 @@ void HelpCommand::execute() {
 			_sender->getReply(discribe[i]);
 		}
 	}
+	_sender->getReply("");
 }

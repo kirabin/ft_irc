@@ -21,4 +21,5 @@ void WhoCommand::execute() {
 	for (it = users.begin(); it != users.end(); it++) {
 		_sender->getReply("@" + (*it)->getName());
 	}
+	_sender->getReply("");
 }

@@ -21,4 +21,5 @@ void NickCommand::execute() {
 	if (_sender->getChannel()) {
 		_sender->sendMessageToChannel("@" + oldName + "set his nick to " + "@" + newName);
 	}
+	_sender->getReply("");
 }

@@ -27,4 +27,5 @@ void JoinCommand::execute() {
 			newChannel->addUser(_sender);
 		}
 	}
+	_sender->getReply("");
 }

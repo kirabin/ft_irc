@@ -17,17 +17,15 @@ void				Channel::addUser(User *newUser) {
 
 void				Channel::removeUser(User *user)
 {
-	std::vector<User *>::iterator iter = _users.begin();
-	User *tmp;
+	std::vector<User *>::iterator it;
 
-	for (; iter < _users.end(); iter++)
+	for (it = _users.begin(); it < _users.end(); it++)
 	{
-		tmp = *iter;
-		if (tmp == user)
+		if (*it == user)
 		{
-			std::cout << "The user *" << tmp->getName();
+			std::cout << "The user *" << (*it)->getName();
 			std::cout << "* has been removed from the channel *" << this->_name << "*" << std::endl;
-			_users.erase(iter);
+			_users.erase(it);
 			break ;
 		}
 	}

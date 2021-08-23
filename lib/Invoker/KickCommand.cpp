@@ -25,4 +25,5 @@ void KickCommand::execute() {
 
 	channel->sendMessageToChannel(_sender, "kicked" + userToKick->getName());
 	channel->removeUser(userToKick);
+	_sender->getReply("");
 }
