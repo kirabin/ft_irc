@@ -24,6 +24,7 @@ class Channel
 
 		std::string		getName()const;
 		User			*getAdmin()const;
+		User			*getUser(std::string userName);
 
 		void			addUser(User *newUser);
 		void			removeUser(User *user);

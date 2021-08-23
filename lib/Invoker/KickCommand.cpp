@@ -6,18 +6,22 @@ KickCommand::~KickCommand() {}
 
 void KickCommand::execute() {
 
-	// Channel	*chan = server->getChannel(args[1]);
+	if (_args.size() != 2)
+		throw "Error: Arguments error";
+	Channel	*channel = _server->getChannel(_args[1]);
 
+	if (channel->getAdmin() != _sender)
+		throw "Error: You're not an admin of this channel";
+	if (channel == nullptr)
+		throw "Error: No such channel";
 
-	// if (args.size() < 2)
-	// 	return sendErrorReply(ERR_NEEDMOREPARAMS(sender->getName(), args[0]));
-	// else if (args.size() > 2)
-	// 	return sendErrorReply(ERR_TOOMANYPARAMS(sender->getName(), args[0]));
-	// else if (chan == nullptr)
-	// 	return sendErrorReply(ERR_NOSUCHCHANNEL(sender->getName(), args[0], args[0]));
-	// else if (chan->getAdmin() != sender)
-	// 	return sendErrorReply(ERR_NOSUCHCHANNEL(sender->getName(), args[0], args[0]));
-	// else if (!chan->isUser(sender))
-	// 	return sendErrorReply(ERR_NOSUCHCHANNEL(sender->getName(), args[0], args[0]));
+	User *userToKick = channel->getUser(_args[0]);
 
+	if (userToKick == nullptr)
+		throw "Error: No such user on this channel";
+	if (userToKick == _sender)
+		throw "Error: Can't kick oneself";
+
+	channel->sendMessageToChannel(_sender, "kicked" + userToKick->getName());
+	channel->removeUser(userToKick);
 }

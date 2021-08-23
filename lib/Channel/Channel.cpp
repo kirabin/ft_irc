@@ -66,7 +66,7 @@ void			Channel::printShortInfo()const
 	std::cout << out;
 }
 
-void			Channel::printFullInfo()const
+void			Channel::printFullInfo() const
 {
 	std::cout << std::endl;
 	std::cout << "**************** Channel info ****************" << std::endl;
@@ -98,3 +98,13 @@ bool			Channel::isUser(User *user)const
 	return false;
 }
 
+User			*Channel::getUser(std::string userName)
+{
+	for (std::vector<User *>::iterator itUser = _users.begin(); itUser != _users.end(); itUser++)
+	{
+		std::string	curName = (*itUser)->getName();
+		if (curName == userName)
+			return *itUser;
+	}
+	return nullptr;
+}

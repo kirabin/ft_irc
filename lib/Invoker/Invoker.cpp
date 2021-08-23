@@ -26,7 +26,11 @@ void	Invoker::processCommand(User* sender, deque<string> args) {
 			_commands[i]->setServer(_server);
 			_commands[i]->setSender(sender);
 			_commands[i]->setArgs(args);
-			_commands[i]->execute();
+			try {
+				_commands[i]->execute();
+			} catch(const char* message) {
+				sender->getReply(string(message));
+			}
 			break;
 		}
 	}
