@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/mdenys/projects/ft_irc/lib/Invoker/LeaveCommand.cpp" "/Users/mdenys/projects/ft_irc/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Invoker/LeaveCommand.cpp.o"
   "/Users/mdenys/projects/ft_irc/lib/Invoker/ListCommand.cpp" "/Users/mdenys/projects/ft_irc/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.o"
   "/Users/mdenys/projects/ft_irc/lib/Invoker/NickCommand.cpp" "/Users/mdenys/projects/ft_irc/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Invoker/NickCommand.cpp.o"
+  "/Users/mdenys/projects/ft_irc/lib/Invoker/PassCommand.cpp" "/Users/mdenys/projects/ft_irc/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Invoker/PassCommand.cpp.o"
   "/Users/mdenys/projects/ft_irc/lib/Invoker/WhoCommand.cpp" "/Users/mdenys/projects/ft_irc/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Invoker/WhoCommand.cpp.o"
   "/Users/mdenys/projects/ft_irc/lib/Server/Server.cpp" "/Users/mdenys/projects/ft_irc/cmake-build-debug/CMakeFiles/irc_server.dir/lib/Server/Server.cpp.o"
   "/Users/mdenys/projects/ft_irc/lib/User/User.cpp" "/Users/mdenys/projects/ft_irc/cmake-build-debug/CMakeFiles/irc_server.dir/lib/User/User.cpp.o"
