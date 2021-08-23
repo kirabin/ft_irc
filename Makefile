@@ -1,15 +1,34 @@
 NAME	=	a.out
 COMPILER=	clang++
 FLAGS	=	-Wall -Wextra -g
-SRC		=	lib/*/*.cpp  main.cpp
-INC		=	
+SRC		=	main.cpp \
+			lib/Channel/Channel.cpp \
+			lib/Invoker/Command.cpp \
+			lib/Invoker/HelpCommand.cpp \
+			lib/Invoker/Invoker.cpp \
+			lib/Invoker/JoinCommand.cpp \
+			lib/Invoker/KickCommand.cpp \
+			lib/Invoker/LeaveCommand.cpp \
+			lib/Invoker/ListCommand.cpp \
+			lib/Invoker/NickCommand.cpp \
+			lib/Invoker/PassCommand.cpp \
+			lib/Invoker/WhoCommand.cpp \
+			lib/Server/Server.cpp \
+			lib/User/User.cpp \
+			lib/Utils/utils.cpp
+OBJ		=	$(SRC:.cpp=.o)
+INC		=
+
 
 .PHONY: bircd
 
 all: $(NAME)
 
-$(NAME): $(SRC)
-	$(COMPILER) $(FLAGS) $(SRC)
+%.o: %.cpp $(INC)
+	$(COMPILER) $(FLAGS) -o $@ -c $<
+
+$(NAME): $(OBJ)
+	$(COMPILER) $(FLAGS) $(OBJ)
 
 clean:
 	rm -f */*.o
