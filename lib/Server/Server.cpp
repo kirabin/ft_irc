@@ -157,8 +157,8 @@ void			Server::action()
             else
             {
                 std::cout << "disconnect not registered user" << std::endl;
+                this->removeUser((*itUser)->getId());
             }
-
             close(curPollfd.fd);
             break;
 
