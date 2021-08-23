@@ -1,14 +1,10 @@
 #include "Server.hpp"
 
-int				createSocket(const char *port);
-
 // * ************** Constructor & Destructor ************** * //
 
 Server::Server(std::string host, std::string port, std::string password) : _host(host), _port(port), _password(password)
 {
 	_sock = createSocket();
-//	_channels.push_back(new Channel("#room1", nullptr));
-//	_channels.push_back(new Channel("#room2", nullptr));
 	_servname = _host + ":" + _port;
 }
 

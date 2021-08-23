@@ -13,8 +13,8 @@ class User
 		std::string         _id;
 		bool				_enter;
 		int					_sockFd;
-		int					_port;		// Зачем нам это тут?
-		std::string			_host;		// Зачем нам это тут #2
+		int					_port;
+		std::string			_host;
 		std::string			_nick;
 		std::string			_message;
 		Channel				*_channel;
@@ -34,25 +34,16 @@ class User
 		Channel			*getChannel()const;
 		std::string     getName() const;
 		void			setName(std::string name);
-		void			setNick(std::string nick);
-		void			setSockFd(int fd);
-		void			setMessage(std::string message);
-		void			setAuthorized(bool enter);
+        void			setAuthorized(bool enter);
 		void			setChannel(Channel *channel);
         std::string     getId() const;
-		// Это метод не сюда, а в Channel
 		void			removeUserFromChannel();
-
-		// А что оно делает?
 		void			appendMessage(std::string message);
 		void			clearMessage();
-
 		void			sendMessageToChannel(std::string message);
 		void			getReply(std::string message);
-
 		void			printShortInfo()const;
-		void			printFullInfo()const;
-		std::string     get_id();
+        std::string     get_id();
 };
 
 #endif

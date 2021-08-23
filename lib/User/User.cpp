@@ -40,8 +40,7 @@ Channel			*User::getChannel()const { return _channel; }
 std::string		User::getSign()const { return _nick + "@" + _host + ":" + std::to_string(_port); }
 
 void			User::setName(std::string name) { _nick = name; }
-void			User::setSockFd(int fd) { _sockFd = fd; }
-void			User::setMessage(std::string message) { _message = message; }
+
 void			User::setAuthorized(bool enter) { _enter = enter; }
 void			User::setChannel(Channel *channel) { _channel = channel; }
 
@@ -87,25 +86,6 @@ void			User::removeUserFromChannel()
 void			User::printShortInfo()const
 {
 	std::cout << "Name: " << std::setw(10) << _nick << ", fd: " << _sockFd << std::endl;
-}
-
-void			User::printFullInfo()const
-{
-	std::ostringstream	out;
-
-	out << std::endl;
-	out << "**************** User info ****************" << std::endl;
-
-	out << "Name: " << _nick << std::endl;
-	out << "SockFf: " << _sockFd << std::endl;
-	out << "Port: " << _port << std::endl;
-	out << "Host: " << _host << std::endl;
-	out << "Channel: " << _channel->getName() << std::endl;
-
-	out << "**************** End  info ****************" << std::endl;
-	out << std::endl;
-
-	std::cout << out;
 }
 
 std::string User::get_id() {
