@@ -4,7 +4,7 @@ int				createSocket(const char *port);
 
 // * ************** Constructor & Destructor ************** * //
 
-Server::Server(std::string host, std::string port, std::string password) : _host(host), _port(port), _password(password + "\n")
+Server::Server(std::string host, std::string port, std::string password) : _host(host), _port(port), _password(password)
 {
 	_sock = createSocket();
 //	_channels.push_back(new Channel("#room1", nullptr));
@@ -129,14 +129,7 @@ void			Server::action()
 				std::advance(itUser, std::distance(_pollfds.begin(), itPollfd) - 1);
 				ssize_t byteRecved;
                 byteRecved = recvMsg(*itUser);
-                if ((*itUser)->isAuthorized())
-                {
-                    _Invoker->processData(*itUser, (*itUser)->getMessage());
-                }
-                else
-                {
-                    validEnter(*itUser);
-                }
+				_Invoker->processData(*itUser, (*itUser)->getMessage());
 
 			}
 		}
@@ -179,11 +172,6 @@ int				Server::recvMsg(User *user) {
 		user->appendMessage(message);
 	}
 	return (byteRecved);
-}
-
-void			Server::validEnter(User *user)
-{
-	//TODO impelent /pass
 }
 
 // * ************** Added function ************** * //
@@ -310,3 +298,10 @@ User *Server::getUserById(std::string id) {
 	return nullptr;
 }
 
+bool	Server::checkPassword(std::string userPassword){
+
+	std::cout << userPassword << " " << _password << ":"<< std::endl;
+	if (userPassword == _password)
+		return true;
+	return false;
+}

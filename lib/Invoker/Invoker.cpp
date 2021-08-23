@@ -6,8 +6,8 @@
 #include "LeaveCommand.hpp"
 #include "WhoCommand.hpp"
 #include "ListCommand.hpp"
+#include "PassCommand.hpp"
 
-// TODO # define PASS_DIS		"/pass <passwordtoserver> - kick a user from channel"
 // TODO # define USER_DIS		"/user <username> <hostname> <servername> <realname> - used at the beginning of connection to specify you on server"
 
 Invoker::Invoker(Server *server) : _server(server) {
@@ -18,6 +18,7 @@ Invoker::Invoker(Server *server) : _server(server) {
 	_commands.push_back(new WhoCommand());
 	_commands.push_back(new KickCommand());
 	_commands.push_back(new ListCommand());
+	_commands.push_back(new PassCommand());
 }
 
 Invoker::~Invoker() {
@@ -37,9 +38,10 @@ void	Invoker::processCommand(User* sender, deque<string> args) {
 			} catch(const char* message) {
 				sender->getReply("Error: " + string(message));
 			}
-			break;
+			return ;
 		}
 	}
+	sender->getReply("Error: No such command");
 }
 
 void	Invoker::processData(User *sender, std::string data) {

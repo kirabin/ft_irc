@@ -11,7 +11,4 @@ class NickCommand: public Command {
 		void execute();
 };
 
-
-
-
 #endif

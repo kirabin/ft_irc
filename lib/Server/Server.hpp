@@ -30,7 +30,6 @@ class Server
 		Server();
 		int				createSocket();
 		void			removeUser(std::string id);
-		void			validEnter(User *user);
 		int				recvMsg(User *user);
 
 	public:
@@ -47,6 +46,8 @@ class Server
 		std::string		getSign()const;
 		std::string		getHost()const;
 		std::string		getServname()const;
+
+		bool			checkPassword(std::string userPassword);
 
 		Channel			*addChannel(std::string name, User *admin);
 
