@@ -232,15 +232,10 @@ void			Server::removeUser(std::string id)
 
 
     //TODO Имплементировать удаление с сервера пользователя
-
-    std::cout << id <<  " это пришло с Server::removeUser(int i)" << std::endl;
-
-    std::cout << "deleted from _users" << std::endl;
-
-
-
-
-
+    std::cout << "id: " << id << " nickname: " << this->getUserById(id)->getNick() << std::endl;
+    std::cout << "socket fd: " << this->getUserById(id)->getSockFd() << std::endl;
+    this->removeUserFromPoll(id);
+    this->removeUserFromUsers(id);
 }
 
 Channel			*Server::addChannel(std::string name, User *admin)
@@ -325,7 +320,17 @@ void Server::removeUserFromUsers(std::string id) {
 }
 
 void Server::removeUserFromPoll(std::string id) {
-
+	int socketUser = this->getUserById(id)->getSockFd();
+	std::vector<pollfd>::iterator	it = _pollfds.begin();
+	std::vector<pollfd>::iterator	ite = _pollfds.end();
+	for (; it != ite; it++ )
+	{
+		if (socketUser == (*it).fd)
+		{
+			_pollfds.erase(it);
+			break ;
+		}
+	}
 }
 
 void Server::show_pollfd() {
