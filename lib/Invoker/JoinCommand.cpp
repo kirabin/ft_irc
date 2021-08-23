@@ -8,6 +8,9 @@ JoinCommand::JoinCommand() {
 JoinCommand::~JoinCommand() {}
 
 void JoinCommand::execute() {
+
+	if (!_sender->isAuthorized())
+		throw "You're not authorized, use /pass";
 	if (_args.size() != 1)
 		throw "Arguments count error";
 	if (_sender->getChannel() != nullptr)

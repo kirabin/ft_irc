@@ -9,6 +9,8 @@ KickCommand::~KickCommand() {}
 
 void KickCommand::execute() {
 
+	if (!_sender->isAuthorized())
+		throw "You're not authorized, use /pass";
 	if (_args.size() != 2)
 		throw "Arguments count error";
 

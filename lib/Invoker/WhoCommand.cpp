@@ -9,6 +9,8 @@ WhoCommand::~WhoCommand() {}
 
 void WhoCommand::execute() {
 
+	if (!_sender->isAuthorized())
+		throw "You're not authorized, use /pass";
 	if (_args.size() != 1)
 		throw "Arguments count error";
 

@@ -8,6 +8,9 @@ ListCommand::ListCommand() {
 ListCommand::~ListCommand() {}
 
 void ListCommand::execute() {
+	if (!_sender->isAuthorized())
+		throw "You're not authorized, use /pass";
+
 	vector<Channel*> channels = _server->getChannels();
 	vector<Channel*>::iterator it;
 
