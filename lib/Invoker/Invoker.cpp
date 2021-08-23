@@ -29,7 +29,7 @@ void	Invoker::processCommand(User* sender, deque<string> args) {
 			try {
 				_commands[i]->execute();
 			} catch(const char* message) {
-				sender->getReply(string(message));
+				sender->getReply("Error" + string(message));
 			}
 			break;
 		}
@@ -55,8 +55,4 @@ void	Invoker::processData(User *sender, std::string data) {
 		cout << "seding message" << endl;
 		sender->sendMessageToChannel(data);
 	}
-}
-
-void Invoker::sendErrorReply(std::string info) {
-
 }

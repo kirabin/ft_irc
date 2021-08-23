@@ -19,8 +19,6 @@ class Invoker
 		Server						*_server;
 		std::vector<Command*>		_commands;
 
-		void			sendErrorReply(std::string info);
-
 	public:
 		Invoker(Server *server);
 		~Invoker();

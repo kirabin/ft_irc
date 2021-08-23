@@ -108,3 +108,7 @@ User			*Channel::getUser(std::string userName)
 	}
 	return nullptr;
 }
+
+std::vector<User *> Channel::getUsers() const {
+	return _users;
+}

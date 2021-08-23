@@ -6,18 +6,19 @@ NickCommand::~NickCommand() {}
 
 void NickCommand::execute() {
 
-    if (_args.size() < 1) {
-        _sender->getReply(_server->getSign() + SPC + (ERR_NEEDMOREPARAMS(_sender->getName(), _args[0])));
-    } else if (_args.size() > 1) {
-        _sender->getReply(_server->getSign() + SPC + (ERR_TOOMANYPARAMS(_sender->getName(), _args[0])));
-    } else {
-        std::string newName = _args[0];
-        std::string oldName = _sender->getName();
+	if (_args.size() != 1)
+		throw "Arguments count error";
 
-        _sender->setName(newName);
-        // _sender->sendMessageToChannel(_msg);
-		if (_sender->getChannel()) {
-			_sender->getChannel()->sendServiceMessageToChannel(oldName + " change name to " + newName);
-		}
-    }
+	string newName = _args[0];
+	string oldName = _sender->getName();
+
+	// TODO
+	// if (!isExistingName(newName))
+		// throw "This name already in use";
+
+	_sender->setName(newName);
+	_sender->getReply("Your nick is @" + newName);
+	if (_sender->getChannel()) {
+		_sender->sendMessageToChannel("@" + oldName + "set his nick to " + "@" + newName);
+	}
 }
