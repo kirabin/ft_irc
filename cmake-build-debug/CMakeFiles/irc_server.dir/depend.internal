@@ -34,6 +34,7 @@ CMakeFiles/irc_server.dir/lib/Invoker/Invoker.cpp.o
  /Users/mdenys/projects/ft_irc/lib/Invoker/LeaveCommand.hpp
  /Users/mdenys/projects/ft_irc/lib/Invoker/ListCommand.hpp
  /Users/mdenys/projects/ft_irc/lib/Invoker/NickCommand.hpp
+ /Users/mdenys/projects/ft_irc/lib/Invoker/PassCommand.hpp
  /Users/mdenys/projects/ft_irc/lib/Invoker/WhoCommand.hpp
  /Users/mdenys/projects/ft_irc/lib/Server/Server.hpp
  /Users/mdenys/projects/ft_irc/lib/User/User.hpp
@@ -80,6 +81,15 @@ CMakeFiles/irc_server.dir/lib/Invoker/NickCommand.cpp.o
  /Users/mdenys/projects/ft_irc/lib/Invoker/Invoker.hpp
  /Users/mdenys/projects/ft_irc/lib/Invoker/NickCommand.cpp
  /Users/mdenys/projects/ft_irc/lib/Invoker/NickCommand.hpp
+ /Users/mdenys/projects/ft_irc/lib/Server/Server.hpp
+ /Users/mdenys/projects/ft_irc/lib/User/User.hpp
+ /Users/mdenys/projects/ft_irc/lib/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/lib/Invoker/PassCommand.cpp.o
+ /Users/mdenys/projects/ft_irc/lib/Channel/Channel.hpp
+ /Users/mdenys/projects/ft_irc/lib/Invoker/Command.hpp
+ /Users/mdenys/projects/ft_irc/lib/Invoker/Invoker.hpp
+ /Users/mdenys/projects/ft_irc/lib/Invoker/PassCommand.cpp
+ /Users/mdenys/projects/ft_irc/lib/Invoker/PassCommand.hpp
  /Users/mdenys/projects/ft_irc/lib/Server/Server.hpp
  /Users/mdenys/projects/ft_irc/lib/User/User.hpp
  /Users/mdenys/projects/ft_irc/lib/Utils/ircserv.hpp

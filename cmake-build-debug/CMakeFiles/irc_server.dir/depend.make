@@ -34,6 +34,7 @@ CMakeFiles/irc_server.dir/lib/Invoker/Invoker.cpp.o: \
  ../lib/Invoker/LeaveCommand.hpp \
  ../lib/Invoker/ListCommand.hpp \
  ../lib/Invoker/NickCommand.hpp \
+ ../lib/Invoker/PassCommand.hpp \
  ../lib/Invoker/WhoCommand.hpp \
  ../lib/Server/Server.hpp \
  ../lib/User/User.hpp \
@@ -80,6 +81,15 @@ CMakeFiles/irc_server.dir/lib/Invoker/NickCommand.cpp.o: \
  ../lib/Invoker/Invoker.hpp \
  ../lib/Invoker/NickCommand.cpp \
  ../lib/Invoker/NickCommand.hpp \
+ ../lib/Server/Server.hpp \
+ ../lib/User/User.hpp \
+ ../lib/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/lib/Invoker/PassCommand.cpp.o: \
+ ../lib/Channel/Channel.hpp \
+ ../lib/Invoker/Command.hpp \
+ ../lib/Invoker/Invoker.hpp \
+ ../lib/Invoker/PassCommand.cpp \
+ ../lib/Invoker/PassCommand.hpp \
  ../lib/Server/Server.hpp \
  ../lib/User/User.hpp \
  ../lib/Utils/ircserv.hpp

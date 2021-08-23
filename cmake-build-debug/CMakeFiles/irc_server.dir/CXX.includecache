@@ -61,6 +61,8 @@ WhoCommand.hpp
 /Users/mdenys/projects/ft_irc/lib/Invoker/WhoCommand.hpp
 ListCommand.hpp
 /Users/mdenys/projects/ft_irc/lib/Invoker/ListCommand.hpp
+PassCommand.hpp
+/Users/mdenys/projects/ft_irc/lib/Invoker/PassCommand.hpp
 
 /Users/mdenys/projects/ft_irc/lib/Invoker/Invoker.hpp
 Command.hpp
@@ -115,6 +117,14 @@ NickCommand.hpp
 /Users/mdenys/projects/ft_irc/lib/Invoker/NickCommand.hpp
 
 /Users/mdenys/projects/ft_irc/lib/Invoker/NickCommand.hpp
+Command.hpp
+/Users/mdenys/projects/ft_irc/lib/Invoker/Command.hpp
+
+/Users/mdenys/projects/ft_irc/lib/Invoker/PassCommand.cpp
+PassCommand.hpp
+/Users/mdenys/projects/ft_irc/lib/Invoker/PassCommand.hpp
+
+/Users/mdenys/projects/ft_irc/lib/Invoker/PassCommand.hpp
 Command.hpp
 /Users/mdenys/projects/ft_irc/lib/Invoker/Command.hpp
 
