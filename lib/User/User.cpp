@@ -32,6 +32,7 @@ int				User::getSockFd()const { return _sockFd; }
 int				User::getPort()const { return _port; }
 std::string		User::getName()const { return _nick; }
 std::string		User::getHost()const { return _host; }
+std::string		User::getNick()const { return _nick; }
 std::string		User::getMessage() const { return _message; }
 Channel			*User::getChannel()const { return _channel; }
 

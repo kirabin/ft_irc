@@ -23,6 +23,7 @@ void JoinCommand::execute() {
 			Channel	*newChannel = _server->addChannel(_args[0], _sender);
 			_sender->setChannel(newChannel);
 			_sender->getChannel()->sendServiceMessageToChannel(_sender->getName() + " join to channel " + newChannel->getName());
+			newChannel->addUser(_sender);
 		}
 	}
 }

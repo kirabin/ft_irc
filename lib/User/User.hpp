@@ -26,7 +26,7 @@ class User
 		bool 			isAuthorized()const;
 		int				getSockFd()const;
 		int				getPort()const;
-		std::string		getnick()const;
+		std::string		getNick()const;
         std::string		getHost()const;
 		std::string		getMessage()const;
 		std::string		getSign()const;

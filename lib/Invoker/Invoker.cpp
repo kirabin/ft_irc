@@ -48,6 +48,7 @@ void	Invoker::processData(User *sender, std::string data) {
 
 		processCommand(sender, arguments);
 	} else {
+		cout << "seding message" << endl;
 		sender->sendMessageToChannel(data);
 	}
 }
