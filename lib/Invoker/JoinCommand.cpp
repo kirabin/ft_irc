@@ -24,7 +24,7 @@ void JoinCommand::execute() {
 			existingChan->addUser(_sender);
 			// existingChan->setOperator(_sender);
 		} else {
-			Channel	*newChannel = _server->addChannel(_args[0], _sender);
+			Channel	*newChannel = _server->createChannel(_args[0], _sender);
 			_sender->setChannel(newChannel);
 			_sender->getChannel()->sendServiceMessageToChannel(_sender->getName() + " join to channel " + newChannel->getName());
 			newChannel->addUser(_sender);

@@ -51,7 +51,7 @@ class Server
         //channel
         std::vector<Channel*>   getChannels();
         Channel			        *getChannel(std::string chanName);
-        Channel			        *addChannel(std::string name, User *admin);
+        Channel			        *createChannel(std::string name, User *admin);
         //other methods
 		void			        start();
 		void			        greeting(int client_d)const;

@@ -183,7 +183,7 @@ void			Server::removeUser(std::string id)
     this->removeUserFromUsers(id);
 }
 
-Channel			*Server::addChannel(std::string name, User *admin)
+Channel			*Server::createChannel(std::string name, User *admin)
 {
 	Channel	*newChannel = new Channel(name, admin);
 	_channels.push_back(newChannel);
