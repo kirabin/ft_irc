@@ -19,7 +19,6 @@ Server::~Server() { }
 int				Server::getSock()const { return _sock; }
 std::string		Server::getHost()const { return _host; }
 std::string		Server::getPort()const { return _port; }
-std::string		Server::getSign()const { return _port; }
 std::string		Server::getServname()const { return _servname; }
 
 User			*Server::getUser(std::string userName)
@@ -184,7 +183,7 @@ void			Server::removeUser(std::string id)
     this->removeUserFromUsers(id);
 }
 
-Channel			*Server::addChannel(std::string name, User *admin)
+Channel			*Server::createChannel(std::string name, User *admin)
 {
 	Channel	*newChannel = new Channel(name, admin);
 	_channels.push_back(newChannel);

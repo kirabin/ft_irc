@@ -345,6 +345,30 @@ lib/Invoker/NickCommand.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Invoker/NickCommand.cpp.s
 .PHONY : lib/Invoker/NickCommand.cpp.s
 
+lib/Invoker/PassCommand.o: lib/Invoker/PassCommand.cpp.o
+.PHONY : lib/Invoker/PassCommand.o
+
+# target to build an object file
+lib/Invoker/PassCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Invoker/PassCommand.cpp.o
+.PHONY : lib/Invoker/PassCommand.cpp.o
+
+lib/Invoker/PassCommand.i: lib/Invoker/PassCommand.cpp.i
+.PHONY : lib/Invoker/PassCommand.i
+
+# target to preprocess a source file
+lib/Invoker/PassCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Invoker/PassCommand.cpp.i
+.PHONY : lib/Invoker/PassCommand.cpp.i
+
+lib/Invoker/PassCommand.s: lib/Invoker/PassCommand.cpp.s
+.PHONY : lib/Invoker/PassCommand.s
+
+# target to generate assembly for a file
+lib/Invoker/PassCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/lib/Invoker/PassCommand.cpp.s
+.PHONY : lib/Invoker/PassCommand.cpp.s
+
 lib/Invoker/WhoCommand.o: lib/Invoker/WhoCommand.cpp.o
 .PHONY : lib/Invoker/WhoCommand.o
 
@@ -501,6 +525,9 @@ help:
 	@echo "... lib/Invoker/NickCommand.o"
 	@echo "... lib/Invoker/NickCommand.i"
 	@echo "... lib/Invoker/NickCommand.s"
+	@echo "... lib/Invoker/PassCommand.o"
+	@echo "... lib/Invoker/PassCommand.i"
+	@echo "... lib/Invoker/PassCommand.s"
 	@echo "... lib/Invoker/WhoCommand.o"
 	@echo "... lib/Invoker/WhoCommand.i"
 	@echo "... lib/Invoker/WhoCommand.s"

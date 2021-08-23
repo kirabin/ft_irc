@@ -134,6 +134,12 @@
 		<Unit filename="/Users/mdenys/projects/ft_irc/lib/Invoker/NickCommand.hpp">
 			<Option target="irc_server"/>
 		</Unit>
+		<Unit filename="/Users/mdenys/projects/ft_irc/lib/Invoker/PassCommand.cpp">
+			<Option target="irc_server"/>
+		</Unit>
+		<Unit filename="/Users/mdenys/projects/ft_irc/lib/Invoker/PassCommand.hpp">
+			<Option target="irc_server"/>
+		</Unit>
 		<Unit filename="/Users/mdenys/projects/ft_irc/lib/Invoker/WhoCommand.cpp">
 			<Option target="irc_server"/>
 		</Unit>

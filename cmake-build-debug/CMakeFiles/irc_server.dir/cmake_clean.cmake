@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/irc_server.dir/lib/Invoker/LeaveCommand.cpp.o"
   "CMakeFiles/irc_server.dir/lib/Invoker/ListCommand.cpp.o"
   "CMakeFiles/irc_server.dir/lib/Invoker/NickCommand.cpp.o"
+  "CMakeFiles/irc_server.dir/lib/Invoker/PassCommand.cpp.o"
   "CMakeFiles/irc_server.dir/lib/Invoker/WhoCommand.cpp.o"
   "CMakeFiles/irc_server.dir/lib/Server/Server.cpp.o"
   "CMakeFiles/irc_server.dir/lib/User/User.cpp.o"

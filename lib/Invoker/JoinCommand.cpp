@@ -8,7 +8,6 @@ JoinCommand::JoinCommand() {
 JoinCommand::~JoinCommand() {}
 
 void JoinCommand::execute() {
-
 	if (_args.size() != 1)
 		throw "Arguments count error";
 	if (_sender->getChannel() != nullptr)
@@ -24,7 +23,7 @@ void JoinCommand::execute() {
 	} else {
 		Channel	*newChannel = _server->addChannel(_args[0], _sender);
 
-		_sender->setChannel(newChannel);
+		_sender->createChannel(newChannel);
 		// "User joined channel"
 		newChannel->addUser(_sender);
 	}
