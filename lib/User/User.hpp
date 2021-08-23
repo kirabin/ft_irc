@@ -37,7 +37,7 @@ class User
 		void			setNick(std::string nick);
 		void			setSockFd(int fd);
 		void			setMessage(std::string message);
-		void			setEnter(bool enter);
+		void			setAuthorized(bool enter);
 		void			setChannel(Channel *channel);
         std::string     getId() const;
 		// Это метод не сюда, а в Channel

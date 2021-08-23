@@ -103,11 +103,7 @@ int				Server::acceptUser()
 
 void			Server::greeting(int client_d)const
 {
-	std::string str((WELCOME_MSG(_servname)));
-
-	if (send(client_d, str.c_str(), str.length(), SEND_OPT) == -1)
-		throw std::runtime_error("error send");
-	str = "Enter password: ";
+	std::string str((WELCOME_MSG(_servname, "\n\nUse /help to learn about allowed commands\n")));
 	if (send(client_d, str.c_str(), str.length(), SEND_OPT) == -1)
 		throw std::runtime_error("error send");
 }
@@ -187,23 +183,7 @@ int				Server::recvMsg(User *user) {
 
 void			Server::validEnter(User *user)
 {
-	std::string str("Success\n");
-
-	if (user->getMessage() == _password)
-	{
-		user->setEnter(true);
-		if (send(user->getSockFd(), str.c_str(), str.length(), SEND_OPT) == -1)
-			throw std::runtime_error("error send");
-	}
-	else
-	{
-		str = "Invalid password\n";
-		if (send(user->getSockFd(), str.c_str(), str.length(), SEND_OPT) == -1)
-			throw std::runtime_error("error send");
-		str = "Enter password: ";
-		if (send(user->getSockFd(), str.c_str(), str.length(), SEND_OPT) == -1)
-			throw std::runtime_error("error send");
-	}
+	//TODO impelent /pass
 }
 
 // * ************** Added function ************** * //

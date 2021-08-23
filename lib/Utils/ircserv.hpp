@@ -46,7 +46,7 @@
 # define PASS_DIS		"/pass <passwordtoserver> - kick a user from channel"
 # define USER_DIS		"/user <username> <hostname> <servername> <realname> - used at the beginning of connection to specify you on server"
 
-# define WELCOME_MSG(servname)	("Welcome to our server (" + servname + "), Dude!\nBefore you start, you have to do a simple authorization in a few steps:\n\n1) /pass\n2) /username\n3) /nickname\n\nTo learn more about the commands, use /help\n\r\n")
+# define WELCOME_MSG(servname, commands)	("Welcome to our server " + servname + ", Dude!\nBefore you start, you have to do a simple authorization in a few steps: " + commands )
 # define LEAVE_SERVER	" leave server"
 
 

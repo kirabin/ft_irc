@@ -42,7 +42,7 @@ std::string		User::getSign()const { return _nick + "@" + _host + ":" + std::to_s
 void			User::setName(std::string name) { _nick = name; }
 void			User::setSockFd(int fd) { _sockFd = fd; }
 void			User::setMessage(std::string message) { _message = message; }
-void			User::setEnter(bool enter) { _enter = enter; }
+void			User::setAuthorized(bool enter) { _enter = enter; }
 void			User::setChannel(Channel *channel) { _channel = channel; }
 
 // * **************** Class Function **************** * //
