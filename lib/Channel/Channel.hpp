@@ -22,8 +22,10 @@ class Channel
 		Channel(std::string name, User* admin);
 		~Channel();
 
-		std::string		getName()const;
-		User			*getAdmin()const;
+		std::string		getName() const;
+		User			*getAdmin() const;
+		User			*getUser(std::string userName);
+		std::vector<User *> getUsers() const;
 
 		void			addUser(User *newUser);
 		void			removeUser(User *user);

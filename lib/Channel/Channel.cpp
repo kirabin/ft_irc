@@ -17,17 +17,15 @@ void				Channel::addUser(User *newUser) {
 
 void				Channel::removeUser(User *user)
 {
-	std::vector<User *>::iterator iter = _users.begin();
-	User *tmp;
+	std::vector<User *>::iterator it;
 
-	for (; iter < _users.end(); iter++)
+	for (it = _users.begin(); it < _users.end(); it++)
 	{
-		tmp = *iter;
-		if (tmp == user)
+		if (*it == user)
 		{
-			std::cout << "The user *" << tmp->getName();
+			std::cout << "The user *" << (*it)->getName();
 			std::cout << "* has been removed from the channel *" << this->_name << "*" << std::endl;
-			_users.erase(iter);
+			_users.erase(it);
 			break ;
 		}
 	}
@@ -66,7 +64,7 @@ void			Channel::printShortInfo()const
 	std::cout << out;
 }
 
-void			Channel::printFullInfo()const
+void			Channel::printFullInfo() const
 {
 	std::cout << std::endl;
 	std::cout << "**************** Channel info ****************" << std::endl;
@@ -98,3 +96,17 @@ bool			Channel::isUser(User *user)const
 	return false;
 }
 
+User			*Channel::getUser(std::string userName)
+{
+	for (std::vector<User *>::iterator itUser = _users.begin(); itUser != _users.end(); itUser++)
+	{
+		std::string	curName = (*itUser)->getName();
+		if (curName == userName)
+			return *itUser;
+	}
+	return nullptr;
+}
+
+std::vector<User *> Channel::getUsers() const {
+	return _users;
+}

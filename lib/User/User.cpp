@@ -80,7 +80,6 @@ void			User::removeUserFromChannel()
 {
 	if (_channel != nullptr)
 		this->_channel->removeUser(this);
-
 }
 
 // * **************** Extra Function **************** * //

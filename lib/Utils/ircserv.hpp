@@ -37,10 +37,10 @@
 # define PASS		"/pass"
 # define USER		"/user"
 
-# define HELP_DIS		"/help <> - show a list of available commands"
+# define HELP_DIS		"/help - show a list of available commands"
 # define NICK_DIS		"/nick <nick> - сhange your nickname"
 # define JOIN_DIS		"/join <#channel> - join or create a channel"
-# define LEAVE_DIS		"/leave <#channel> - leave channel"
+# define LEAVE_DIS		"/leave - leave channel"
 # define WHO_DIS		"/who <#channel> - show the list of users on channel"
 # define KICK_DIS		"/kick <user> <#channel> - kick a user from channel"
 # define PASS_DIS		"/pass <passwordtoserver> - kick a user from channel"
