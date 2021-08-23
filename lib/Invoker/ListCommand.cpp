@@ -1,7 +1,9 @@
 #include "ListCommand.hpp"
 
-
-ListCommand::ListCommand(string name) : Command(name) {}
+ListCommand::ListCommand() {
+	_name = "/list";
+	_description = "/list - show channels on the server";
+}
 
 ListCommand::~ListCommand() {}
 

@@ -6,7 +6,7 @@ using namespace std;
 
 class WhoCommand: public Command {
 	public:
-		WhoCommand(string name);
+		WhoCommand();
 		virtual ~WhoCommand();
 		void execute();
 };

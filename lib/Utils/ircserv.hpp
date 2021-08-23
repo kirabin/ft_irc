@@ -23,7 +23,6 @@
 
 # define ENDL		"\r\n"
 # define SPC		" * "
-# define CMD_SIZE	6
 # define SEND_OPT	0
 
 // ----==== Command description ====---- //

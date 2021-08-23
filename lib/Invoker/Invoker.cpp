@@ -7,14 +7,21 @@
 #include "WhoCommand.hpp"
 #include "ListCommand.hpp"
 
+// TODO # define PASS_DIS		"/pass <passwordtoserver> - kick a user from channel"
+// TODO # define USER_DIS		"/user <username> <hostname> <servername> <realname> - used at the beginning of connection to specify you on server"
+
 Invoker::Invoker(Server *server) : _server(server) {
-	_commands.push_back(new HelpCommand("/help"));
-	_commands.push_back(new NickCommand("/nick"));
-	_commands.push_back(new JoinCommand("/join"));
-	_commands.push_back(new LeaveCommand("/leave"));
-	_commands.push_back(new WhoCommand("/who"));
-	_commands.push_back(new KickCommand("/kick"));
-	_commands.push_back(new ListCommand("/list"));
+	_commands.push_back(new HelpCommand(_commands));
+	_commands.push_back(new NickCommand());
+	_commands.push_back(new JoinCommand());
+	_commands.push_back(new LeaveCommand());
+	_commands.push_back(new WhoCommand());
+	_commands.push_back(new KickCommand());
+	_commands.push_back(new ListCommand());
+}
+
+Invoker::~Invoker() {
+	// TODO delete commands
 }
 
 void	Invoker::processCommand(User* sender, deque<string> args) {
@@ -56,5 +63,5 @@ void	Invoker::processData(User *sender, std::string data) {
 	} else {
 		sender->sendMessageToChannel(data);
 	}
-	
+
 }

@@ -1,6 +1,9 @@
 #include "JoinCommand.hpp"
 
-JoinCommand::JoinCommand(string name) : Command(name) {}
+JoinCommand::JoinCommand() {
+	 _name = "/join";
+	 _description = "/join <#channel> - join or create a channel";
+}
 
 JoinCommand::~JoinCommand() {}
 

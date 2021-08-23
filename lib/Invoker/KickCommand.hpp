@@ -6,7 +6,7 @@ using namespace std;
 
 class KickCommand: public Command {
 	public:
-		KickCommand(string name);
+		KickCommand();
 		virtual ~KickCommand();
 		void execute();
 };

@@ -5,9 +5,11 @@
 using namespace std;
 
 class HelpCommand: public Command {
+	private:
+		std::vector<Command*>& _commands;
 
 	public:
-		HelpCommand(string name);
+		HelpCommand(std::vector<Command*>& commands);
 		virtual ~HelpCommand();
 		void execute();
 };

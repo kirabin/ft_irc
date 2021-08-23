@@ -6,7 +6,7 @@ using namespace std;
 
 class LeaveCommand: public Command {
 	public:
-		LeaveCommand(string name);
+		LeaveCommand();
 		virtual ~LeaveCommand();
 		void execute();
 };

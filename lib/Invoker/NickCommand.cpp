@@ -1,6 +1,9 @@
 #include "NickCommand.hpp"
 
-NickCommand::NickCommand(string name) : Command(name) {}
+NickCommand::NickCommand() {
+	_name = "/nick";
+	_description = "/nick <nick> - сhange your nickname";
+}
 
 NickCommand::~NickCommand() {}
 
