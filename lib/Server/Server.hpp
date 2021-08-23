@@ -29,7 +29,7 @@ class Server
 
 		Server();
 		int				createSocket();
-		void			removeUser(int i);
+		void			removeUser(std::string id);
 		void			validEnter(User *user);
 		int				recvMsg(User *user);
 
@@ -38,7 +38,7 @@ class Server
 		~Server();
 
 		void			start();
-		int				acceptOK();
+		int				acceptUser();
 		void			greeting(int client_d)const;
 		void			action();
 		void			log(std::string text);
@@ -52,8 +52,13 @@ class Server
 
 		User			*getUser(int sock);
 		User			*getUser(std::string userName);
+		User			*getUserById(std::string id);
 		Channel			*getChannel(std::string chanName);
 		std::vector<Channel*> getChannels();
+		void            removeUserFromPoll(std::string id);
+		void            removeUserFromUsers(std::string id);
+		void            removeUserFromChannel();
+		void            show_pollfd();
 };
 
 #endif

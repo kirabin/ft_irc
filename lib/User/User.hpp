@@ -10,6 +10,7 @@ class User
 {
 	private:
 		std::string			_name;
+		std::string         _id;
 		bool				_enter;
 		int					_sockFd;
 		int					_port;		// Зачем нам это тут?
@@ -38,7 +39,7 @@ class User
 		void			setMessage(std::string message);
 		void			setEnter(bool enter);
 		void			setChannel(Channel *channel);
-
+        std::string     getId() const;
 		// Это метод не сюда, а в Channel
 		void			removeUserFromChannel();
 
@@ -51,6 +52,7 @@ class User
 
 		void			printShortInfo()const;
 		void			printFullInfo()const;
+		std::string     get_id();
 };
 
 #endif

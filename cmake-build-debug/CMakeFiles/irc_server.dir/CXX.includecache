@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/denisnadey/projects/ft_irc/lib/Channel/Channel.hpp
+/Users/mdenys/projects/ft_irc/lib/Channel/Channel.hpp
 ../Utils/ircserv.hpp
-/Users/denisnadey/projects/ft_irc/lib/Utils/ircserv.hpp
+/Users/mdenys/projects/ft_irc/lib/Utils/ircserv.hpp
 ../User/User.hpp
-/Users/denisnadey/projects/ft_irc/lib/User/User.hpp
+/Users/mdenys/projects/ft_irc/lib/User/User.hpp
 
-/Users/denisnadey/projects/ft_irc/lib/Invoker/Command.hpp
+/Users/mdenys/projects/ft_irc/lib/Invoker/Command.hpp
 iostream
 -
 string
@@ -22,21 +22,21 @@ deque
 vector
 -
 ../Server/Server.hpp
-/Users/denisnadey/projects/ft_irc/lib/Server/Server.hpp
+/Users/mdenys/projects/ft_irc/lib/Server/Server.hpp
 ../User/User.hpp
-/Users/denisnadey/projects/ft_irc/lib/User/User.hpp
+/Users/mdenys/projects/ft_irc/lib/User/User.hpp
 ../Utils/ircserv.hpp
-/Users/denisnadey/projects/ft_irc/lib/Utils/ircserv.hpp
+/Users/mdenys/projects/ft_irc/lib/Utils/ircserv.hpp
 
-/Users/denisnadey/projects/ft_irc/lib/Invoker/Invoker.hpp
+/Users/mdenys/projects/ft_irc/lib/Invoker/Invoker.hpp
 Command.hpp
-/Users/denisnadey/projects/ft_irc/lib/Invoker/Command.hpp
+/Users/mdenys/projects/ft_irc/lib/Invoker/Command.hpp
 ../Utils/ircserv.hpp
-/Users/denisnadey/projects/ft_irc/lib/Utils/ircserv.hpp
+/Users/mdenys/projects/ft_irc/lib/Utils/ircserv.hpp
 ../Server/Server.hpp
-/Users/denisnadey/projects/ft_irc/lib/Server/Server.hpp
+/Users/mdenys/projects/ft_irc/lib/Server/Server.hpp
 ../User/User.hpp
-/Users/denisnadey/projects/ft_irc/lib/User/User.hpp
+/Users/mdenys/projects/ft_irc/lib/User/User.hpp
 deque
 -
 vector
@@ -44,29 +44,29 @@ vector
 string
 -
 
-/Users/denisnadey/projects/ft_irc/lib/Server/Server.cpp
+/Users/mdenys/projects/ft_irc/lib/Server/Server.cpp
 Server.hpp
-/Users/denisnadey/projects/ft_irc/lib/Server/Server.hpp
+/Users/mdenys/projects/ft_irc/lib/Server/Server.hpp
 
-/Users/denisnadey/projects/ft_irc/lib/Server/Server.hpp
+/Users/mdenys/projects/ft_irc/lib/Server/Server.hpp
 vector
 -
 ../Utils/ircserv.hpp
-/Users/denisnadey/projects/ft_irc/lib/Utils/ircserv.hpp
+/Users/mdenys/projects/ft_irc/lib/Utils/ircserv.hpp
 ../User/User.hpp
-/Users/denisnadey/projects/ft_irc/lib/User/User.hpp
+/Users/mdenys/projects/ft_irc/lib/User/User.hpp
 ../Channel/Channel.hpp
-/Users/denisnadey/projects/ft_irc/lib/Channel/Channel.hpp
+/Users/mdenys/projects/ft_irc/lib/Channel/Channel.hpp
 ../Invoker/Invoker.hpp
-/Users/denisnadey/projects/ft_irc/lib/Invoker/Invoker.hpp
+/Users/mdenys/projects/ft_irc/lib/Invoker/Invoker.hpp
 
-/Users/denisnadey/projects/ft_irc/lib/User/User.hpp
+/Users/mdenys/projects/ft_irc/lib/User/User.hpp
 ../Utils/ircserv.hpp
-/Users/denisnadey/projects/ft_irc/lib/Utils/ircserv.hpp
+/Users/mdenys/projects/ft_irc/lib/Utils/ircserv.hpp
 ../Channel/Channel.hpp
-/Users/denisnadey/projects/ft_irc/lib/Channel/Channel.hpp
+/Users/mdenys/projects/ft_irc/lib/Channel/Channel.hpp
 
-/Users/denisnadey/projects/ft_irc/lib/Utils/ircserv.hpp
+/Users/mdenys/projects/ft_irc/lib/Utils/ircserv.hpp
 iostream
 -
 sstream

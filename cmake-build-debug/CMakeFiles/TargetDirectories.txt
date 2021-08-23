@@ -1,3 +1,3 @@
-/Users/denisnadey/projects/ft_irc/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/denisnadey/projects/ft_irc/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/denisnadey/projects/ft_irc/cmake-build-debug/CMakeFiles/irc_server.dir
+/Users/mdenys/projects/ft_irc/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/mdenys/projects/ft_irc/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mdenys/projects/ft_irc/cmake-build-debug/CMakeFiles/irc_server.dir

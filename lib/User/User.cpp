@@ -20,6 +20,7 @@ User::User(std::string nick, int sockFd, char *host, int port)
 	_port = port;
 	_channel = nullptr;
 	_enter = false;
+	_id =  get_id();
 }
 
 User::~User()
@@ -106,4 +107,24 @@ void			User::printFullInfo()const
 	out << std::endl;
 
 	std::cout << out;
+}
+
+std::string User::get_id() {
+
+		std::string s;
+		static const char alphanum[] =
+				"0123456789"
+				"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+				"abcdefghijklmnopqrstuvwxyz";
+		srand( time( 0 ) ); // автоматическая рандомизация
+		for (int i = 0; i < 25; ++i) {
+			s += alphanum[rand() % (sizeof(alphanum) - 1)];
+		}
+
+		return s;
+
+}
+
+std::string User::getId() const{
+	return _id;
 }

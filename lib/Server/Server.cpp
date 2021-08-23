@@ -79,7 +79,7 @@ void			Server::start()
 	}
 }
 
-int				Server::acceptOK()
+int				Server::acceptUser()
 {
 	int				client_d;
 	sockaddr_in		client_addr;
@@ -96,14 +96,8 @@ int				Server::acceptOK()
 	if (fcntl(client_d, F_SETFL, O_NONBLOCK) == -1)
 	 	throw std::runtime_error("error fcntl");
 
-	static int	i;
-	i++;
-
 	User	*newUser = new User("user_example", client_d, inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
 	_users.push_back(newUser);
-
-// TODO Убрать добавление в рандомный чат
-	//randChannel->addUser(newUser);
 
 	std::cout << "New client " << newUser->getName() << "@" << newUser->getHost() << ":" << newUser->getPort() << std::endl;
 	return client_d;
@@ -132,7 +126,7 @@ void			Server::action()
 		{
 			if (curPollfd.fd == _sock)
 			{
-				this->greeting(acceptOK());
+				this->greeting(acceptUser());
 				break ;
 			}
 			else
@@ -160,8 +154,7 @@ void			Server::action()
             if ((*itUser)->isAuthorized() && ((*itUser)->getName() != "user_example"))
             {
                 std::cout << "disconnect @" << (*itUser)->getName() << std::endl;
-                this->removeUser((*itUser)->getSockFd());
-                std::cout << "and deleted from server" << std::endl;
+                this->removeUser((*itUser)->getId());
             }
             else
             {
@@ -217,7 +210,7 @@ void			Server::validEnter(User *user)
 
 // * ************** Added function ************** * //
 
-void			Server::removeUser(int i)
+void			Server::removeUser(std::string id)
 {
 //	// remove User[i] - first
 //	std::vector<User *>::iterator iterUser = _users.begin();
@@ -233,9 +226,21 @@ void			Server::removeUser(int i)
 //	_pollfds.erase(iterPollfd);
 
 
+
+
+	this->show_pollfd();
+
+
     //TODO Имплементировать удаление с сервера пользователя
 
-    std::cout << "представье что удаление произошло это пришло с Server::removeUser(int i)" << std::endl;
+    std::cout << id <<  " это пришло с Server::removeUser(int i)" << std::endl;
+
+    std::cout << "deleted from _users" << std::endl;
+
+
+
+
+
 }
 
 Channel			*Server::addChannel(std::string name, User *admin)
@@ -300,5 +305,45 @@ void Server::log(std::string text) {
 
 vector<Channel *> Server::getChannels() {
     return _channels;
+}
+
+void Server::removeUserFromChannel() {
+
+}
+
+void Server::removeUserFromUsers(std::string id) {
+	std::vector<User *>::iterator	it = _users.begin();
+	std::vector<User *>::iterator	ite = _users.end();
+	for (; it != ite; it++ )
+	{
+		if ((*it)->getId() == id)
+		{
+			_users.erase(it);
+			break ;
+		}
+	}
+}
+
+void Server::removeUserFromPoll(std::string id) {
+
+}
+
+void Server::show_pollfd() {
+	std::vector<pollfd>::iterator	it = _pollfds.begin();
+	std::vector<pollfd>::iterator	ite = _pollfds.end();
+	for (; it != ite; it++ )
+	{
+		std::cout << (*it).fd << std::endl;
+	}
+}
+
+User *Server::getUserById(std::string id) {
+	for (std::vector<User *>::iterator itUser = _users.begin(); itUser != _users.end(); itUser++)
+	{
+		std::string	_id = (*itUser)->getId();
+		if (_id == id)
+			return *itUser;
+	}
+	return nullptr;
 }
 
