@@ -1,6 +1,6 @@
 #ifndef NameCommand_hpp
 # define NameCommand_hpp
-# include "Command.hpp"
+# include "../Command.hpp"
 
 using namespace std;
 

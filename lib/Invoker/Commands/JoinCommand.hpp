@@ -1,6 +1,6 @@
 #ifndef JoinCommand_hpp
 # define JoinCommand_hpp
-# include "Command.hpp"
+# include "../Command.hpp"
 
 using namespace std;
 

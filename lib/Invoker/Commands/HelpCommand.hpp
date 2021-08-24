@@ -1,6 +1,6 @@
 #ifndef HelpCommand_hpp
 # define HelpCommand_hpp
-# include "Command.hpp"
+# include "../Command.hpp"
 
 using namespace std;
 

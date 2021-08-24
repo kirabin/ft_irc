@@ -1,6 +1,6 @@
 #ifndef PassCommand_hpp
 # define PassCommand_hpp
-# include "Command.hpp"
+# include "../Command.hpp"
 
 using namespace std;
 

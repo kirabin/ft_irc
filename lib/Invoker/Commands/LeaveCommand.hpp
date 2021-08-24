@@ -1,6 +1,6 @@
 #ifndef LeaveCommand_hpp
 # define LeaveCommand_hpp
-# include "Command.hpp"
+# include "../Command.hpp"
 
 using namespace std;
 

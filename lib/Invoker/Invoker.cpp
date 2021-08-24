@@ -1,12 +1,12 @@
 #include "Invoker.hpp"
-#include "NickCommand.hpp"
-#include "HelpCommand.hpp"
-#include "JoinCommand.hpp"
-#include "KickCommand.hpp"
-#include "LeaveCommand.hpp"
-#include "WhoCommand.hpp"
-#include "ListCommand.hpp"
-#include "PassCommand.hpp"
+#include "Commands/NickCommand.hpp"
+#include "Commands/HelpCommand.hpp"
+#include "Commands/JoinCommand.hpp"
+#include "Commands/KickCommand.hpp"
+#include "Commands/LeaveCommand.hpp"
+#include "Commands/WhoCommand.hpp"
+#include "Commands/ListCommand.hpp"
+#include "Commands/PassCommand.hpp"
 
 Invoker::Invoker(Server *server) : _server(server) {
 	_commands.push_back(new HelpCommand(_commands));

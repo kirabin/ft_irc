@@ -1,6 +1,6 @@
 #ifndef KickCommand_hpp
 # define KickCommand_hpp
-# include "Command.hpp"
+# include "../Command.hpp"
 
 using namespace std;
 
