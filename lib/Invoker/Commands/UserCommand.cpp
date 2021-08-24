@@ -1,17 +1,18 @@
-#include "NameCommand.hpp"
+#include "UserCommand.hpp"
 
 // TODO: numeric replies
 // ERR_NEEDMOREPARAMS
 // ERR_ALREADYREGISTRED
 
-NameCommand::NameCommand() {
+// TODO: https://datatracker.ietf.org/doc/html/rfc2812#section-3.1.3
+
+UserCommand::UserCommand() {
 	_name = "/name";
 	_description = "/user <username> <hostname> <servername> <realname> - used at the beginning of connection to specify you on server";
 }
 
-NameCommand::~NameCommand() {}
+UserCommand::~UserCommand() {}
 
-void NameCommand::execute() {
-
+void UserCommand::execute() {
 
 }

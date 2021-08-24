@@ -9,8 +9,7 @@ class User;
 class User
 {
 	private:
-		std::string			_name;
-		std::string         _id;
+		std::string			_id;
 		bool				_enter;
 		int					_sockFd;
 		int					_port;
@@ -20,6 +19,9 @@ class User
 		Channel				*_channel;
 
 	public:
+		std::string			username;
+		std::string			realname;
+
 		User(int sockFd, int port);
 		User(int sockFd, char *host, int port);
 		~User();
@@ -28,7 +30,7 @@ class User
 		int				getSockFd()const;
 		int				getPort()const;
 		std::string		getNick()const;
-        std::string		getHost()const;
+		std::string		getHost()const;
 		std::string		getMessage()const;
 		std::string		getSign()const;
 		Channel			*getChannel()const;
