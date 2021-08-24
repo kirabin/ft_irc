@@ -21,7 +21,7 @@ class User
 
 	public:
 		User(int sockFd, int port);
-		User(std::string nick, int sockFd, char *host, int port);
+		User(int sockFd, char *host, int port);
 		~User();
 
 		bool 			isAuthorized()const;

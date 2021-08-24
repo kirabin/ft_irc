@@ -1,5 +1,7 @@
 #include "KickCommand.hpp"
 
+// TODO: numeric replies
+
 KickCommand::KickCommand() {
 	_name = "/kick";
 	_description = "/kick <user> <#channel> - kick a user from channel";

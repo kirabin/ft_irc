@@ -89,7 +89,7 @@ int				Server::acceptUser()
 	if (fcntl(client_d, F_SETFL, O_NONBLOCK) == -1)
 	 	throw std::runtime_error("error fcntl");
 
-	User	*newUser = new User("user_example", client_d, inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
+	User	*newUser = new User(client_d, inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
 	_users.push_back(newUser);
 
 	std::cout << "New client " << newUser->getName() << "@" << newUser->getHost() << ":" << newUser->getPort() << std::endl;

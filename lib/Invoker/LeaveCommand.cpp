@@ -1,5 +1,7 @@
 #include "LeaveCommand.hpp"
 
+// TODO: numeric replies
+
 LeaveCommand::LeaveCommand() {
 	_name = "/leave";
 	_description = "/leave - leave channel";

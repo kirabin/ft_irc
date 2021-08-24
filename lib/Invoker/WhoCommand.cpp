@@ -1,5 +1,7 @@
 #include "WhoCommand.hpp"
 
+// TODO: numeric replies
+
 WhoCommand::WhoCommand() {
 	_name = "/who";
 	_description = "/who <#channel> - show the list of users on channel";

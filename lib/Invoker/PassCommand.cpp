@@ -1,5 +1,7 @@
 #include "PassCommand.hpp"
 
+// TODO: numeric replies
+
 PassCommand::PassCommand() {
 	_name = "/pass";
 	_description = "/pass <passwordtoserver> - authorise on channel";

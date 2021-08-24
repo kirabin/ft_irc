@@ -1,5 +1,10 @@
 #include "NickCommand.hpp"
 
+// TODO: Numeric replies
+// ERR_NONICKNAMEGIVEN             ERR_ERRONEUSNICKNAME
+// ERR_NICKNAMEINUSE               ERR_NICKCOLLISION
+// ERR_UNAVAILRESOURCE             ERR_RESTRICTED
+
 NickCommand::NickCommand() {
 	_name = "/nick";
 	_description = "/nick <nick> - сhange your nickname";
@@ -11,19 +16,28 @@ void NickCommand::execute() {
 
 	if (!_sender->isAuthorized())
 		throw "You're not authorized, use /pass";
+
+	string oldNick = _sender->getNick();
+	if (_args.size() == 0) {
+		_sender->getReply("Your nick is @" + oldNick);
+		_sender->getReply("");
+		return ;
+	}
+
 	if (_args.size() != 1)
 		throw "Arguments count error";
 
-	string newName = _args[0];
-	string oldName = _sender->getName();
+	string newNick = _args[0];
 
-	if (_server->getUser(newName))
-		throw "This name already in use";
+	if (newNick == oldNick)
+		throw "Nick can't be the same as before";
+	if (_server->getUser(newNick))
+		throw "This nick is already in use";
 
-	_sender->setName(newName);
-	_sender->getReply("Your nick is @" + newName);
+	_sender->setName(newNick);
+	_sender->getReply("Your nick changed to @" + newNick);
 	if (_sender->getChannel()) {
-		_sender->sendMessageToChannel("@" + oldName + "set his nick to " + "@" + newName);
+		_sender->sendMessageToChannel("@" + oldNick+ "set his nick to " + "@" + newNick);
 	}
 	_sender->getReply("");
 }

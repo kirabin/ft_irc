@@ -1,5 +1,7 @@
 #include "ListCommand.hpp"
 
+// TODO: numeric replies
+
 ListCommand::ListCommand() {
 	_name = "/list";
 	_description = "/list - show channels on the server";

@@ -8,8 +8,6 @@
 #include "ListCommand.hpp"
 #include "PassCommand.hpp"
 
-// TODO # define USER_DIS		"/user <username> <hostname> <servername> <realname> - used at the beginning of connection to specify you on server"
-
 Invoker::Invoker(Server *server) : _server(server) {
 	_commands.push_back(new HelpCommand(_commands));
 	_commands.push_back(new NickCommand());
@@ -22,7 +20,12 @@ Invoker::Invoker(Server *server) : _server(server) {
 }
 
 Invoker::~Invoker() {
-	// TODO delete commands
+	vector<Command*>::iterator it;
+
+	// TODO: how to close a server?
+	for (it = _commands.begin(); it != _commands.end(); it++) {
+		delete *it;
+	}
 }
 
 void	Invoker::processCommand(User* sender, deque<string> args) {
@@ -37,11 +40,13 @@ void	Invoker::processCommand(User* sender, deque<string> args) {
 				_commands[i]->execute();
 			} catch(const char* message) {
 				sender->getReply("Error: " + string(message));
+				sender->getReply("");
 			}
 			return ;
 		}
 	}
 	sender->getReply("Error: No such command");
+	sender->getReply("");
 }
 
 void	Invoker::processData(User *sender, std::string data) {
@@ -57,7 +62,8 @@ void	Invoker::processData(User *sender, std::string data) {
 		while (getline(ssMsg, av, ' '))
 		{
 			av.erase(av.find_last_not_of(ENDL) + 1);
-			arguments.push_back(av);
+			if (!av.empty())
+				arguments.push_back(av);
 		}
 		/////////////////////
 

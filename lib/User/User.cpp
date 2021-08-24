@@ -12,9 +12,9 @@ User::User(int sockFd, int port)
 	_enter = false;
 }
 
-User::User(std::string nick, int sockFd, char *host, int port)
+User::User(int sockFd, char *host, int port)
 {
-	_nick = nick;
+	_nick = "";
 	_sockFd = sockFd;
 	_host = host;
 	_port = port;
