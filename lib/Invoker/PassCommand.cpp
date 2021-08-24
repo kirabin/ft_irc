@@ -21,5 +21,3 @@ void PassCommand::execute() {
 	_sender->getReply("You're now authorized");
 	_sender->getReply("");
 }
-
-// TODO is auth to errors

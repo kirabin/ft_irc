@@ -17,9 +17,8 @@ void NickCommand::execute() {
 	string newName = _args[0];
 	string oldName = _sender->getName();
 
-	// TODO
-	// if (!isExistingName(newName))
-		// throw "This name already in use";
+	if (_server->getUser(newName))
+		throw "This name already in use";
 
 	_sender->setName(newName);
 	_sender->getReply("Your nick is @" + newName);
