@@ -1,5 +1,5 @@
-#include "lib/Utils/ircserv.hpp"
-#include "lib/Server/Server.hpp"
+#include "src/Utils/ircserv.hpp"
+#include "src/Server/Server.hpp"
 
 int main(int argc, char **argv)
 {

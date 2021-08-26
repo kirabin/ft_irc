@@ -1,38 +1,38 @@
 NAME	=	a.out
 COMPILER=	clang++
 FLAGS	=	-Wall -Wextra -g
-SRC		=	lib/Channel/Channel.cpp \
-			lib/Invoker/Command.cpp \
-			lib/Invoker/Commands/HelpCommand.cpp \
-			lib/Invoker/Commands/JoinCommand.cpp \
-			lib/Invoker/Commands/KickCommand.cpp \
-			lib/Invoker/Commands/LeaveCommand.cpp \
-			lib/Invoker/Commands/ListCommand.cpp \
-			lib/Invoker/Commands/NameCommand.cpp \
-			lib/Invoker/Commands/NickCommand.cpp \
-			lib/Invoker/Commands/PassCommand.cpp \
-			lib/Invoker/Commands/WhoCommand.cpp \
-			lib/Invoker/Invoker.cpp \
-			lib/Server/Server.cpp \
-			lib/User/User.cpp \
-			lib/Utils/utils.cpp \
+SRC		=	src/Channel/Channel.cpp \
+			src/Invoker/Command.cpp \
+			src/Invoker/Commands/HelpCommand.cpp \
+			src/Invoker/Commands/JoinCommand.cpp \
+			src/Invoker/Commands/KickCommand.cpp \
+			src/Invoker/Commands/LeaveCommand.cpp \
+			src/Invoker/Commands/ListCommand.cpp \
+			src/Invoker/Commands/UserCommand.cpp \
+			src/Invoker/Commands/NickCommand.cpp \
+			src/Invoker/Commands/PassCommand.cpp \
+			src/Invoker/Commands/WhoCommand.cpp \
+			src/Invoker/Invoker.cpp \
+			src/Server/Server.cpp \
+			src/User/User.cpp \
+			src/Utils/utils.cpp \
 			main.cpp
 OBJ		=	$(SRC:.cpp=.o)
-INC		=	lib/Channel/Channel.hpp \
-			lib/Invoker/Command.hpp \
-			lib/Invoker/Commands/HelpCommand.hpp \
-			lib/Invoker/Commands/JoinCommand.hpp \
-			lib/Invoker/Commands/KickCommand.hpp \
-			lib/Invoker/Commands/LeaveCommand.hpp \
-			lib/Invoker/Commands/ListCommand.hpp \
-			lib/Invoker/Commands/NameCommand.hpp \
-			lib/Invoker/Commands/NickCommand.hpp \
-			lib/Invoker/Commands/PassCommand.hpp \
-			lib/Invoker/Commands/WhoCommand.hpp \
-			lib/Invoker/Invoker.hpp \
-			lib/Server/Server.hpp \
-			lib/User/User.hpp \
-			lib/Utils/ircserv.hpp
+INC		=	src/Channel/Channel.hpp \
+			src/Invoker/Command.hpp \
+			src/Invoker/Commands/HelpCommand.hpp \
+			src/Invoker/Commands/JoinCommand.hpp \
+			src/Invoker/Commands/KickCommand.hpp \
+			src/Invoker/Commands/LeaveCommand.hpp \
+			src/Invoker/Commands/ListCommand.hpp \
+			src/Invoker/Commands/UserCommand.hpp \
+			src/Invoker/Commands/NickCommand.hpp \
+			src/Invoker/Commands/PassCommand.hpp \
+			src/Invoker/Commands/WhoCommand.hpp \
+			src/Invoker/Invoker.hpp \
+			src/Server/Server.hpp \
+			src/User/User.hpp \
+			src/Utils/ircserv.hpp
 
 .PHONY: bircd
 
@@ -64,9 +64,9 @@ bircd:
 	./bircd/bircd.out 6667
 
 run:
-	./a.out 127.0.0.1:6444:23
+	./a.out 127.0.0.1:6667:23
 
 nc:
-	nc 127.0.0.1 6444
+	nc 127.0.0.1 6667
 
 
