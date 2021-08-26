@@ -8,7 +8,7 @@
 
 UserCommand::UserCommand() {
 	_name = "/name";
-	_description = "/user <username> <hostname> <servername> <realname> - used at the beginning of connection to specify you on server";
+	_description = "USER <username> <hostname> <servername> <realname> - used at the beginning of connection to specify you on server";
 }
 
 UserCommand::~UserCommand() {}

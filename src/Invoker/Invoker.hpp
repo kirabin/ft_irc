@@ -25,6 +25,7 @@ class Invoker
 
 		void			processData(User *sender, std::string msg);
 		void			processCommand(User *sender, deque<string> arguments);
+		bool			isCommand(std::string data);
 };
 
 #endif

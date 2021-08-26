@@ -7,6 +7,6 @@
 - You must be able to authenticate, a username.
 
 To Implement:
-- `/join #channel`
+- `JOIN #channel`
 - `/msg nickname`
 - `/nich new_nickname`

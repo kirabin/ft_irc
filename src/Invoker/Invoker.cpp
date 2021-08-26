@@ -49,24 +49,33 @@ void	Invoker::processCommand(User* sender, deque<string> args) {
 	sender->getReply("");
 }
 
+bool	Invoker::isCommand(std::string data) {
+	vector<Command*>::iterator it;
+
+	for (it = _commands.begin(); it != _commands.end(); it++) {
+		if ((*it)->getName() == data) {
+			return true;
+		}
+	}
+	return false;
+}
+
 void	Invoker::processData(User *sender, std::string data) {
 
 	std::cout << "@" << sender->getName() << " " << data;
 
-	if (data[0] == '/') {  // data.isCommand()
-		// split
-		stringstream	ssMsg(data);
-		string			av;
-		deque<string>	arguments;
+	stringstream	ssMsg(data);
+	string			av;
+	deque<string>	arguments;
 
-		while (getline(ssMsg, av, ' '))
-		{
-			av.erase(av.find_last_not_of(ENDL) + 1);
-			if (!av.empty())
-				arguments.push_back(av);
-		}
-		/////////////////////
+	while (getline(ssMsg, av, ' '))
+	{
+		av.erase(av.find_last_not_of(ENDL) + 1);
+		if (!av.empty())
+			arguments.push_back(av);
+	}
 
+	if (isCommand(arguments[0])) {
 		processCommand(sender, arguments);
 	} else {
 		sender->sendMessageToChannel(data);

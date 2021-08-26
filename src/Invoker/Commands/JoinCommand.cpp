@@ -3,8 +3,8 @@
 // TODO: numeric replies
 
 JoinCommand::JoinCommand() {
-	 _name = "/join";
-	 _description = "/join <#channel> - join or create a channel";
+	 _name = "JOIN";
+	 _description = "JOIN <#channel> - join or create a channel";
 }
 
 JoinCommand::~JoinCommand() {}
@@ -12,7 +12,7 @@ JoinCommand::~JoinCommand() {}
 void JoinCommand::execute() {
 
 	if (!_sender->isAuthorized())
-		throw "You're not authorized, use /pass";
+		throw "You're not authorized, use PASS";
 	if (_args.size() != 1)
 		throw "Arguments count error";
 	if (_sender->getChannel() != nullptr)

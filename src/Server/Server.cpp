@@ -98,7 +98,7 @@ int				Server::acceptUser()
 
 void			Server::greeting(int client_d)const
 {
-	std::string str((WELCOME_MSG(_servname, "\n\nUse /help to learn about allowed commands\n")));
+	std::string str((WELCOME_MSG(_servname, "\n\nUse HELP to learn about allowed commands\n")));
 	if (send(client_d, str.c_str(), str.length(), SEND_OPT) == -1)
 		throw std::runtime_error("error send");
 }

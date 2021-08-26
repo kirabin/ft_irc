@@ -3,8 +3,8 @@
 // TODO: numeric replies
 
 LeaveCommand::LeaveCommand() {
-	_name = "/leave";
-	_description = "/leave - leave channel";
+	_name = "LEAVE";
+	_description = "LEAVE - leave channel";
 }
 
 LeaveCommand::~LeaveCommand() {}
@@ -12,7 +12,7 @@ LeaveCommand::~LeaveCommand() {}
 void LeaveCommand::execute() {
 
 	if (!_sender->isAuthorized())
-		throw "You're not authorized, use /pass";
+		throw "You're not authorized, use PASS";
 	if (_args.size() != 0)
 		throw "Arguments count error";
 	if (_sender->getChannel() == nullptr)

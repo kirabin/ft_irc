@@ -3,8 +3,8 @@
 // TODO: numeric replies
 
 WhoCommand::WhoCommand() {
-	_name = "/who";
-	_description = "/who <#channel> - show the list of users on channel";
+	_name = "/WHO";
+	_description = "/WHO <#channel> - show the list of users on channel";
 }
 
 WhoCommand::~WhoCommand() {}
@@ -12,7 +12,7 @@ WhoCommand::~WhoCommand() {}
 void WhoCommand::execute() {
 
 	if (!_sender->isAuthorized())
-		throw "You're not authorized, use /pass";
+		throw "You're not authorized, use PASS";
 	if (_args.size() != 1)
 		throw "Arguments count error";
 

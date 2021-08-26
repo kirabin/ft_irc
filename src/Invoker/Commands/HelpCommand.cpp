@@ -3,8 +3,8 @@
 // TODO: numeric replies
 
 HelpCommand::HelpCommand(std::vector<Command*>& commands) : _commands(commands){
-	_name = "/help";
-	_description = "/help - show a list of available commands";
+	_name = "HELP";
+	_description = "HELP - show a list of available commands";
 }
 
 HelpCommand::~HelpCommand() {}

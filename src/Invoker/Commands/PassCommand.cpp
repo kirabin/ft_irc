@@ -3,8 +3,8 @@
 // TODO: numeric replies
 
 PassCommand::PassCommand() {
-	_name = "/pass";
-	_description = "/pass <passwordtoserver> - authorise on channel";
+	_name = "PASS";
+	_description = "PASS <passwordtoserver> - authorise on channel";
 }
 
 PassCommand::~PassCommand() {}

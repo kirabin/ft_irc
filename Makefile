@@ -45,8 +45,7 @@ $(NAME): $(OBJ)
 	$(COMPILER) $(FLAGS) $(OBJ)
 
 clean:
-	rm -f */*.o
-	rm -f *.o
+	rm -f $(OBJ)
 	rm -f */*.out
 	rm -f *.out
 	rm -f */*.gch
@@ -68,5 +67,3 @@ run:
 
 nc:
 	nc 127.0.0.1 6667
-
-

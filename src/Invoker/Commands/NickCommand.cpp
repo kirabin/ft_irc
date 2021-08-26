@@ -6,8 +6,8 @@
 // ERR_UNAVAILRESOURCE             ERR_RESTRICTED
 
 NickCommand::NickCommand() {
-	_name = "/nick";
-	_description = "/nick <nick> - сhange your nickname";
+	_name = "NICK";
+	_description = "NICK <nick> - сhange your nickname";
 }
 
 NickCommand::~NickCommand() {}
@@ -15,7 +15,7 @@ NickCommand::~NickCommand() {}
 void NickCommand::execute() {
 
 	if (!_sender->isAuthorized())
-		throw "You're not authorized, use /pass";
+		throw "You're not authorized, use PASS";
 
 	string oldNick = _sender->getNick();
 	if (_args.size() == 0) {

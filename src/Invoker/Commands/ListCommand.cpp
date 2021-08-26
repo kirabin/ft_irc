@@ -3,15 +3,15 @@
 // TODO: numeric replies
 
 ListCommand::ListCommand() {
-	_name = "/list";
-	_description = "/list - show channels on the server";
+	_name = "LIST";
+	_description = "LIST - show channels on the server";
 }
 
 ListCommand::~ListCommand() {}
 
 void ListCommand::execute() {
 	if (!_sender->isAuthorized())
-		throw "You're not authorized, use /pass";
+		throw "You're not authorized, use PASS";
 
 	vector<Channel*> channels = _server->getChannels();
 	vector<Channel*>::iterator it;

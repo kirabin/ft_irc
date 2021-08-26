@@ -35,7 +35,7 @@ class Server
 	public:
 		Server(const std::string host, const std::string port, const std::string password);
 		~Server();
-        //user
+
         int				        acceptUser();
         User			        *getUser(int sock);
         User			        *getUser(std::string userName);
