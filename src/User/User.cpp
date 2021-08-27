@@ -49,7 +49,7 @@ void			User::setChannel(Channel *channel) { _channel = channel; }
 void			User::appendMessage(std::string message)
 {
 	_message.append(message);
-	_message.erase(_message.find_last_not_of(ENDL) + 1);
+	_message.erase(_message.find_last_not_of("\n\r") + 1);
 	_message.append("\n");
 }
 
@@ -71,8 +71,8 @@ void			User::getReply(std::string message)
 {
 	std::string	finalMessage;
 
-	finalMessage = message + ENDL;
-	send(_sockFd, finalMessage.c_str(), finalMessage.length(), SEND_OPT);
+	finalMessage = message + "\n\r";
+	send(_sockFd, finalMessage.c_str(), finalMessage.length(), 0);
 }
 
 void			User::removeUserFromChannel()

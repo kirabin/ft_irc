@@ -1,10 +1,13 @@
 #include "KickCommand.hpp"
 
 // TODO: numeric replies
+// ERR_NEEDMOREPARAMS              ERR_NOSUCHCHANNEL
+// ERR_BADCHANMASK                 ERR_CHANOPRIVSNEEDED
+// ERR_NOTONCHANNEL
 
 KickCommand::KickCommand() {
-	_name = "/kick";
-	_description = "/kick <user> <#channel> - kick a user from channel";
+	_name = "KICK";
+	_description = "KICK <user> <#channel> - kick a user from channel";
 }
 
 KickCommand::~KickCommand() {}

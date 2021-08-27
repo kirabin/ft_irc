@@ -7,7 +7,7 @@
 // TODO: https://datatracker.ietf.org/doc/html/rfc2812#section-3.1.3
 
 UserCommand::UserCommand() {
-	_name = "/name";
+	_name = "USER";
 	_description = "USER <username> <hostname> <servername> <realname> - used at the beginning of connection to specify you on server";
 }
 
@@ -15,4 +15,9 @@ UserCommand::~UserCommand() {}
 
 void UserCommand::execute() {
 
+	if (_args.size() != 4)
+		throw "Arguments count error";
+
+	// _sender.setUsername();
+	// _sender.setRealname();
 }

@@ -1,6 +1,11 @@
 #include "JoinCommand.hpp"
 
 // TODO: numeric replies
+// ERR_NEEDMOREPARAMS              ERR_BANNEDFROMCHAN
+// ERR_INVITEONLYCHAN              ERR_BADCHANNELKEY
+// ERR_CHANNELISFULL               ERR_BADCHANMASK
+// ERR_NOSUCHCHANNEL               ERR_TOOMANYCHANNELS
+// RPL_TOPIC
 
 JoinCommand::JoinCommand() {
 	 _name = "JOIN";

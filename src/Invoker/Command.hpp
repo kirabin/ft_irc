@@ -11,6 +11,8 @@ class Command;
 # include "../User/User.hpp"
 # include "../Utils/ircserv.hpp"
 
+// TODO: QUIT command
+
 using namespace std;
 
 class Command {
@@ -27,7 +29,7 @@ class Command {
 
 		string getName() const;
 		string getDescription() const;
-		
+
 		void setSender(User* sender);
 		void setServer(Server* server);
 		void setArgs(deque<string> args);

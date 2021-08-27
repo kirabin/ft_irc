@@ -3,8 +3,8 @@
 // TODO: numeric replies
 
 WhoCommand::WhoCommand() {
-	_name = "/WHO";
-	_description = "/WHO <#channel> - show the list of users on channel";
+	_name = "WHO";
+	_description = "WHO <#channel> - show the list of users on channel";
 }
 
 WhoCommand::~WhoCommand() {}

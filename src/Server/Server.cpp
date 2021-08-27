@@ -99,7 +99,7 @@ int				Server::acceptUser()
 void			Server::greeting(int client_d)const
 {
 	std::string str((WELCOME_MSG(_servname, "\n\nUse HELP to learn about allowed commands\n")));
-	if (send(client_d, str.c_str(), str.length(), SEND_OPT) == -1)
+	if (send(client_d, str.c_str(), str.length(), 0) == -1)
 		throw std::runtime_error("error send");
 }
 
@@ -158,7 +158,7 @@ int				Server::recvMsg(User *user) {
 
 	user->clearMessage();
 	memset(message, '\0', sizeof(message));
-	while (!std::strstr(message, ENDL))
+	while (!std::strstr(message, "\n\r"))
 	{
 		memset(message, '\0', sizeof(message));
 		byteRecved = recv(user->getSockFd(), message, sizeof(message), RECV_FLAGS);
@@ -294,8 +294,6 @@ User *Server::getUserById(std::string id) {
 }
 
 bool	Server::checkPassword(std::string userPassword){
-
-	std::cout << userPassword << " " << _password << ":"<< std::endl;
 	if (userPassword == _password)
 		return true;
 	return false;

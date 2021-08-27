@@ -6,8 +6,6 @@ class Channel;
 # include "../Utils/ircserv.hpp"
 # include "../User/User.hpp"
 
-# define SEND_OPT	0
-
 class Channel
 {
 	private:

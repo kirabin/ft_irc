@@ -5,6 +5,8 @@
 // ERR_NICKNAMEINUSE               ERR_NICKCOLLISION
 // ERR_UNAVAILRESOURCE             ERR_RESTRICTED
 
+// ERR_NEEDMOREPARAMS
+
 NickCommand::NickCommand() {
 	_name = "NICK";
 	_description = "NICK <nick> - сhange your nickname";

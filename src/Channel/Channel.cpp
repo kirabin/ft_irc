@@ -32,7 +32,7 @@ void				Channel::removeUser(User *user)
 }
 
 void	Channel::sendMessageToUser(User* user, std::string message) {
-	send(user->getSockFd(), message.c_str(), message.length(), SEND_OPT);
+	send(user->getSockFd(), message.c_str(), message.length(), 0);
 }
 
 void	Channel::sendMessageToChannel(User *sender, std::string message) {
@@ -49,7 +49,7 @@ void				Channel::sendServiceMessageToChannel(std::string message)
 	std::string	fMessage = "* " + message + " *";
 
 	for (std::vector<User *>::iterator iter = _users.begin(); iter != _users.end(); iter++) {
-		send((*iter)->getSockFd(), fMessage.c_str(), fMessage.length(), SEND_OPT);
+		send((*iter)->getSockFd(), fMessage.c_str(), fMessage.length(), 0);
 	}
 }
 

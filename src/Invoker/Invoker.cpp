@@ -39,7 +39,10 @@ void	Invoker::processCommand(User* sender, deque<string> args) {
 			try {
 				_commands[i]->execute();
 			} catch(const char* message) {
-				sender->getReply("Error: " + string(message));
+				sender->getReply(string(message));
+				sender->getReply("");
+			} catch(string message) {
+				sender->getReply(message);
 				sender->getReply("");
 			}
 			return ;
@@ -70,7 +73,7 @@ void	Invoker::processData(User *sender, std::string data) {
 
 	while (getline(ssMsg, av, ' '))
 	{
-		av.erase(av.find_last_not_of(ENDL) + 1);
+		av.erase(av.find_last_not_of("\n\r") + 1);
 		if (!av.empty())
 			arguments.push_back(av);
 	}
