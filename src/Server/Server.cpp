@@ -118,6 +118,11 @@ void			Server::action()
             std::vector<User *>::iterator	itUser = _users.begin();
             std::advance(itUser, std::distance(_pollfds.begin(), itPollfd) - 1);
 
+			if (_users.empty())
+			{
+				break;
+			}
+
             if ((*itUser)->isAuthorized() && ((*itUser)->getName() != "user_example"))
             {
                 std::cout << "disconnect @" << (*itUser)->getName() << std::endl;
@@ -128,7 +133,7 @@ void			Server::action()
                 std::cout << "disconnect not registered user" << std::endl;
                 this->removeUser((*itUser)->getId());
             }
-            close(curPollfd.fd);
+
             break;
 
         }
@@ -271,6 +276,7 @@ void Server::removeUserFromPoll(std::string id) {
 	{
 		if (socketUser == (*it).fd)
 		{
+			close((*it).fd);
 			_pollfds.erase(it);
 			break ;
 		}

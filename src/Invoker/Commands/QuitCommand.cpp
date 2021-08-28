@@ -11,5 +11,6 @@ void QuitCommand::execute() {
 	// if (_args > 0) {
 	// 	// TODO: print message somewhere
 	// }
-	// TODO: terminate session
+    _server->removeUser(_sender->getId());
+
 }

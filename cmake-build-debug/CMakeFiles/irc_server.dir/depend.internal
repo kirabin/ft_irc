@@ -22,6 +22,15 @@ CMakeFiles/irc_server.dir/src/Invoker/Command.cpp.o
  /Users/denisnadey/projects/ft_irc/src/Server/Server.hpp
  /Users/denisnadey/projects/ft_irc/src/User/User.hpp
  /Users/denisnadey/projects/ft_irc/src/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.o
+ /Users/denisnadey/projects/ft_irc/src/Channel/Channel.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Command.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/ErrorCommand.cpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/ErrorCommand.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Invoker.hpp
+ /Users/denisnadey/projects/ft_irc/src/Server/Server.hpp
+ /Users/denisnadey/projects/ft_irc/src/User/User.hpp
+ /Users/denisnadey/projects/ft_irc/src/Utils/ircserv.hpp
 CMakeFiles/irc_server.dir/src/Invoker/Commands/HelpCommand.cpp.o
  /Users/denisnadey/projects/ft_irc/src/Channel/Channel.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Command.hpp
@@ -85,6 +94,24 @@ CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.o
  /Users/denisnadey/projects/ft_irc/src/Server/Server.hpp
  /Users/denisnadey/projects/ft_irc/src/User/User.hpp
  /Users/denisnadey/projects/ft_irc/src/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.o
+ /Users/denisnadey/projects/ft_irc/src/Channel/Channel.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Command.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/QuitCommand.cpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/QuitCommand.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Invoker.hpp
+ /Users/denisnadey/projects/ft_irc/src/Server/Server.hpp
+ /Users/denisnadey/projects/ft_irc/src/User/User.hpp
+ /Users/denisnadey/projects/ft_irc/src/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.o
+ /Users/denisnadey/projects/ft_irc/src/Channel/Channel.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Command.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/UserCommand.cpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/UserCommand.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Invoker.hpp
+ /Users/denisnadey/projects/ft_irc/src/Server/Server.hpp
+ /Users/denisnadey/projects/ft_irc/src/User/User.hpp
+ /Users/denisnadey/projects/ft_irc/src/Utils/ircserv.hpp
 CMakeFiles/irc_server.dir/src/Invoker/Commands/WhoCommand.cpp.o
  /Users/denisnadey/projects/ft_irc/src/Channel/Channel.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Command.hpp
@@ -97,6 +124,7 @@ CMakeFiles/irc_server.dir/src/Invoker/Commands/WhoCommand.cpp.o
 CMakeFiles/irc_server.dir/src/Invoker/Invoker.cpp.o
  /Users/denisnadey/projects/ft_irc/src/Channel/Channel.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Command.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/ErrorCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/HelpCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/JoinCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/KickCommand.hpp
@@ -104,6 +132,8 @@ CMakeFiles/irc_server.dir/src/Invoker/Invoker.cpp.o
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/ListCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NickCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PassCommand.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/QuitCommand.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/UserCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/WhoCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Invoker.cpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Invoker.hpp

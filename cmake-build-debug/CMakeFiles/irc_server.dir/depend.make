@@ -22,6 +22,15 @@ CMakeFiles/irc_server.dir/src/Invoker/Command.cpp.o: \
  ../src/Server/Server.hpp \
  ../src/User/User.hpp \
  ../src/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.o: \
+ ../src/Channel/Channel.hpp \
+ ../src/Invoker/Command.hpp \
+ ../src/Invoker/Commands/ErrorCommand.cpp \
+ ../src/Invoker/Commands/ErrorCommand.hpp \
+ ../src/Invoker/Invoker.hpp \
+ ../src/Server/Server.hpp \
+ ../src/User/User.hpp \
+ ../src/Utils/ircserv.hpp
 CMakeFiles/irc_server.dir/src/Invoker/Commands/HelpCommand.cpp.o: \
  ../src/Channel/Channel.hpp \
  ../src/Invoker/Command.hpp \
@@ -85,6 +94,24 @@ CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.o: \
  ../src/Server/Server.hpp \
  ../src/User/User.hpp \
  ../src/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.o: \
+ ../src/Channel/Channel.hpp \
+ ../src/Invoker/Command.hpp \
+ ../src/Invoker/Commands/QuitCommand.cpp \
+ ../src/Invoker/Commands/QuitCommand.hpp \
+ ../src/Invoker/Invoker.hpp \
+ ../src/Server/Server.hpp \
+ ../src/User/User.hpp \
+ ../src/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.o: \
+ ../src/Channel/Channel.hpp \
+ ../src/Invoker/Command.hpp \
+ ../src/Invoker/Commands/UserCommand.cpp \
+ ../src/Invoker/Commands/UserCommand.hpp \
+ ../src/Invoker/Invoker.hpp \
+ ../src/Server/Server.hpp \
+ ../src/User/User.hpp \
+ ../src/Utils/ircserv.hpp
 CMakeFiles/irc_server.dir/src/Invoker/Commands/WhoCommand.cpp.o: \
  ../src/Channel/Channel.hpp \
  ../src/Invoker/Command.hpp \
@@ -97,6 +124,7 @@ CMakeFiles/irc_server.dir/src/Invoker/Commands/WhoCommand.cpp.o: \
 CMakeFiles/irc_server.dir/src/Invoker/Invoker.cpp.o: \
  ../src/Channel/Channel.hpp \
  ../src/Invoker/Command.hpp \
+ ../src/Invoker/Commands/ErrorCommand.hpp \
  ../src/Invoker/Commands/HelpCommand.hpp \
  ../src/Invoker/Commands/JoinCommand.hpp \
  ../src/Invoker/Commands/KickCommand.hpp \
@@ -104,6 +132,8 @@ CMakeFiles/irc_server.dir/src/Invoker/Invoker.cpp.o: \
  ../src/Invoker/Commands/ListCommand.hpp \
  ../src/Invoker/Commands/NickCommand.hpp \
  ../src/Invoker/Commands/PassCommand.hpp \
+ ../src/Invoker/Commands/QuitCommand.hpp \
+ ../src/Invoker/Commands/UserCommand.hpp \
  ../src/Invoker/Commands/WhoCommand.hpp \
  ../src/Invoker/Invoker.cpp \
  ../src/Invoker/Invoker.hpp \

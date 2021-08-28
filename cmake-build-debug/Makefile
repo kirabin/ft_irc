@@ -201,6 +201,30 @@ src/Invoker/Command.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Command.cpp.s
 .PHONY : src/Invoker/Command.cpp.s
 
+src/Invoker/Commands/ErrorCommand.o: src/Invoker/Commands/ErrorCommand.cpp.o
+.PHONY : src/Invoker/Commands/ErrorCommand.o
+
+# target to build an object file
+src/Invoker/Commands/ErrorCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.o
+.PHONY : src/Invoker/Commands/ErrorCommand.cpp.o
+
+src/Invoker/Commands/ErrorCommand.i: src/Invoker/Commands/ErrorCommand.cpp.i
+.PHONY : src/Invoker/Commands/ErrorCommand.i
+
+# target to preprocess a source file
+src/Invoker/Commands/ErrorCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.i
+.PHONY : src/Invoker/Commands/ErrorCommand.cpp.i
+
+src/Invoker/Commands/ErrorCommand.s: src/Invoker/Commands/ErrorCommand.cpp.s
+.PHONY : src/Invoker/Commands/ErrorCommand.s
+
+# target to generate assembly for a file
+src/Invoker/Commands/ErrorCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.s
+.PHONY : src/Invoker/Commands/ErrorCommand.cpp.s
+
 src/Invoker/Commands/HelpCommand.o: src/Invoker/Commands/HelpCommand.cpp.o
 .PHONY : src/Invoker/Commands/HelpCommand.o
 
@@ -369,6 +393,54 @@ src/Invoker/Commands/PassCommand.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.s
 .PHONY : src/Invoker/Commands/PassCommand.cpp.s
 
+src/Invoker/Commands/QuitCommand.o: src/Invoker/Commands/QuitCommand.cpp.o
+.PHONY : src/Invoker/Commands/QuitCommand.o
+
+# target to build an object file
+src/Invoker/Commands/QuitCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.o
+.PHONY : src/Invoker/Commands/QuitCommand.cpp.o
+
+src/Invoker/Commands/QuitCommand.i: src/Invoker/Commands/QuitCommand.cpp.i
+.PHONY : src/Invoker/Commands/QuitCommand.i
+
+# target to preprocess a source file
+src/Invoker/Commands/QuitCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.i
+.PHONY : src/Invoker/Commands/QuitCommand.cpp.i
+
+src/Invoker/Commands/QuitCommand.s: src/Invoker/Commands/QuitCommand.cpp.s
+.PHONY : src/Invoker/Commands/QuitCommand.s
+
+# target to generate assembly for a file
+src/Invoker/Commands/QuitCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.s
+.PHONY : src/Invoker/Commands/QuitCommand.cpp.s
+
+src/Invoker/Commands/UserCommand.o: src/Invoker/Commands/UserCommand.cpp.o
+.PHONY : src/Invoker/Commands/UserCommand.o
+
+# target to build an object file
+src/Invoker/Commands/UserCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.o
+.PHONY : src/Invoker/Commands/UserCommand.cpp.o
+
+src/Invoker/Commands/UserCommand.i: src/Invoker/Commands/UserCommand.cpp.i
+.PHONY : src/Invoker/Commands/UserCommand.i
+
+# target to preprocess a source file
+src/Invoker/Commands/UserCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.i
+.PHONY : src/Invoker/Commands/UserCommand.cpp.i
+
+src/Invoker/Commands/UserCommand.s: src/Invoker/Commands/UserCommand.cpp.s
+.PHONY : src/Invoker/Commands/UserCommand.s
+
+# target to generate assembly for a file
+src/Invoker/Commands/UserCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.s
+.PHONY : src/Invoker/Commands/UserCommand.cpp.s
+
 src/Invoker/Commands/WhoCommand.o: src/Invoker/Commands/WhoCommand.cpp.o
 .PHONY : src/Invoker/Commands/WhoCommand.o
 
@@ -507,6 +579,9 @@ help:
 	@echo "... src/Invoker/Command.o"
 	@echo "... src/Invoker/Command.i"
 	@echo "... src/Invoker/Command.s"
+	@echo "... src/Invoker/Commands/ErrorCommand.o"
+	@echo "... src/Invoker/Commands/ErrorCommand.i"
+	@echo "... src/Invoker/Commands/ErrorCommand.s"
 	@echo "... src/Invoker/Commands/HelpCommand.o"
 	@echo "... src/Invoker/Commands/HelpCommand.i"
 	@echo "... src/Invoker/Commands/HelpCommand.s"
@@ -528,6 +603,12 @@ help:
 	@echo "... src/Invoker/Commands/PassCommand.o"
 	@echo "... src/Invoker/Commands/PassCommand.i"
 	@echo "... src/Invoker/Commands/PassCommand.s"
+	@echo "... src/Invoker/Commands/QuitCommand.o"
+	@echo "... src/Invoker/Commands/QuitCommand.i"
+	@echo "... src/Invoker/Commands/QuitCommand.s"
+	@echo "... src/Invoker/Commands/UserCommand.o"
+	@echo "... src/Invoker/Commands/UserCommand.i"
+	@echo "... src/Invoker/Commands/UserCommand.s"
 	@echo "... src/Invoker/Commands/WhoCommand.o"
 	@echo "... src/Invoker/Commands/WhoCommand.i"
 	@echo "... src/Invoker/Commands/WhoCommand.s"

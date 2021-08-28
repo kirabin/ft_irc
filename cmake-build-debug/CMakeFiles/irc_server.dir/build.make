@@ -261,6 +261,45 @@ CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PassCommand.cpp -o CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.s
 
+CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.o: CMakeFiles/irc_server.dir/flags.make
+CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.o: ../src/Invoker/Commands/QuitCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/denisnadey/projects/ft_irc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.o -c /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/QuitCommand.cpp
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/QuitCommand.cpp > CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.i
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/QuitCommand.cpp -o CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.s
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.o: CMakeFiles/irc_server.dir/flags.make
+CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.o: ../src/Invoker/Commands/ErrorCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/denisnadey/projects/ft_irc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.o -c /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/ErrorCommand.cpp
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/ErrorCommand.cpp > CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.i
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/ErrorCommand.cpp -o CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.s
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.o: CMakeFiles/irc_server.dir/flags.make
+CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.o: ../src/Invoker/Commands/UserCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/denisnadey/projects/ft_irc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.o -c /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/UserCommand.cpp
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/UserCommand.cpp > CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.i
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/UserCommand.cpp -o CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.s
+
 # Object files for target irc_server
 irc_server_OBJECTS = \
 "CMakeFiles/irc_server.dir/src/Channel/Channel.cpp.o" \
@@ -277,7 +316,10 @@ irc_server_OBJECTS = \
 "CMakeFiles/irc_server.dir/src/Utils/utils.cpp.o" \
 "CMakeFiles/irc_server.dir/main.cpp.o" \
 "CMakeFiles/irc_server.dir/src/Invoker/Commands/ListCommand.cpp.o" \
-"CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.o"
+"CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.o" \
+"CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.o" \
+"CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.o" \
+"CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.o"
 
 # External object files for target irc_server
 irc_server_EXTERNAL_OBJECTS =
@@ -297,9 +339,12 @@ irc_server: CMakeFiles/irc_server.dir/src/Utils/utils.cpp.o
 irc_server: CMakeFiles/irc_server.dir/main.cpp.o
 irc_server: CMakeFiles/irc_server.dir/src/Invoker/Commands/ListCommand.cpp.o
 irc_server: CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.o
+irc_server: CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.o
+irc_server: CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.o
+irc_server: CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.o
 irc_server: CMakeFiles/irc_server.dir/build.make
 irc_server: CMakeFiles/irc_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/denisnadey/projects/ft_irc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable irc_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/denisnadey/projects/ft_irc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable irc_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/irc_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
