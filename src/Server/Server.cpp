@@ -68,7 +68,9 @@ void			Server::start()
 		iter = _pollfds.begin();
 		if (poll(&(*iter), _pollfds.size(), -1) == -1)
 			throw std::runtime_error("error: poll");
+
 		this->action();
+
 	}
 }
 
@@ -111,24 +113,7 @@ void			Server::action()
 	{
 		curPollfd = *itPollfd;
 
-		if ((curPollfd.revents & POLLIN) == POLLIN)
-		{
-			if (curPollfd.fd == _sock)
-			{
-				this->greeting(acceptUser());
-				break ;
-			}
-			else
-			{
-                std::vector<User *>::iterator	itUser = _users.begin();
-				std::advance(itUser, std::distance(_pollfds.begin(), itPollfd) - 1);
-				ssize_t byteRecved;
-                byteRecved = recvMsg(*itUser);
-				_Invoker->processData(*itUser, (*itUser)->getMessage());
-
-			}
-		}
-		if ((curPollfd.revents & POLLHUP) == POLLHUP)
+		 if ((curPollfd.revents & POLLHUP) == POLLHUP)
         {
             std::vector<User *>::iterator	itUser = _users.begin();
             std::advance(itUser, std::distance(_pollfds.begin(), itPollfd) - 1);
@@ -147,6 +132,24 @@ void			Server::action()
             break;
 
         }
+
+		if ((curPollfd.revents & POLLIN) == POLLIN)
+		{
+			if (curPollfd.fd == _sock)
+			{
+				this->greeting(acceptUser());
+				break ;
+			}
+			else
+			{
+				std::vector<User *>::iterator	itUser = _users.begin();
+				std::advance(itUser, std::distance(_pollfds.begin(), itPollfd) - 1);
+				ssize_t byteRecved;
+				byteRecved = recvMsg(*itUser);
+				_Invoker->processData(*itUser, (*itUser)->getMessage());
+
+			}
+		}
 
 
 	}
