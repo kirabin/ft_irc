@@ -1,4 +1,4 @@
-NAME	=	a.out
+NAME	=	ircserv
 COMPILER=	clang++
 FLAGS	=	-Wall -Wextra -g
 SRC		=	src/Channel/Channel.cpp \
@@ -14,6 +14,8 @@ SRC		=	src/Channel/Channel.cpp \
 			src/Invoker/Commands/WhoCommand.cpp \
 			src/Invoker/Commands/QuitCommand.cpp \
 			src/Invoker/Commands/ErrorCommand.cpp \
+			src/Invoker/Commands/NoticeCommand.cpp \
+			src/Invoker/Commands/PrivateMessageCommand.cpp \
 			src/Invoker/Invoker.cpp \
 			src/Server/Server.cpp \
 			src/User/User.cpp \
@@ -33,6 +35,8 @@ INC		=	src/Channel/Channel.hpp \
 			src/Invoker/Commands/WhoCommand.hpp \
 			src/Invoker/Commands/QuitCommand.hpp \
 			src/Invoker/Commands/ErrorCommand.hpp \
+			src/Invoker/Commands/NoticeCommand.hpp \
+			src/Invoker/Commands/PrivateMessageCommand.hpp \
 			src/Invoker/Invoker.hpp \
 			src/Server/Server.hpp \
 			src/User/User.hpp \

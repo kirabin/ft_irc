@@ -29,13 +29,12 @@ class Server
 
 		Server();
 		int				        createSocket();
-		void			        removeUser(std::string id);
 		int				        recvMsg(User *user);
 
 	public:
 		Server(const std::string host, const std::string port, const std::string password);
 		~Server();
-
+        void			        removeUser(std::string id);
         int				        acceptUser();
         User			        *getUser(int sock);
         User			        *getUser(std::string userName);

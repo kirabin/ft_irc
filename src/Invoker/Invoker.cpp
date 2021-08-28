@@ -10,6 +10,8 @@
 #include "Commands/ErrorCommand.hpp"
 #include "Commands/QuitCommand.hpp"
 #include "Commands/UserCommand.hpp"
+#include "Commands/NoticeCommand.hpp"
+#include "Commands/PrivateMessageCommand.hpp"
 
 Invoker::Invoker(Server *server) : _server(server) {
 	_commands.push_back(new HelpCommand(_commands));
@@ -23,6 +25,8 @@ Invoker::Invoker(Server *server) : _server(server) {
 	_commands.push_back(new ErrorCommand());
 	_commands.push_back(new QuitCommand());
 	_commands.push_back(new UserCommand());
+	_commands.push_back(new NoticeCommand());
+	_commands.push_back(new PrivateMessageCommand());
 }
 
 Invoker::~Invoker() {
