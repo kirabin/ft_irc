@@ -85,11 +85,29 @@ CMakeFiles/irc_server.dir/src/Invoker/Commands/NickCommand.cpp.o: \
  ../src/Server/Server.hpp \
  ../src/User/User.hpp \
  ../src/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.o: \
+ ../src/Channel/Channel.hpp \
+ ../src/Invoker/Command.hpp \
+ ../src/Invoker/Commands/NoticeCommand.cpp \
+ ../src/Invoker/Commands/NoticeCommand.hpp \
+ ../src/Invoker/Invoker.hpp \
+ ../src/Server/Server.hpp \
+ ../src/User/User.hpp \
+ ../src/Utils/ircserv.hpp
 CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.o: \
  ../src/Channel/Channel.hpp \
  ../src/Invoker/Command.hpp \
  ../src/Invoker/Commands/PassCommand.cpp \
  ../src/Invoker/Commands/PassCommand.hpp \
+ ../src/Invoker/Invoker.hpp \
+ ../src/Server/Server.hpp \
+ ../src/User/User.hpp \
+ ../src/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.o: \
+ ../src/Channel/Channel.hpp \
+ ../src/Invoker/Command.hpp \
+ ../src/Invoker/Commands/PrivateMessageCommand.cpp \
+ ../src/Invoker/Commands/PrivateMessageCommand.hpp \
  ../src/Invoker/Invoker.hpp \
  ../src/Server/Server.hpp \
  ../src/User/User.hpp \
@@ -131,7 +149,9 @@ CMakeFiles/irc_server.dir/src/Invoker/Invoker.cpp.o: \
  ../src/Invoker/Commands/LeaveCommand.hpp \
  ../src/Invoker/Commands/ListCommand.hpp \
  ../src/Invoker/Commands/NickCommand.hpp \
+ ../src/Invoker/Commands/NoticeCommand.hpp \
  ../src/Invoker/Commands/PassCommand.hpp \
+ ../src/Invoker/Commands/PrivateMessageCommand.hpp \
  ../src/Invoker/Commands/QuitCommand.hpp \
  ../src/Invoker/Commands/UserCommand.hpp \
  ../src/Invoker/Commands/WhoCommand.hpp \

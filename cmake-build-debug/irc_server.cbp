@@ -135,10 +135,22 @@
 		<Unit filename="/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NickCommand.hpp">
 			<Option target="irc_server"/>
 		</Unit>
+		<Unit filename="/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NoticeCommand.cpp">
+			<Option target="irc_server"/>
+		</Unit>
+		<Unit filename="/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NoticeCommand.hpp">
+			<Option target="irc_server"/>
+		</Unit>
 		<Unit filename="/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PassCommand.cpp">
 			<Option target="irc_server"/>
 		</Unit>
 		<Unit filename="/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PassCommand.hpp">
+			<Option target="irc_server"/>
+		</Unit>
+		<Unit filename="/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PrivateMessageCommand.cpp">
+			<Option target="irc_server"/>
+		</Unit>
+		<Unit filename="/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PrivateMessageCommand.hpp">
 			<Option target="irc_server"/>
 		</Unit>
 		<Unit filename="/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/QuitCommand.cpp">

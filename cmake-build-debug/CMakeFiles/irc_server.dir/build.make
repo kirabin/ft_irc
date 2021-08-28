@@ -300,6 +300,32 @@ CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/UserCommand.cpp -o CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.s
 
+CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.o: CMakeFiles/irc_server.dir/flags.make
+CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.o: ../src/Invoker/Commands/NoticeCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/denisnadey/projects/ft_irc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.o -c /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NoticeCommand.cpp
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NoticeCommand.cpp > CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.i
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NoticeCommand.cpp -o CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.s
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.o: CMakeFiles/irc_server.dir/flags.make
+CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.o: ../src/Invoker/Commands/PrivateMessageCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/denisnadey/projects/ft_irc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.o -c /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PrivateMessageCommand.cpp
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PrivateMessageCommand.cpp > CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.i
+
+CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PrivateMessageCommand.cpp -o CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.s
+
 # Object files for target irc_server
 irc_server_OBJECTS = \
 "CMakeFiles/irc_server.dir/src/Channel/Channel.cpp.o" \
@@ -319,7 +345,9 @@ irc_server_OBJECTS = \
 "CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.o" \
 "CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.o" \
 "CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.o" \
-"CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.o"
+"CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.o" \
+"CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.o" \
+"CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.o"
 
 # External object files for target irc_server
 irc_server_EXTERNAL_OBJECTS =
@@ -342,9 +370,11 @@ irc_server: CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.o
 irc_server: CMakeFiles/irc_server.dir/src/Invoker/Commands/QuitCommand.cpp.o
 irc_server: CMakeFiles/irc_server.dir/src/Invoker/Commands/ErrorCommand.cpp.o
 irc_server: CMakeFiles/irc_server.dir/src/Invoker/Commands/UserCommand.cpp.o
+irc_server: CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.o
+irc_server: CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.o
 irc_server: CMakeFiles/irc_server.dir/build.make
 irc_server: CMakeFiles/irc_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/denisnadey/projects/ft_irc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable irc_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/denisnadey/projects/ft_irc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable irc_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/irc_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

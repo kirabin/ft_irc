@@ -85,11 +85,29 @@ CMakeFiles/irc_server.dir/src/Invoker/Commands/NickCommand.cpp.o
  /Users/denisnadey/projects/ft_irc/src/Server/Server.hpp
  /Users/denisnadey/projects/ft_irc/src/User/User.hpp
  /Users/denisnadey/projects/ft_irc/src/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.o
+ /Users/denisnadey/projects/ft_irc/src/Channel/Channel.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Command.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NoticeCommand.cpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NoticeCommand.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Invoker.hpp
+ /Users/denisnadey/projects/ft_irc/src/Server/Server.hpp
+ /Users/denisnadey/projects/ft_irc/src/User/User.hpp
+ /Users/denisnadey/projects/ft_irc/src/Utils/ircserv.hpp
 CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.o
  /Users/denisnadey/projects/ft_irc/src/Channel/Channel.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Command.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PassCommand.cpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PassCommand.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Invoker.hpp
+ /Users/denisnadey/projects/ft_irc/src/Server/Server.hpp
+ /Users/denisnadey/projects/ft_irc/src/User/User.hpp
+ /Users/denisnadey/projects/ft_irc/src/Utils/ircserv.hpp
+CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.o
+ /Users/denisnadey/projects/ft_irc/src/Channel/Channel.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Command.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PrivateMessageCommand.cpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PrivateMessageCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Invoker.hpp
  /Users/denisnadey/projects/ft_irc/src/Server/Server.hpp
  /Users/denisnadey/projects/ft_irc/src/User/User.hpp
@@ -131,7 +149,9 @@ CMakeFiles/irc_server.dir/src/Invoker/Invoker.cpp.o
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/LeaveCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/ListCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NickCommand.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NoticeCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PassCommand.hpp
+ /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PrivateMessageCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/QuitCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/UserCommand.hpp
  /Users/denisnadey/projects/ft_irc/src/Invoker/Commands/WhoCommand.hpp

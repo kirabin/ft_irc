@@ -28,6 +28,22 @@ vector
 ../Utils/ircserv.hpp
 /Users/denisnadey/projects/ft_irc/src/Utils/ircserv.hpp
 
+/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NoticeCommand.cpp
+NoticeCommand.hpp
+/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NoticeCommand.hpp
+
+/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/NoticeCommand.hpp
+../Command.hpp
+/Users/denisnadey/projects/ft_irc/src/Invoker/Command.hpp
+
+/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PrivateMessageCommand.cpp
+PrivateMessageCommand.hpp
+/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PrivateMessageCommand.hpp
+
+/Users/denisnadey/projects/ft_irc/src/Invoker/Commands/PrivateMessageCommand.hpp
+../Command.hpp
+/Users/denisnadey/projects/ft_irc/src/Invoker/Command.hpp
+
 /Users/denisnadey/projects/ft_irc/src/Invoker/Invoker.hpp
 Command.hpp
 /Users/denisnadey/projects/ft_irc/src/Invoker/Command.hpp
@@ -43,10 +59,6 @@ vector
 -
 string
 -
-
-/Users/denisnadey/projects/ft_irc/src/Server/Server.cpp
-Server.hpp
-/Users/denisnadey/projects/ft_irc/src/Server/Server.hpp
 
 /Users/denisnadey/projects/ft_irc/src/Server/Server.hpp
 vector

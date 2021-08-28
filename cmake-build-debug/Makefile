@@ -369,6 +369,30 @@ src/Invoker/Commands/NickCommand.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/NickCommand.cpp.s
 .PHONY : src/Invoker/Commands/NickCommand.cpp.s
 
+src/Invoker/Commands/NoticeCommand.o: src/Invoker/Commands/NoticeCommand.cpp.o
+.PHONY : src/Invoker/Commands/NoticeCommand.o
+
+# target to build an object file
+src/Invoker/Commands/NoticeCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.o
+.PHONY : src/Invoker/Commands/NoticeCommand.cpp.o
+
+src/Invoker/Commands/NoticeCommand.i: src/Invoker/Commands/NoticeCommand.cpp.i
+.PHONY : src/Invoker/Commands/NoticeCommand.i
+
+# target to preprocess a source file
+src/Invoker/Commands/NoticeCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.i
+.PHONY : src/Invoker/Commands/NoticeCommand.cpp.i
+
+src/Invoker/Commands/NoticeCommand.s: src/Invoker/Commands/NoticeCommand.cpp.s
+.PHONY : src/Invoker/Commands/NoticeCommand.s
+
+# target to generate assembly for a file
+src/Invoker/Commands/NoticeCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/NoticeCommand.cpp.s
+.PHONY : src/Invoker/Commands/NoticeCommand.cpp.s
+
 src/Invoker/Commands/PassCommand.o: src/Invoker/Commands/PassCommand.cpp.o
 .PHONY : src/Invoker/Commands/PassCommand.o
 
@@ -392,6 +416,30 @@ src/Invoker/Commands/PassCommand.s: src/Invoker/Commands/PassCommand.cpp.s
 src/Invoker/Commands/PassCommand.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/PassCommand.cpp.s
 .PHONY : src/Invoker/Commands/PassCommand.cpp.s
+
+src/Invoker/Commands/PrivateMessageCommand.o: src/Invoker/Commands/PrivateMessageCommand.cpp.o
+.PHONY : src/Invoker/Commands/PrivateMessageCommand.o
+
+# target to build an object file
+src/Invoker/Commands/PrivateMessageCommand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.o
+.PHONY : src/Invoker/Commands/PrivateMessageCommand.cpp.o
+
+src/Invoker/Commands/PrivateMessageCommand.i: src/Invoker/Commands/PrivateMessageCommand.cpp.i
+.PHONY : src/Invoker/Commands/PrivateMessageCommand.i
+
+# target to preprocess a source file
+src/Invoker/Commands/PrivateMessageCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.i
+.PHONY : src/Invoker/Commands/PrivateMessageCommand.cpp.i
+
+src/Invoker/Commands/PrivateMessageCommand.s: src/Invoker/Commands/PrivateMessageCommand.cpp.s
+.PHONY : src/Invoker/Commands/PrivateMessageCommand.s
+
+# target to generate assembly for a file
+src/Invoker/Commands/PrivateMessageCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/irc_server.dir/build.make CMakeFiles/irc_server.dir/src/Invoker/Commands/PrivateMessageCommand.cpp.s
+.PHONY : src/Invoker/Commands/PrivateMessageCommand.cpp.s
 
 src/Invoker/Commands/QuitCommand.o: src/Invoker/Commands/QuitCommand.cpp.o
 .PHONY : src/Invoker/Commands/QuitCommand.o
@@ -600,9 +648,15 @@ help:
 	@echo "... src/Invoker/Commands/NickCommand.o"
 	@echo "... src/Invoker/Commands/NickCommand.i"
 	@echo "... src/Invoker/Commands/NickCommand.s"
+	@echo "... src/Invoker/Commands/NoticeCommand.o"
+	@echo "... src/Invoker/Commands/NoticeCommand.i"
+	@echo "... src/Invoker/Commands/NoticeCommand.s"
 	@echo "... src/Invoker/Commands/PassCommand.o"
 	@echo "... src/Invoker/Commands/PassCommand.i"
 	@echo "... src/Invoker/Commands/PassCommand.s"
+	@echo "... src/Invoker/Commands/PrivateMessageCommand.o"
+	@echo "... src/Invoker/Commands/PrivateMessageCommand.i"
+	@echo "... src/Invoker/Commands/PrivateMessageCommand.s"
 	@echo "... src/Invoker/Commands/QuitCommand.o"
 	@echo "... src/Invoker/Commands/QuitCommand.i"
 	@echo "... src/Invoker/Commands/QuitCommand.s"
