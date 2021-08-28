@@ -12,6 +12,8 @@ SRC		=	src/Channel/Channel.cpp \
 			src/Invoker/Commands/NickCommand.cpp \
 			src/Invoker/Commands/PassCommand.cpp \
 			src/Invoker/Commands/WhoCommand.cpp \
+			src/Invoker/Commands/QuitCommand.cpp \
+			src/Invoker/Commands/ErrorCommand.cpp \
 			src/Invoker/Invoker.cpp \
 			src/Server/Server.cpp \
 			src/User/User.cpp \
@@ -29,6 +31,8 @@ INC		=	src/Channel/Channel.hpp \
 			src/Invoker/Commands/NickCommand.hpp \
 			src/Invoker/Commands/PassCommand.hpp \
 			src/Invoker/Commands/WhoCommand.hpp \
+			src/Invoker/Commands/QuitCommand.hpp \
+			src/Invoker/Commands/ErrorCommand.hpp \
 			src/Invoker/Invoker.hpp \
 			src/Server/Server.hpp \
 			src/User/User.hpp \

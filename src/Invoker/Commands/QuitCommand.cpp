@@ -8,6 +8,8 @@ QuitCommand::QuitCommand() {
 QuitCommand::~QuitCommand() {}
 
 void QuitCommand::execute() {
-
-	
+	// if (_args > 0) {
+	// 	// TODO: print message somewhere
+	// }
+	// TODO: terminate session
 }

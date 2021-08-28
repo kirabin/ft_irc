@@ -7,6 +7,9 @@
 #include "Commands/WhoCommand.hpp"
 #include "Commands/ListCommand.hpp"
 #include "Commands/PassCommand.hpp"
+#include "Commands/ErrorCommand.hpp"
+#include "Commands/QuitCommand.hpp"
+#include "Commands/UserCommand.hpp"
 
 Invoker::Invoker(Server *server) : _server(server) {
 	_commands.push_back(new HelpCommand(_commands));
@@ -17,6 +20,9 @@ Invoker::Invoker(Server *server) : _server(server) {
 	_commands.push_back(new KickCommand());
 	_commands.push_back(new ListCommand());
 	_commands.push_back(new PassCommand());
+	_commands.push_back(new ErrorCommand());
+	_commands.push_back(new QuitCommand());
+	_commands.push_back(new UserCommand());
 }
 
 Invoker::~Invoker() {
