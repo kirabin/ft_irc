@@ -4,4 +4,4 @@
 bircd/bircd
 **/.idea
 ircserv
-cmake-build-debug
+CMakeLists.txt
