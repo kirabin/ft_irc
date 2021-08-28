@@ -20,5 +20,5 @@ void LeaveCommand::execute() {
 
 	_sender->removeUserFromChannel();
 	_sender->setChannel(nullptr);
-	_sender->getReply("");
+
 }

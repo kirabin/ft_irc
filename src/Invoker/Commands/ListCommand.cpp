@@ -21,5 +21,5 @@ void ListCommand::execute() {
 	for (it = channels.begin(); it != channels.end(); it++) {
 		_sender->getReply((*it)->getName());
 	}
-	_sender->getReply("");
+
 }

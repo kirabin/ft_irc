@@ -48,8 +48,6 @@ void	Invoker::processCommand(User* sender, deque<string> args) {
 			return ;
 		}
 	}
-	sender->getReply("Error: No such command");
-	sender->getReply("");
 }
 
 bool	Invoker::isCommand(std::string data) {

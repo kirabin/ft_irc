@@ -20,8 +20,7 @@ void PassCommand::execute() {
 
 	_sender->setAuthorized(true);
 	// TODO reply ?
-	_sender->getReply("000 * :You're now authorized");
-	_sender->getReply("");
+	_sender->getReply("001 * :You're now authorized");
 }
 
 // TODO: segfault on lost connection from Lime chat

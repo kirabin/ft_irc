@@ -30,7 +30,7 @@ void KickCommand::execute() {
 	if (userToKick == nullptr)
 		throw ERR_USERNOTINCHANNEL(_args[0], channel->getName());
 
-	channel->sendMessageToChannel(_sender, "kicked" + userToKick->getName());
+	channel->sendMessageToChannel(_sender, "kicked " + userToKick->getName());
 	channel->removeUser(userToKick);
-	_sender->getReply("");
+
 }

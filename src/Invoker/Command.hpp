@@ -11,8 +11,6 @@ class Command;
 # include "../User/User.hpp"
 # include "../Utils/ircserv.hpp"
 
-// TODO: QUIT command
-
 using namespace std;
 
 class Command {

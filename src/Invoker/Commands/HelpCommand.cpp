@@ -15,5 +15,5 @@ void HelpCommand::execute() {
 		_sender->getReply((*it)->getDescription());
 	}
 
-	_sender->getReply("");
+
 }
