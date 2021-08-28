@@ -1,8 +1,5 @@
 #include "PassCommand.hpp"
 
-// TODO: numeric replies
-//  ERR_NEEDMOREPARAMS              ERR_ALREADYREGISTRED
-
 PassCommand::PassCommand() {
 	_name = "PASS";
 	_description = "PASS <passwordtoserver> - authorise on channel";
@@ -22,7 +19,8 @@ void PassCommand::execute() {
 		throw ERR_PASSWDMISMATCH;
 
 	_sender->setAuthorized(true);
-	_sender->getReply(":You're now authorized");
+	// TODO reply ?
+	_sender->getReply("000 * :You're now authorized");
 	_sender->getReply("");
 }
 

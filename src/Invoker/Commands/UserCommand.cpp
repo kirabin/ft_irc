@@ -15,8 +15,8 @@ UserCommand::~UserCommand() {}
 
 void UserCommand::execute() {
 
-	if (_args.size() != 4)
-		throw "Arguments count error";
+	if (_args.size() < 4)
+		throw ERR_NEEDMOREPARAMS(_name);
 
 	// _sender.setUsername();
 	// _sender.setRealname();

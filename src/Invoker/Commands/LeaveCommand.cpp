@@ -1,10 +1,8 @@
 #include "LeaveCommand.hpp"
 
-// TODO: numeric replies
-
 LeaveCommand::LeaveCommand() {
-	_name = "LEAVE";
-	_description = "LEAVE - leave channel";
+	_name = "PART";
+	_description = "PART #channel - leave channel";
 }
 
 LeaveCommand::~LeaveCommand() {}
@@ -12,11 +10,13 @@ LeaveCommand::~LeaveCommand() {}
 void LeaveCommand::execute() {
 
 	if (!_sender->isAuthorized())
-		throw "You're not authorized, use PASS";
-	if (_args.size() != 0)
-		throw "Arguments count error";
-	if (_sender->getChannel() == nullptr)
-		throw "You don't belong to any channel";
+		throw ERR_RESTRICTED;
+	if (_args.size() < 1)
+		throw ERR_NEEDMOREPARAMS(_name);
+	if (!_server->getChannel(_args[0]))
+		throw ERR_NOSUCHCHANNEL(_args[0]);
+	if (_sender->getChannel()->getName() != _args[0])
+		throw ERR_NOTONCHANNEL(_args[0]);
 
 	_sender->removeUserFromChannel();
 	_sender->setChannel(nullptr);
