@@ -41,15 +41,13 @@ INC		=	src/Channel/Channel.hpp \
 			src/User/User.hpp \
 			src/Utils/ircserv.hpp
 
-<<<<<<< HEAD
+
 GREEN ='\033[1;32m'
 WHITE ='\033[0;37m'
 YELLOW ='\033[1;33m'
 
 .PHONY: bircd
 
-=======
->>>>>>> dcc00eeb1760de9f617cbeaf299a90ea74cf54c7
 all: $(NAME)
 
 %.o: %.cpp $(INC)
