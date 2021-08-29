@@ -14,7 +14,7 @@ User::User(int sockFd, int port)
 
 User::User(int sockFd, char *host, int port)
 {
-	_nick = nullptr;
+	_nick = "";
 	_sockFd = sockFd;
 	_host = host;
 	_port = port;

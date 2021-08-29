@@ -49,7 +49,7 @@ class User
 		void			sendMessageToChannel(std::string message);
 		void			getReply(std::string message);
 		void			printShortInfo()const;
-        std::string     get_id();
+		std::string     get_id();
 };
 
 #endif

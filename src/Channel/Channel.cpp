@@ -1,6 +1,7 @@
 #include "Channel.hpp"
 
-Channel::Channel(std::string name, User* admin) : _name(name), _admin(admin) {}
+Channel::Channel(std::string name, User* admin, Server *server) :
+	_name(name), _admin(admin), _server(server) {}
 
 Channel::~Channel() {}
 
@@ -29,6 +30,9 @@ void				Channel::removeUser(User *user)
 			break ;
 		}
 	}
+	if (_users.empty()) {
+		_server->deleteChannel(this);
+	}
 }
 
 void	Channel::sendMessageToUser(User* user, std::string message) {
@@ -51,37 +55,6 @@ void				Channel::sendServiceMessageToChannel(std::string message)
 	for (std::vector<User *>::iterator iter = _users.begin(); iter != _users.end(); iter++) {
 		send((*iter)->getSockFd(), fMessage.c_str(), fMessage.length(), 0);
 	}
-}
-
-// * **************** Extra Function **************** * //
-
-void			Channel::printShortInfo() const
-{
-	std::ostringstream	out;
-
-	out << "Name: " << std::setw(10) << _name << ", users: " << _users.size() << std::endl;
-	std::cout << out;
-}
-
-void			Channel::printFullInfo() const
-{
-	std::cout << std::endl;
-	std::cout << "**************** Channel info ****************" << std::endl;
-
-	std::cout << "Name: " << std::setw(10) << _name << ", users: " << _users.size() << std::endl;
-	if (_users.size() > 0) {
-		std::cout << "User info: " << std::endl;
-	}
-
-	int i = 0;
-	for (std::vector<User *>::const_iterator iter = _users.begin(); iter != _users.end(); iter++, i++)
-	{
-		std::cout << i << ") ";
-		(*iter)->printShortInfo();
-	}
-
-	std::cout << std::endl << "**************** End    info ****************" << std::endl;
-
 }
 
 bool			Channel::isUser(User *user)const
