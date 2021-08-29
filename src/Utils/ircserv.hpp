@@ -17,10 +17,10 @@
 
 
 # define WELCOME_MSG(servname, commands)	("001 * Welcome to our server " + servname + ", Dude!\nBefore you start, you have to do a simple authorization in a few steps: " + commands )
-# define LEAVE_SERVER	" leave server"
+# define MSG_DELIMITER "\n\r"
 
 // REPLIES
-#define RPL_WELCOME(nick, username, host) "001 * Welcome to the Internet Relay Network" +  nick + "!" + username + "@" + host
+#define RPL_WELCOME(nick, username, host) 		"001 * Welcome to the Internet Relay Network" +  nick + "!" + username + "@" + host
 
 // ERRORS
 # define ERR_NEEDMOREPARAMS(command)			("461 * " + command + ": Not enough parameters")
