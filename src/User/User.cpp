@@ -14,7 +14,7 @@ User::User(int sockFd, int port)
 
 User::User(int sockFd, char *host, int port)
 {
-	_nick = "";
+	_nick = nullptr;
 	_sockFd = sockFd;
 	_host = host;
 	_port = port;
@@ -43,7 +43,10 @@ void			User::setNick(std::string nick) { _nick = nick.substr(0, 9); }
 void			User::setUsername(std::string username) { _username = username; }
 void			User::setRealname(std::string realname) { _realname = realname; }
 
-void			User::setAuthorized(bool enter) { _enter = enter; }
+void			User::setAuthorized(bool enter) {
+		_enter = enter;
+}
+
 void			User::setChannel(Channel *channel) { _channel = channel; }
 
 // * **************** Class Function **************** * //
