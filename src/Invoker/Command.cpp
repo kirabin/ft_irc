@@ -24,6 +24,7 @@ void Command::setServer(Server* server) {
 }
 
 void Command::setArgs(deque<string> args) {
+    this->clearArg();
 	_args = args;
 }
 
@@ -54,4 +55,24 @@ std::string Command::makeString() {
     }
     tmp.erase(tmp.find_last_not_of("\n\r") + 1);
     return tmp;
+}
+
+User *Command::getSender() {
+    if (_args.empty())
+    {
+        return nullptr;
+    }
+    else
+    {
+        User* test = _server->getUser(_args[0]);
+        if (test == nullptr)
+        {
+            return  nullptr;
+        }
+        return test;
+    }
+}
+
+void Command::clearArg() {
+    _args.erase(_args.begin(), _args.end());
 }

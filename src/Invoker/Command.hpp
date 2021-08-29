@@ -35,6 +35,8 @@ class Command {
 
 		virtual void execute() = 0;
         std::string makeString();
+        User * getSender();
+        void clearArg();
 };
 
 #endif

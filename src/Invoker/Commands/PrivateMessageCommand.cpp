@@ -16,8 +16,9 @@ PrivateMessageCommand::PrivateMessageCommand() {
 PrivateMessageCommand::~PrivateMessageCommand() {}
 
 void PrivateMessageCommand::execute() {
-    User* test = _server->getUser(_args[0]);
-	std::cout << "this is get comman: |" << this->makeString() << "|" <<  std::endl;
-    setSender(test);
-    _sender->getReply(this->makeString());
+//	std::cout << "this is get comman: |" << this->makeString() << "|" <<  std::endl;
+    setSender(this->getSender());
+    std::string tmp;
+    tmp = _sender->getName() + ": " + this->makeString();
+    _sender->getReply(tmp);
 }
