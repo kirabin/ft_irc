@@ -1,5 +1,6 @@
 **/.DS_Store
 **/*.out
+**/*.o
 **/*.gch
 bircd/bircd
 **/.idea

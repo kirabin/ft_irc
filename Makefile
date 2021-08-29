@@ -49,7 +49,7 @@ NC='\033[0m'
 
 .PHONY: bircd
 
-all: $(NAME) print_assembly
+all: print_assembly $(NAME)
 
 %.o: %.cpp $(INC)
 	@$(COMPILER) $(FLAGS) -o $@ -c $<
