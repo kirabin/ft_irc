@@ -58,8 +58,6 @@ class Server
 		void			        log(std::string text);
 		bool			        checkPassword(std::string userPassword);
 
-
-
 		void                    show_pollfd();
 };
 

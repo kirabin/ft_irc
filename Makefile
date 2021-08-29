@@ -19,7 +19,6 @@ SRC		=	src/Channel/Channel.cpp \
 			src/Invoker/Invoker.cpp \
 			src/Server/Server.cpp \
 			src/User/User.cpp \
-			src/Utils/utils.cpp \
 			main.cpp
 OBJ		=	$(SRC:.cpp=.o)
 INC		=	src/Channel/Channel.hpp \
@@ -42,27 +41,34 @@ INC		=	src/Channel/Channel.hpp \
 			src/User/User.hpp \
 			src/Utils/ircserv.hpp
 
+GREEN ='\033[1;32m'
+WHITE ='\033[0;37m'
+YELLOW ='\033[1;33m'
+
 .PHONY: bircd
 
 all: $(NAME)
 
 %.o: %.cpp $(INC)
-	$(COMPILER) $(FLAGS) -o $@ -c $<
+	@$(COMPILER) $(FLAGS) -o $@ -c $<
 
 $(NAME): $(OBJ)
-	$(COMPILER) $(FLAGS) $(OBJ)
+	@$(COMPILER) $(FLAGS) $(OBJ) -o $(NAME)
+	@echo $(GREEN)"The project is assembled"
 
 clean:
-	rm -f $(OBJ)
-	rm -f */*.out
-	rm -f *.out
-	rm -f */*.gch
-	rm -f *.gch
-	rm -rf *.dSYM
-	rm -rf */*.dSYM
+	@rm -f $(OBJ)
+	@rm -f */*.out
+	@rm -f *.out
+	@rm -f */*.gch
+	@rm -f *.gch
+	@rm -rf *.dSYM
+	@rm -rf */*.dSYM
+	@echo ${YELLOW}"Cleared..."
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo ${YELLOW}"All cleared"
 
 re: fclean all
 
@@ -71,7 +77,9 @@ bircd:
 	./bircd/bircd.out 6667
 
 run:
-	./a.out 127.0.0.1:6667:23
+	@echo $(GREEN)"Start!"${WHITE}
+	@./$(NAME) 127.0.0.1:6667:23
 
 nc:
-	nc 127.0.0.1 6667
+	@echo $(GREEN)"Enter to server new user"${WHITE}
+	@nc 127.0.0.1 6667

@@ -23,8 +23,7 @@ User::User(int sockFd, char *host, int port)
 	_id =  get_id();
 }
 
-User::~User()
-{ }
+User::~User() { }
 
 // * **************** Standart Getter/Setter **************** * //
 
@@ -53,10 +52,7 @@ void			User::appendMessage(std::string message)
 	_message.append("\n");
 }
 
-void	User::clearMessage()
-{
-	_message.clear();
-}
+void	User::clearMessage() { _message.clear(); }
 
 void	User::sendMessageToChannel(std::string message)
 {
@@ -83,14 +79,11 @@ void			User::removeUserFromChannel()
 
 // * **************** Extra Function **************** * //
 
-void			User::printShortInfo()const
-{
-	std::cout << "Name: " << std::setw(10) << _nick << ", fd: " << _sockFd << std::endl;
-}
+void			User::printShortInfo() const { std::cout << "Name: " << std::setw(10) << _nick << ", fd: " << _sockFd << std::endl; }
 
 std::string User::get_id() {
-
 		std::string s;
+
 		static const char alphanum[] =
 				"0123456789"
 				"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -99,11 +92,7 @@ std::string User::get_id() {
 		for (int i = 0; i < 25; ++i) {
 			s += alphanum[rand() % (sizeof(alphanum) - 1)];
 		}
-
 		return s;
-
 }
 
-std::string User::getId() const{
-	return _id;
-}
+std::string User::getId() const { return _id; }
