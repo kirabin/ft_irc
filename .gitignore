@@ -6,3 +6,4 @@ bircd/bircd
 ircserv
 CMakeLists.txt
 cmake-build-debug/*
+.vscode/*
