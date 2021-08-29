@@ -15,7 +15,7 @@ void JoinCommand::execute() {
 		throw ERR_NEEDMOREPARAMS(_name);
 	if (_sender->getChannel() != nullptr)
 		throw ERR_TOOMANYCHANNELS(_sender->getChannel()->getName());
-	if (_args[0][0] != '#')
+	if (!isAllowedChannelName(_args[0]))
 		throw ERR_BADCHANMASK(_args[0]);
 
 	Channel *channel = _server->getChannel(_args[0]);

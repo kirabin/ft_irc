@@ -5,6 +5,9 @@ class Channel;
 
 # include "../Utils/ircserv.hpp"
 # include "../User/User.hpp"
+# include "../Server/Server.hpp"
+
+bool isAllowedChannelName(std::string name);
 
 class Channel
 {
@@ -12,12 +15,13 @@ class Channel
 		std::string			_name;
 		std::vector<User *>	_users;
 		User*				_admin;
+		Server*				_server;
 
 
 		Channel();
 
 	public:
-		Channel(std::string name, User* admin);
+		Channel(std::string name, User* admin, Server *server);
 		~Channel();
 
 		std::string		getName() const;
@@ -36,6 +40,7 @@ class Channel
 		void			printFullInfo()const;
 
 		bool			isUser(User *user)const;
+		void			setName(std::string name);
 };
 
 #endif

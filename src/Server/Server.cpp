@@ -189,9 +189,22 @@ void			Server::removeUser(std::string id)
 
 Channel			*Server::createChannel(std::string name, User *admin)
 {
-	Channel	*newChannel = new Channel(name, admin);
+	Channel	*newChannel = new Channel(name, admin, this);
 	_channels.push_back(newChannel);
 	return newChannel;
+}
+
+void	Server::deleteChannel(Channel *channel) {
+	std::vector<Channel *>::iterator it;
+
+	for (it = _channels.begin(); it < _channels.end(); it++)
+	{
+		if (*it == channel)
+		{
+			_channels.erase(it);
+			break ;
+		}
+	}
 }
 
 // * ************** Extra function ************** * //

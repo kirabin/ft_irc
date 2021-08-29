@@ -15,12 +15,12 @@ class User
 		int					_port;
 		std::string			_host;
 		std::string			_nick;
+		std::string			_username;
+		std::string			_realname;
 		std::string			_message;
 		Channel				*_channel;
 
 	public:
-		std::string			username;
-		std::string			realname;
 
 		User(int sockFd, int port);
 		User(int sockFd, char *host, int port);
@@ -35,7 +35,11 @@ class User
 		std::string		getSign()const;
 		Channel			*getChannel()const;
 		std::string     getName() const;
-		void			setName(std::string name);
+		void			setNick(std::string nickname);
+		void			setUsername(std::string username);
+		void			setRealname(std::string realname);
+
+
         void			setAuthorized(bool enter);
 		void			setChannel(Channel *channel);
         std::string     getId() const;
@@ -45,7 +49,7 @@ class User
 		void			sendMessageToChannel(std::string message);
 		void			getReply(std::string message);
 		void			printShortInfo()const;
-        std::string     get_id();
+		std::string     get_id();
 };
 
 #endif

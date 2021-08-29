@@ -22,8 +22,8 @@ void NickCommand::execute() {
 	if (_server->getUser(newNick))
 		throw ERR_NICKNAMEINUSE(newNick);
 
-	_sender->setName(newNick);
-	_sender->getReply("001 * :Your nick changed to @" + newNick);
+	_sender->setNick(newNick);
+	_sender->getReply(":Your nick changed to @" + _sender->getNick());
 	if (_sender->getChannel()) {
 		_sender->sendMessageToChannel("@" + oldNick+ "set his nick to " + "@" + newNick);
 	}

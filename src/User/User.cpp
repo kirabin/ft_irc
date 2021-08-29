@@ -38,9 +38,14 @@ Channel			*User::getChannel()const { return _channel; }
 
 std::string		User::getSign()const { return _nick + "@" + _host + ":" + std::to_string(_port); }
 
-void			User::setName(std::string name) { _nick = name; }
+void			User::setNick(std::string nick) { _nick = nick.substr(0, 9); }
+void			User::setUsername(std::string username) { _username = username; }
+void			User::setRealname(std::string realname) { _realname = realname; }
 
-void			User::setAuthorized(bool enter) { _enter = enter; }
+void			User::setAuthorized(bool enter) {
+		_enter = enter;
+}
+
 void			User::setChannel(Channel *channel) { _channel = channel; }
 
 // * **************** Class Function **************** * //
