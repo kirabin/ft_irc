@@ -49,7 +49,7 @@ NC='\033[0m'
 
 .PHONY: bircd
 
-all: $(NAME)
+all: $(NAME) print_assembly
 
 %.o: %.cpp $(INC)
 	@$(COMPILER) $(FLAGS) -o $@ -c $<
@@ -81,3 +81,6 @@ run:
 nc:
 	@echo $(GREEN)"Enter to server new user"$(NC)
 	@nc 127.0.0.1 6667
+
+print_assembly:
+	@echo $(YELLOW)"The project is being assembled, please wait ... or it has already been assembled simply, I did not understand how to display this message when the project is already assembled"$(NC)
