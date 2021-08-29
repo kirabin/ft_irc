@@ -35,7 +35,8 @@ class Command {
 
 		virtual void execute() = 0;
         std::string makeString();
-        User * getSender();
+        User * getUserFromArg();
+        Channel * getChannelFromArg();
         void clearArg();
 };
 

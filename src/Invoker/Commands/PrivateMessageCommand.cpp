@@ -19,19 +19,26 @@ void PrivateMessageCommand::execute() {
 	if (!_sender->didRegister())
 		throw ERR_RESTRICTED;
 
-    if (this->getSender() != nullptr)
+    if (this->getUserFromArg() != nullptr)
     {
         std::string tmp;
         tmp = _sender->getName() + ": " + this->makeString();
-        setSender(this->getSender());
+        setSender(this->getUserFromArg());
         _sender->getReply(tmp);
     }
-    else if ( _server->getChannel(_args[0]) != nullptr)
+    else if (this->getChannelFromArg() != nullptr)
     {
-        Channel* tmp_channel =   _server->getChannel(_args[0]);
+        std::cout << "channel test" << std::endl;
+        Channel* tmp_channel =  this->getChannelFromArg();
+        std::cout << "channel test2" << std::endl;
         std::string tmp;
         tmp = _sender->getName() + ": " + this->makeString();
-        tmp_channel->sendMessageToChannel(_sender, tmp);
+        //TODO не получает канал разобраться почему !!!
+
+        if (tmp_channel && !tmp.empty())
+        {
+            tmp_channel->sendMessageToChannel(_sender, tmp);
+        }
     }
     else
     {

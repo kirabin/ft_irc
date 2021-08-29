@@ -33,11 +33,11 @@ std::string Command::makeString() {
     std::string tmp;
     for (size_t i  = 0; i <= _args.size(); i++)
     {
-        if (i == 0 && _server->getUser(_args[i]) == nullptr)
+        if (i == 0 && _server->getUser(_args[i]) == nullptr && _server->getChannel(_args[i]) == nullptr)
         {
             tmp = this->_args[i] ;
         }
-        else if (_server->getUser(_args[i]) != nullptr)
+        else if ((_server->getUser(_args[i]) != nullptr) || (_server->getChannel(_args[i]) != nullptr))
         {
            ;
         }
@@ -57,7 +57,7 @@ std::string Command::makeString() {
     return tmp;
 }
 
-User *Command::getSender() {
+User *Command::getUserFromArg() {
     if (_args.empty())
     {
         return nullptr;
@@ -83,4 +83,28 @@ User *Command::getSender() {
 
 void Command::clearArg() {
     _args.erase(_args.begin(), _args.end());
+}
+
+Channel *Command::getChannelFromArg() {
+    if (_args.empty())
+    {
+        return nullptr;
+    }
+    else
+    {
+        Channel* channel = _server->getChannel(_args[0]);
+
+        if (channel == nullptr)
+        {
+            return  nullptr;
+        }
+        else
+        {
+            if(channel  != nullptr)
+            {
+                return  channel;
+            }
+        }
+        return nullptr;
+    }
 }

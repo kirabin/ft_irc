@@ -43,6 +43,9 @@ Channel			*Server::getChannel(std::string name)
 {
 	std::vector<Channel *>::iterator channel;
 
+	if (name.empty())
+        return nullptr;
+
 	for (channel = _channels.begin(); channel != _channels.end(); channel++)
 	{
 		if ((*channel)->getName() == name.substr(1))
