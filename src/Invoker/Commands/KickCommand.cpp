@@ -13,7 +13,7 @@ void KickCommand::execute() {
 		throw ERR_RESTRICTED;
 	if (_args.size() < 2)
 		throw ERR_NEEDMOREPARAMS(_name);
-	if (_args[1][0] != '#')
+	if (!isAllowedChannelName(_args[0]))
 		throw ERR_BADCHANMASK(_args[1]);
 
 	Channel	*channel = _server->getChannel(_args[1]);

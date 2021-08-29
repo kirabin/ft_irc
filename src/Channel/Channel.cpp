@@ -1,7 +1,9 @@
 #include "Channel.hpp"
 
 Channel::Channel(std::string name, User* admin, Server *server) :
-	_name(name), _admin(admin), _server(server) {}
+ _admin(admin), _server(server) {
+	setName(name);
+}
 
 Channel::~Channel() {}
 
@@ -9,6 +11,10 @@ Channel::~Channel() {}
 
 std::string			Channel::getName()const { return _name; }
 User				*Channel::getAdmin()const { return _admin; }
+
+void				Channel::setName(std::string name) {
+	_name = name.substr(0, 200);
+}
 
 // * **************** Class Function **************** * //
 
@@ -81,4 +87,23 @@ User			*Channel::getUser(std::string userName)
 
 std::vector<User *> Channel::getUsers() const {
 	return _users;
+}
+
+bool	isAllowedChannelName(std::string channelName) {
+	if (channelName.empty()) {
+		std::cout << "1";
+		return false;
+	}
+	if (channelName[0] != '#' && channelName[0] != '&') {
+		std::cout << "2";
+		return false;
+	}
+
+	for (size_t i = 0; i < channelName.size(); i++) {
+		if (channelName[i] == ' ' || channelName[i] == 7 || channelName[i] == ',') {
+			std::cout << "3";
+			return false;
+		}
+	}
+	return true;
 }

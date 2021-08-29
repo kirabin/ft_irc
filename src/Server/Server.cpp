@@ -256,13 +256,9 @@ int				Server::createSocket()
 	return sock;
 }
 
-void Server::log(std::string text) {
-    std::cout << text << std::endl;
-}
+void Server::log(std::string text) { std::cout << text << std::endl; }
 
-vector<Channel *> Server::getChannels() {
-    return _channels;
-}
+vector<Channel *> Server::getChannels() { return _channels; }
 
 void Server::removeUserFromChannel() {
 
@@ -300,9 +296,7 @@ void Server::show_pollfd() {
 	std::vector<pollfd>::iterator	it = _pollfds.begin();
 	std::vector<pollfd>::iterator	ite = _pollfds.end();
 	for (; it != ite; it++ )
-	{
 		std::cout << (*it).fd << std::endl;
-	}
 }
 
 User *Server::getUserById(std::string id) {

@@ -8,6 +8,7 @@ class Command;
 # include <deque>
 # include <vector>
 # include "../Server/Server.hpp"
+# include "../Channel/Channel.hpp"
 # include "../User/User.hpp"
 # include "../Utils/ircserv.hpp"
 
