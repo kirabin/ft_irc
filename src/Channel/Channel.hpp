@@ -7,6 +7,8 @@ class Channel;
 # include "../User/User.hpp"
 # include "../Server/Server.hpp"
 
+bool isAllowedChannelName(std::string name);
+
 class Channel
 {
 	private:
@@ -38,6 +40,7 @@ class Channel
 		void			printFullInfo()const;
 
 		bool			isUser(User *user)const;
+		void			setName(std::string name);
 };
 
 #endif
