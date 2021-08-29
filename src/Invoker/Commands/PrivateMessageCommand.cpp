@@ -17,5 +17,13 @@ PrivateMessageCommand::~PrivateMessageCommand() {}
 
 void PrivateMessageCommand::execute() {
 
+	std::string tmp;
+
+	for (size_t i  = 0; i <= _args.size(); i++)
+	{
+		tmp = tmp +  " " + this->_args[i] ;
+	}
+	tmp.erase(tmp.find_last_not_of("\n\r") + 1);
+	std::cout << "|" << tmp << "|" <<  std::endl;
 
 }
