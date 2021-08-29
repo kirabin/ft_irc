@@ -10,7 +10,7 @@ ListCommand::ListCommand() {
 ListCommand::~ListCommand() {}
 
 void ListCommand::execute() {
-	if (!_sender->isAuthorized())
+	if (!_sender->didRegister())
 		throw ERR_RESTRICTED;
 
 	vector<Channel*> channels = _server->getChannels();
@@ -21,5 +21,4 @@ void ListCommand::execute() {
 	for (it = channels.begin(); it != channels.end(); it++) {
 		_sender->getReply((*it)->getName());
 	}
-
 }

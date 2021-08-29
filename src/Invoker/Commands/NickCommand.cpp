@@ -10,8 +10,6 @@ NickCommand::~NickCommand() {}
 
 void NickCommand::execute() {
 
-	if (!_sender->isAuthorized())
-		throw ERR_RESTRICTED;
 	if (_args.size() < 1)
 		throw ERR_NEEDMOREPARAMS(_name);
 	// TODO: check for allowed characters in nick
@@ -23,9 +21,9 @@ void NickCommand::execute() {
 		throw ERR_NICKNAMEINUSE(newNick);
 
 	_sender->setNick(newNick);
-	_sender->getReply("NICK :" + _sender->getNick());
+	_server->sendMessage(_sender, "NICK " + _sender->getNick());
 	if (_sender->getChannel()) {
 		_sender->sendMessageToChannel("@" + oldNick+ "set his nick to " + "@" + newNick);
 	}
-
+	_sender->doRegister();
 }

@@ -20,4 +20,5 @@ void UserCommand::execute() {
 
 	_sender->setUsername(_args[0]);
 	_sender->setRealname(_args[3]);
+	_sender->doRegister();
 }

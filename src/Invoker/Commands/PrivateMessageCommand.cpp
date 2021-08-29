@@ -16,6 +16,9 @@ PrivateMessageCommand::PrivateMessageCommand() {
 PrivateMessageCommand::~PrivateMessageCommand() {}
 
 void PrivateMessageCommand::execute() {
+	if (!_sender->didRegister())
+		throw ERR_RESTRICTED;
+
     if (this->getSender() != nullptr)
     {
         std::string tmp;

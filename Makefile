@@ -52,7 +52,7 @@ NC='\033[0m'
 all: print_assembly $(NAME)
 
 %.o: %.cpp $(INC)
-	@$(COMPILER) $(FLAGS) -o $@ -c $<
+	$(COMPILER) $(FLAGS) -o $@ -c $<
 
 $(NAME): $(OBJ)
 	@$(COMPILER) $(FLAGS) $(OBJ) -o $(NAME)

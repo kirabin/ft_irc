@@ -10,7 +10,8 @@ class User
 {
 	private:
 		std::string			_id;
-		bool				_enter;
+		bool				_didEnter;
+		bool				_didRegister;
 		int					_sockFd;
 		int					_port;
 		std::string			_host;
@@ -28,15 +29,18 @@ class User
 		User(int sockFd, char *host, int port);
 		~User();
 
-		bool 			isAuthorized()const;
-		int				getSockFd()const;
-		int				getPort()const;
-		std::string		getNick()const;
-		std::string		getHost()const;
-		std::string		getMessage()const;
-		std::string		getSign()const;
-		Channel			*getChannel()const;
-		std::string     getName() const;
+		bool			didEnter() const;
+		void			setDidEnter(bool value);
+		bool			didRegister() const;
+		void			doRegister();
+		int				getSockFd() const;
+		int				getPort() const;
+		std::string		getNick() const;
+		std::string		getHost() const;
+		std::string		getMessage() const;
+		std::string		getSign() const;
+		Channel			*getChannel() const;
+		std::string		getName() const;
 		void			setNick(std::string nickname);
 		void			setUsername(std::string username);
 		void			setRealname(std::string realname);

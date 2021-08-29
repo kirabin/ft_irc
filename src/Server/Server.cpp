@@ -5,7 +5,7 @@
 Server::Server(std::string host, std::string port, std::string password) : _host(host), _port(port), _password(password)
 {
 	_sock = createSocket();
-	_servname = _host + ":" + _port;
+	_serverName = _host;
 }
 
 Server::~Server() { }
@@ -15,7 +15,7 @@ Server::~Server() { }
 int				Server::getSock()const { return _sock; }
 std::string		Server::getHost()const { return _host; }
 std::string		Server::getPort()const { return _port; }
-std::string		Server::getServname()const { return _servname; }
+std::string		Server::getServerName()const { return _serverName; }
 
 User			*Server::getUser(std::string userName)
 {
@@ -57,18 +57,18 @@ void			Server::start()
 {
 	pollfd	newPollfd = {_sock, POLLIN, 0};
 	if (fcntl(_sock, F_SETFL, O_NONBLOCK) == -1)
-	 	throw std::runtime_error("error fcntl");
+	 	throw std::runtime_error("Error: fcntl");
 
 	std::vector<pollfd>::iterator	iter;
 	_pollfds.push_back(newPollfd);
 	_Invoker = new Invoker(this);
 
-	std::cout << "server created!" << std::endl;
+	std::cout << "Server created!" << std::endl;
 	while (true) {
 
 		iter = _pollfds.begin();
 		if (poll(&(*iter), _pollfds.size(), -1) == -1)
-			throw std::runtime_error("error: poll");
+			throw std::runtime_error("Error: poll");
 
 		this->action();
 
@@ -101,7 +101,7 @@ int				Server::acceptUser()
 
 void			Server::greeting(int client_d)const
 {
-	std::string str((WELCOME_MSG(_servname, "\n\nUse HELP to learn about allowed commands\n")));
+	std::string str("PASS NICK USER\n\r");
 	if (send(client_d, str.c_str(), str.length(), 0) == -1)
 		throw std::runtime_error("error send");
 }
@@ -124,7 +124,7 @@ void			Server::action()
 				break;
 			}
 
-            if ((*itUser)->isAuthorized() && ((*itUser)->getName() != "user_example"))
+            if ((*itUser)->didRegister() && ((*itUser)->getName() != "user_example"))
             {
                 std::cout << "disconnect @" << (*itUser)->getName() << std::endl;
                 this->removeUser((*itUser)->getId());
@@ -310,8 +310,17 @@ User *Server::getUserById(std::string id) {
 	return nullptr;
 }
 
-bool	Server::checkPassword(std::string userPassword){
+bool	Server::checkPassword(std::string userPassword) {
 	if (userPassword == _password)
 		return true;
 	return false;
+}
+
+
+std::string		Server::getPrefix() const {
+	return ":" + _serverName;
+}
+
+void	Server::sendMessage(User* to, std::string message) {
+	to->getReply(getPrefix() + " " + message);
 }

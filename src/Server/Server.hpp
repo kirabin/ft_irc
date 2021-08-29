@@ -21,7 +21,7 @@ class Server
 		const std::string		_host;
 		const std::string		_port;
 		const std::string		_password;
-		std::string				_servname;
+		std::string				_serverName;
 		std::vector<pollfd>		_pollfds;
 		std::vector<User *>		_users;
 		std::vector<Channel *>	_channels;
@@ -46,7 +46,8 @@ class Server
         int				        getSock()const;
         std::string		        getPort()const;
         std::string		        getHost()const;
-        std::string		        getServname()const;
+        std::string				getServerName() const;
+		std::string				getPrefix() const;
         //channel
         std::vector<Channel*>   getChannels();
         Channel			        *getChannel(std::string chanName);
@@ -60,6 +61,7 @@ class Server
 		bool			        checkPassword(std::string userPassword);
 
 		void                    show_pollfd();
+		void					sendMessage(User* to, std::string message);
 };
 
 #endif

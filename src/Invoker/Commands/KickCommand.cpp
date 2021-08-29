@@ -9,7 +9,7 @@ KickCommand::~KickCommand() {}
 
 void KickCommand::execute() {
 
-	if (!_sender->isAuthorized())
+	if (!_sender->didRegister())
 		throw ERR_RESTRICTED;
 	if (_args.size() < 2)
 		throw ERR_NEEDMOREPARAMS(_name);

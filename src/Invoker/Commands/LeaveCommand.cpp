@@ -9,7 +9,7 @@ LeaveCommand::~LeaveCommand() {}
 
 void LeaveCommand::execute() {
 
-	if (!_sender->isAuthorized())
+	if (!_sender->didRegister())
 		throw ERR_RESTRICTED;
 	if (_args.size() < 1)
 		throw ERR_NEEDMOREPARAMS(_name);

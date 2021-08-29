@@ -9,7 +9,7 @@ PassCommand::~PassCommand() {}
 
 void PassCommand::execute() {
 
-	if (_sender->isAuthorized())
+	if (_sender->didEnter())
 		throw ERR_ALREADYREGISTRED;
 	if (_args.size() != 1)
 		throw ERR_NEEDMOREPARAMS(_name);
@@ -18,9 +18,8 @@ void PassCommand::execute() {
 	if (!_server->checkPassword(password))
 		throw ERR_PASSWDMISMATCH;
 
-	_sender->setAuthorized(true);
-	// TODO reply ?
-	_sender->getReply("001 * :You're now authorized");
+	_server->sendMessage(_sender, "Correct password");
+	_sender->setDidEnter(true);
+	_sender->doRegister();
+	_sender->getReply("Correct password");
 }
-
-// TODO: segfault on lost connection from Lime chat
