@@ -18,6 +18,8 @@ class User
 		std::string			_username;
 		std::string			_realname;
 		std::string			_message;
+
+		// TODO: user should be able to join multiple channels
 		Channel				*_channel;
 
 	public:

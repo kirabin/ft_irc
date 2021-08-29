@@ -23,7 +23,10 @@ void WhoCommand::execute() {
 
 	vector<User*>::iterator it;
 	for (it = users.begin(); it != users.end(); it++) {
-		_sender->getReply("@" + (*it)->getName());
+		if (channel->getAdmin() == *it)
+			_sender->getReply("@" + (*it)->getName());
+		else
+			_sender->getReply((*it)->getName());
 	}
 
 }

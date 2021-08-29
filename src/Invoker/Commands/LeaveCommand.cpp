@@ -15,7 +15,7 @@ void LeaveCommand::execute() {
 		throw ERR_NEEDMOREPARAMS(_name);
 	if (!_server->getChannel(_args[0]))
 		throw ERR_NOSUCHCHANNEL(_args[0]);
-	if (_sender->getChannel()->getName() != _args[0])
+	if (_sender->getChannel() != _server->getChannel(_args[0]))
 		throw ERR_NOTONCHANNEL(_args[0]);
 
 	_sender->removeUserFromChannel();
