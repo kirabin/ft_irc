@@ -45,6 +45,7 @@ INC		=	src/Channel/Channel.hpp \
 GREEN ='\033[1;32m'
 WHITE ='\033[0;37m'
 YELLOW ='\033[1;33m'
+NC='\033[0m'
 
 .PHONY: bircd
 
@@ -55,7 +56,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(COMPILER) $(FLAGS) $(OBJ) -o $(NAME)
-	@echo $(GREEN)"The project is assembled"
+	@echo $(GREEN)"The project is assembled"$(NC)
 
 clean:
 	@rm -f $(OBJ)
@@ -65,18 +66,18 @@ clean:
 	@rm -f *.gch
 	@rm -rf *.dSYM
 	@rm -rf */*.dSYM
-	@echo ${YELLOW}"Cleared..."
+	@echo ${YELLOW}"Cleared..."$(NC)
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo ${YELLOW}"All cleared"
+	@echo ${YELLOW}"All cleared"$(NC)
 
 re: fclean all
 
 run:
-	@echo $(GREEN)"Start!"${WHITE}
+	@echo $(GREEN)"Start!"$(NC)
 	@./$(NAME) 127.0.0.1:6667:23
 
 nc:
-	@echo $(GREEN)"Enter to server new user"${WHITE}
+	@echo $(GREEN)"Enter to server new user"$(NC)
 	@nc 127.0.0.1 6667
