@@ -13,7 +13,8 @@ std::string			Channel::getName()const { return _name; }
 User				*Channel::getAdmin()const { return _admin; }
 
 void				Channel::setName(std::string name) {
-	_name = name.substr(0, 200);
+	size_t maxNameLenght = 200;
+	_name = name.substr(1, maxNameLenght);
 }
 
 // * **************** Class Function **************** * //

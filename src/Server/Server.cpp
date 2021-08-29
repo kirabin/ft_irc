@@ -39,13 +39,14 @@ User			*Server::getUser(int sock)
 	return nullptr;
 }
 
-Channel			*Server::getChannel(std::string chanName)
+Channel			*Server::getChannel(std::string name)
 {
-	for (std::vector<Channel *>::iterator itUser = _channels.begin(); itUser != _channels.end(); itUser++)
+	std::vector<Channel *>::iterator channel;
+
+	for (channel = _channels.begin(); channel != _channels.end(); channel++)
 	{
-		std::string	curName = (*itUser)->getName();
-		if (curName == chanName)
-			return *itUser;
+		if ((*channel)->getName() == name.substr(1))
+			return *channel;
 	}
 	return nullptr;
 }
