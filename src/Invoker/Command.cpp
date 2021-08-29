@@ -64,12 +64,20 @@ User *Command::getSender() {
     }
     else
     {
-        User* test = _server->getUser(_args[0]);
-        if (test == nullptr)
+        User* user = _server->getUser(_args[0]);
+
+        if (user == nullptr)
         {
             return  nullptr;
         }
-        return test;
+        else
+        {
+            if(user  != nullptr)
+            {
+                return  user;
+            }
+        }
+        return nullptr;
     }
 }
 

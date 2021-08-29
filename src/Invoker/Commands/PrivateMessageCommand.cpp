@@ -16,9 +16,22 @@ PrivateMessageCommand::PrivateMessageCommand() {
 PrivateMessageCommand::~PrivateMessageCommand() {}
 
 void PrivateMessageCommand::execute() {
-//	std::cout << "this is get comman: |" << this->makeString() << "|" <<  std::endl;
-    setSender(this->getSender());
-    std::string tmp;
-    tmp = _sender->getName() + ": " + this->makeString();
-    _sender->getReply(tmp);
+    if (this->getSender() != nullptr)
+    {
+        std::string tmp;
+        tmp = _sender->getName() + ": " + this->makeString();
+        setSender(this->getSender());
+        _sender->getReply(tmp);
+    }
+    else if ( _server->getChannel(_args[0]) != nullptr)
+    {
+        Channel* tmp_channel =   _server->getChannel(_args[0]);
+        std::string tmp;
+        tmp = _sender->getName() + ": " + this->makeString();
+        tmp_channel->sendMessageToChannel(_sender, tmp);
+    }
+    else
+    {
+        _sender->getReply("error nick or channel not found");
+    }
 }
