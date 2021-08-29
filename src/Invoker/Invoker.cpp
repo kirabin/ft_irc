@@ -73,7 +73,7 @@ bool	Invoker::isCommand(std::string data) {
 
 void	Invoker::processData(User *sender, std::string data) {
 
-	std::cout << "@" << sender->getName() << " " << data;
+
 
 	stringstream	ssMsg(data);
 	string			av;
@@ -86,9 +86,11 @@ void	Invoker::processData(User *sender, std::string data) {
 			arguments.push_back(av);
 	}
 
-	if (isCommand(arguments[0])) {
+	if (!arguments.empty() && isCommand(arguments[0])) {
+        std::cout << "@" << sender->getName() << " " << data;
 		processCommand(sender, arguments);
 	} else {
+
 		sender->sendMessageToChannel(data);
 	}
 
