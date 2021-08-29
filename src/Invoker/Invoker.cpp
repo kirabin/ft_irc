@@ -89,9 +89,5 @@ void	Invoker::processData(User *sender, std::string data) {
 	if (!arguments.empty() && isCommand(arguments[0])) {
         std::cout << "@" << sender->getName() << " " << data;
 		processCommand(sender, arguments);
-	} else {
-
-		sender->sendMessageToChannel(data);
 	}
-
 }
