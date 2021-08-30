@@ -21,5 +21,5 @@ void PassCommand::execute() {
 	_server->sendMessage(_sender, "Correct password");
 	_sender->setDidEnter(true);
 	_sender->doRegister();
-	_sender->getReply("Correct password");
+	// _sender->getReply("Correct password");
 }

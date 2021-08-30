@@ -2,9 +2,10 @@
 
 // * **************** Constructor & Destructor **************** * //
 
-User::User(int sockFd, int port)
-{
-	_nick = nullptr;
+size_t User::_maxChannels = 1;
+
+User::User(int sockFd, int port) {
+	_nick = "";
 	_sockFd = sockFd;
 	_host = nullptr;
 	_port = port;
@@ -12,8 +13,7 @@ User::User(int sockFd, int port)
 	_didEnter = false;
 }
 
-User::User(int sockFd, char *host, int port)
-{
+User::User(int sockFd, char *host, int port) {
 	_nick = "";
 	_sockFd = sockFd;
 	_host = host;

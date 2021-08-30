@@ -6,22 +6,27 @@ class User;
 # include "../Utils/ircserv.hpp"
 # include "../Channel/Channel.hpp"
 
+using std::vector;
+using std::string;
+
 class User
 {
 	private:
-		std::string			_id;
+		string				_id;
 		bool				_didEnter;
 		bool				_didRegister;
 		int					_sockFd;
 		int					_port;
-		std::string			_host;
-		std::string			_nick;
-		std::string			_username;
-		std::string			_realname;
-		std::string			_message;
+		string				_host;
+		string				_nick;
+		string				_username;
+		string				_realname;
+		string				_message;
 
 		// TODO: user should be able to join multiple channels
-		Channel				*_channel;
+		static size_t		_maxChannels;
+		vector<Channel *>	_channels;
+		Channel*			_channel;
 
 	public:
 
@@ -35,27 +40,27 @@ class User
 		void			doRegister();
 		int				getSockFd() const;
 		int				getPort() const;
-		std::string		getNick() const;
-		std::string		getHost() const;
-		std::string		getMessage() const;
-		std::string		getSign() const;
+		string		getNick() const;
+		string		getHost() const;
+		string		getMessage() const;
+		string		getSign() const;
 		Channel			*getChannel() const;
-		std::string		getName() const;
-		void			setNick(std::string nickname);
-		void			setUsername(std::string username);
-		void			setRealname(std::string realname);
+		string		getName() const;
+		void			setNick(string nickname);
+		void			setUsername(string username);
+		void			setRealname(string realname);
 
 
-        void			setAuthorized(bool enter);
+		void			setAuthorized(bool enter);
 		void			setChannel(Channel *channel);
-        std::string     getId() const;
+		string			getId() const;
 		void			removeUserFromChannel();
-		void			appendMessage(std::string message);
+		void			appendMessage(string message);
 		void			clearMessage();
-		void			sendMessageToChannel(std::string message);
-		void			getReply(std::string message);
+		void			sendMessageToChannel(string message);
+		void			getReply(string message);
 		void			printShortInfo()const;
-		std::string     get_id();
+		string			get_id();
 };
 
 #endif
