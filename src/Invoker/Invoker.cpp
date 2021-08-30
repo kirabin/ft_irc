@@ -32,7 +32,6 @@ Invoker::Invoker(Server *server) : _server(server) {
 Invoker::~Invoker() {
 	vector<Command*>::iterator it;
 
-	// TODO: how to close a server?
 	for (it = _commands.begin(); it != _commands.end(); it++) {
 		delete *it;
 	}
@@ -50,17 +49,15 @@ void	Invoker::processCommand(User* sender, deque<string> args) {
 				_commands[i]->execute();
 			} catch(const char* message) {
 				sender->getReply(string(message));
-				sender->getReply("");
 			} catch(string message) {
 				sender->getReply(message);
-				sender->getReply("");
 			}
-			return ;
+			break;
 		}
 	}
 }
 
-bool	Invoker::isCommand(std::string data) {
+bool	Invoker::isCommand(string data) {
 	vector<Command*>::iterator it;
 
 	for (it = _commands.begin(); it != _commands.end(); it++) {
@@ -71,10 +68,7 @@ bool	Invoker::isCommand(std::string data) {
 	return false;
 }
 
-void	Invoker::processData(User *sender, std::string data) {
-
-
-
+deque<string> Invoker::dataToArgs(string data) {
 	stringstream	ssMsg(data);
 	string			av;
 	deque<string>	arguments;
@@ -85,9 +79,14 @@ void	Invoker::processData(User *sender, std::string data) {
 		if (!av.empty())
 			arguments.push_back(av);
 	}
+	return arguments;
+}
+
+void	Invoker::processData(User *sender, string data) {
+	deque<string> arguments = dataToArgs(data);
 
 	if (!arguments.empty() && isCommand(arguments[0])) {
-        std::cout << "@" << sender->getName() << " " << data;
+		cout << "@" << sender->getName() << " " << data; // delete
 		processCommand(sender, arguments);
 	}
 }

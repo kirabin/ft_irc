@@ -36,7 +36,6 @@ class Command {
 		void setArgs(deque<string> args);
 
 		virtual void execute() = 0;
-
 };
 
 #endif
