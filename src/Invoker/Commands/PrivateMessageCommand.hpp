@@ -9,6 +9,11 @@ class PrivateMessageCommand: public Command {
 		PrivateMessageCommand();
 		virtual ~PrivateMessageCommand();
 		void execute();
+
+		string makeString();
+		User * getUserFromArg();
+		Channel * getChannelFromArg();
+		void clearArg();
 };
 
 #endif

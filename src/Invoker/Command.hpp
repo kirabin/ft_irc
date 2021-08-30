@@ -12,15 +12,17 @@ class Command;
 # include "../User/User.hpp"
 # include "../Utils/ircserv.hpp"
 
-using namespace std;
+using std::string;
+using std::vector;
+using std::deque;
 
 class Command {
 	protected:
-		string _name;
-		string _description;
-		Server *_server;
-		User *_sender;
-		deque<string> _args;
+		string			_name;
+		string			_description;
+		Server*			_server;
+		User*			_sender;
+		deque<string>	_args;
 
 	public:
 		Command();
@@ -34,10 +36,7 @@ class Command {
 		void setArgs(deque<string> args);
 
 		virtual void execute() = 0;
-        std::string makeString();
-        User * getUserFromArg();
-        Channel * getChannelFromArg();
-        void clearArg();
+
 };
 
 #endif

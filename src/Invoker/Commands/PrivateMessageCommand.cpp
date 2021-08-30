@@ -44,4 +44,86 @@ void PrivateMessageCommand::execute() {
     {
         _sender->getReply("error nick or channel not found");
     }
+	this->clearArg();
+}
+
+std::string PrivateMessageCommand::makeString() {
+
+    std::string tmp;
+    for (size_t i  = 0; i <= _args.size(); i++)
+    {
+        if (i == 0 && _server->getUser(_args[i]) == nullptr && _server->getChannel(_args[i]) == nullptr)
+        {
+            tmp = this->_args[i] ;
+        }
+        else if ((_server->getUser(_args[i]) != nullptr) || (_server->getChannel(_args[i]) != nullptr))
+        {
+           ;
+        }
+        else
+        {
+            if (tmp.empty())
+            {
+                tmp =  this->_args[i] ;
+            }
+           else
+            {
+                tmp = tmp +  " " + this->_args[i] ;
+            }
+        }
+    }
+    tmp.erase(tmp.find_last_not_of("\n\r") + 1);
+    return tmp;
+}
+
+User *PrivateMessageCommand::getUserFromArg() {
+    if (_args.empty())
+    {
+        return nullptr;
+    }
+    else
+    {
+        User* user = _server->getUser(_args[0]);
+
+        if (user == nullptr)
+        {
+            return  nullptr;
+        }
+        else
+        {
+            if(user  != nullptr)
+            {
+                return  user;
+            }
+        }
+        return nullptr;
+    }
+}
+
+void PrivateMessageCommand::clearArg() {
+    _args.erase(_args.begin(), _args.end());
+}
+
+Channel *PrivateMessageCommand::getChannelFromArg() {
+    if (_args.empty())
+    {
+        return nullptr;
+    }
+    else
+    {
+        Channel* channel = _server->getChannel(_args[0]);
+
+        if (channel == nullptr)
+        {
+            return  nullptr;
+        }
+        else
+        {
+            if(channel  != nullptr)
+            {
+                return  channel;
+            }
+        }
+        return nullptr;
+    }
 }
