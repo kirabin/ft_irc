@@ -51,7 +51,7 @@ void	Channel::sendMessageToChannel(User *sender, std::string message) {
 	for (std::vector<User *>::iterator iter = _users.begin(); iter != _users.end(); iter++)
 	{
 		if (*iter != sender)
-			sendMessageToUser(*iter, sender->getSign() + " :" + message + "\n");
+			sendMessageToUser(*iter, sender->getNick() + " " + message + "\n");
 	}
 }
 

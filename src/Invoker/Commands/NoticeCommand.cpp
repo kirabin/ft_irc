@@ -10,4 +10,6 @@ NoticeCommand::~NoticeCommand() {}
 void NoticeCommand::execute() {
 	if (!_sender->didRegister())
 		throw ERR_RESTRICTED;
+
+	// TODO: Notice command
 }

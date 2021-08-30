@@ -1,8 +1,5 @@
 #include "Command.hpp"
 
-// Private Messages command
-// Notice command
-
 Command::Command() : _name(""), _description(""), _server(NULL), _sender(NULL) {}
 
 Command::~Command() {}
@@ -26,5 +23,3 @@ void Command::setServer(Server* server) {
 void Command::setArgs(deque<string> args) {
 	_args = args;
 }
-
-// TODO: make command not found

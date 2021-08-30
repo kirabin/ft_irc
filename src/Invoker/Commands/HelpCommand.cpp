@@ -14,6 +14,4 @@ void HelpCommand::execute() {
 	for (it = _commands.begin(); it != _commands.end(); it++) {
 		_sender->getReply((*it)->getDescription());
 	}
-
-
 }
