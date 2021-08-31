@@ -48,7 +48,7 @@ Channel			*Server::getChannel(std::string name)
 
 	for (channel = _channels.begin(); channel != _channels.end(); channel++)
 	{
-		if ((*channel)->getName() == name.substr(1))
+		if ((*channel)->getName() == name)
 			return *channel;
 	}
 	return nullptr;

@@ -28,13 +28,10 @@ void PrivateMessageCommand::execute() {
     }
     else if (this->getChannelFromArg() != nullptr)
     {
-        std::cout << "channel test" << std::endl;
         Channel* tmp_channel =  this->getChannelFromArg();
-        std::cout << "channel test2" << std::endl;
         std::string tmp;
-        tmp = _sender->getName() + ": " + this->makeString();
-        //TODO не получает канал разобраться почему !!!
-
+        tmp = this->makeString();
+        std::cout << tmp << std::endl;
         if (tmp_channel && !tmp.empty())
         {
             tmp_channel->sendMessageToChannel(_sender, tmp);
@@ -50,27 +47,22 @@ void PrivateMessageCommand::execute() {
 std::string PrivateMessageCommand::makeString() {
 
     std::string tmp;
-    for (size_t i  = 0; i <= _args.size(); i++)
+    for (size_t i  = 1; i <= _args.size(); i++)
     {
-        if (i == 0 && _server->getUser(_args[i]) == nullptr && _server->getChannel(_args[i]) == nullptr)
+        if (!this->_args[i].empty())
         {
-            tmp = this->_args[i] ;
-        }
-        else if ((_server->getUser(_args[i]) != nullptr) || (_server->getChannel(_args[i]) != nullptr))
-        {
-           ;
-        }
-        else
-        {
+
             if (tmp.empty())
             {
-                tmp =  this->_args[i] ;
+                tmp =  this->_args[i];
             }
-           else
+            else
             {
-                tmp = tmp +  " " + this->_args[i] ;
+                tmp = tmp +  " " + this->_args[i];
             }
+
         }
+
     }
     tmp.erase(tmp.find_last_not_of("\n\r") + 1);
     return tmp;
@@ -111,7 +103,9 @@ Channel *PrivateMessageCommand::getChannelFromArg() {
     }
     else
     {
-        Channel* channel = _server->getChannel(_args[0]);
+        string getName = _args[0].substr(1, _args[0].size());
+
+        Channel* channel = _server->getChannel(getName);
 
         if (channel == nullptr)
         {
@@ -121,6 +115,7 @@ Channel *PrivateMessageCommand::getChannelFromArg() {
         {
             if(channel  != nullptr)
             {
+
                 return  channel;
             }
         }
