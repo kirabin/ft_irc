@@ -23,7 +23,7 @@ void NickCommand::execute() {
 	_sender->setNick(newNick);
 	_server->sendMessage(_sender, "NICK " + _sender->getNick());
 	if (_sender->getChannel()) {
-		_sender->sendMessageToChannel("@" + oldNick+ "set his nick to " + "@" + newNick);
+		_sender->sendMessage(_sender->getChannel(), "@" + oldNick+ "set his nick to " + "@" + newNick);
 	}
 	_sender->doRegister();
 }
