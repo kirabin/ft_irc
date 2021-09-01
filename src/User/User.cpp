@@ -11,6 +11,7 @@ User::User(int sockFd, int port) {
 	_port = port;
 	_channel = nullptr;
 	_didEnter = false;
+    _didEnter = false;
 }
 
 User::User(int sockFd, char *host, int port) {
@@ -21,6 +22,7 @@ User::User(int sockFd, char *host, int port) {
 	_channel = nullptr;
 	_didEnter = false;
 	_id =  get_id();
+    _didEnter = false;
 }
 
 User::~User() { }
