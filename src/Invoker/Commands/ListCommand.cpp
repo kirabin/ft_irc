@@ -19,6 +19,8 @@ void ListCommand::execute() {
 	// _sender->getReply("Channels: " + std::to_string(channels.size()));
 
 	for (it = channels.begin(); it != channels.end(); it++) {
-		_sender->getReply("#" + (*it)->getName());
+		_sender->getReply(RPL_LIST((*it)->getName(), to_string((*it)->getUsers().size())));
 	}
+	_sender->getReply(RPL_LISTEND);
+
 }

@@ -15,11 +15,10 @@ void PassCommand::execute() {
 		throw ERR_NEEDMOREPARAMS(_name);
 
 	string password = _args[0];
-	std::cout << password << ":" << std::endl;
 	if (!_server->checkPassword(password))
 		throw ERR_PASSWDMISMATCH;
 
-	_server->sendMessage(_sender, "Correct password");
+	_server->sendMessage(_sender, "PASS Correct password");
 	_sender->setDidEnter(true);
 	_sender->doRegister();
 }
