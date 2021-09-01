@@ -46,6 +46,7 @@ class User
 		string		getSign() const;
 		Channel			*getChannel() const;
 		string		getName() const;
+		string			getPrefix() const;
 		void			setNick(string nickname);
 		void			setUsername(string username);
 		void			setRealname(string realname);
@@ -58,7 +59,7 @@ class User
 		void			appendMessage(string message);
 		void			clearMessage();
 		void			sendMessage(Channel* channel, string message);
-		void			sendMessage(User* user, string message);
+		void			sendMessage(User* to, string message);
 		void			getReply(string message);
 		void			printShortInfo()const;
 		string			get_id();

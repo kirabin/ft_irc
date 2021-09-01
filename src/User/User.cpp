@@ -59,6 +59,10 @@ void			User::appendMessage(std::string message)
 
 void	User::clearMessage() { _message.clear(); }
 
+string	User::getPrefix() const {
+	return ":" + _nick;
+}
+
 void	User::sendMessage(Channel *channel, std::string message)
 {
 	if (!message.empty())
@@ -68,8 +72,8 @@ void	User::sendMessage(Channel *channel, std::string message)
     }
 }
 
-void	User::sendMessage(User *user, std::string message) {
-	
+void	User::sendMessage(User *to, std::string message) {
+	to->getReply(getPrefix() + " " + message);
 }
 
 void			User::getReply(std::string message)
