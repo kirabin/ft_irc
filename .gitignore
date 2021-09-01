@@ -8,3 +8,4 @@ ircserv
 CMakeLists.txt
 cmake-build-debug/*
 .vscode/*
+Checklist.pdf
