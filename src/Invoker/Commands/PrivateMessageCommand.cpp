@@ -21,10 +21,10 @@ void PrivateMessageCommand::execute() {
 
     if (this->getUserFromArg() != nullptr)
     {
-        std::string tmp;
-        tmp = _sender->getName() + ": " + this->makeString();
-        setSender(this->getUserFromArg());
-        _sender->getReply(tmp);
+        // std::string tmp;
+        // tmp = _sender->getNick() + ": " + ;
+        User* user = this->getUserFromArg();
+        _sender->sendMessage(user,"PRIVMSG " + user->getNick() +  " :"+ this->makeString());
     }
     else if (this->getChannelFromArg() != nullptr)
     {
@@ -34,7 +34,7 @@ void PrivateMessageCommand::execute() {
         std::cout << tmp << std::endl;
         if (tmp_channel && !tmp.empty())
         {
-            tmp_channel->sendMessageToChannel(_sender, tmp);
+            tmp_channel->sendMessageToChannel(_sender, "PRIVMSG " + tmp);
         }
     }
     else

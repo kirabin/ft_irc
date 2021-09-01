@@ -19,8 +19,10 @@
 
 // REPLIES
 #define RPL_WELCOME(nick, username, host)		"001 * Welcome to the Internet Relay Network" +  nick + "!" + username + "@" + host
-#define RPL_LIST(channel, usersCount)			("322 * " + channel + " " + usersCount)
+#define RPL_LIST(channel, usersCount)			("322 * #" + channel + " " + usersCount)
 #define RPL_LISTEND								"323 * :End of LIST"
+
+
 
 // ERRORS
 # define ERR_NEEDMOREPARAMS(command)			("461 * " + command + ": Not enough parameters")

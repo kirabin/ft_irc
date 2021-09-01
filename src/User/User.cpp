@@ -73,7 +73,7 @@ void	User::sendMessage(Channel *channel, std::string message)
 }
 
 void	User::sendMessage(User *to, std::string message) {
-	to->getReply(getPrefix() + " " + message);
+	to->getReply(this->getPrefix() + " " + message);
 }
 
 void			User::getReply(std::string message)
