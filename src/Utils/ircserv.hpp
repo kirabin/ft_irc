@@ -15,7 +15,7 @@
 # include <unistd.h>
 # include <poll.h>
 
-# define MSG_DELIMITER "\n\r"
+# define MSG_DELIMITER "\r\n"
 
 // REPLIES
 #define RPL_WELCOME(nick, username, host)		"001 * Welcome to the Internet Relay Network" +  nick + "!" + username + "@" + host

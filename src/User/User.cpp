@@ -59,13 +59,17 @@ void			User::appendMessage(std::string message)
 
 void	User::clearMessage() { _message.clear(); }
 
-void	User::sendMessageToChannel(std::string message)
+void	User::sendMessage(Channel *channel, std::string message)
 {
 	if (!message.empty())
     {
-        if (_channel != nullptr)
-            _channel->sendMessageToChannel(this, message);
+        if (channel != nullptr)
+            channel->sendMessageToChannel(this, message);
     }
+}
+
+void	User::sendMessage(User *user, std::string message) {
+	
 }
 
 void			User::getReply(std::string message)

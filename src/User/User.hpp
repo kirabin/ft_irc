@@ -57,7 +57,8 @@ class User
 		void			removeUserFromChannel();
 		void			appendMessage(string message);
 		void			clearMessage();
-		void			sendMessageToChannel(string message);
+		void			sendMessage(Channel* channel, string message);
+		void			sendMessage(User* user, string message);
 		void			getReply(string message);
 		void			printShortInfo()const;
 		string			get_id();

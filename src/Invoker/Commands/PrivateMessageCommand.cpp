@@ -51,18 +51,13 @@ std::string PrivateMessageCommand::makeString() {
     {
         if (!this->_args[i].empty())
         {
-
-            if (tmp.empty())
-            {
+            if (tmp.empty()) {
                 tmp =  this->_args[i];
             }
-            else
-            {
+            else {
                 tmp = tmp +  " " + this->_args[i];
             }
-
         }
-
     }
     tmp.erase(tmp.find_last_not_of(MSG_DELIMITER) + 1);
     return tmp;

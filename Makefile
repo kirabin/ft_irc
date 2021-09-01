@@ -84,3 +84,6 @@ nc:
 
 print_assembly:
 	@echo $(YELLOW)"The project is being assembled, please wait ... or it has already been assembled simply, I did not understand how to display this message when the project is already assembled"$(NC)
+
+irssi:
+	irssi -c 127.0.0.1
