@@ -21,13 +21,14 @@ void JoinCommand::execute() {
 	Channel *channel = _server->getChannel(_args[0]);
 	if (channel) {
 		_sender->setChannel(channel);
-		channel->sendMessageToChannel(_sender, "joined a channel");
+		channel->sendMessageToChannel(_sender, "joined a channel", "JOIN");
 		_server->sendMessage(_sender, "JOIN" + channel->getName());
 		channel->addUser(_sender);
 	} else {
 		Channel	*newChannel = _server->createChannel(_args[0], _sender);
 
 		_sender->setChannel(newChannel);
+		newChannel->sendMessageToChannel(_sender, "joined a channel", "JOIN");
 		_server->sendMessage(_sender, "JOIN You created a channel");
 		newChannel->addUser(_sender);
 	}

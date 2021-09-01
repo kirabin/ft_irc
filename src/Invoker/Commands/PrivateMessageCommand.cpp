@@ -19,26 +19,20 @@ void PrivateMessageCommand::execute() {
 	if (!_sender->didRegister())
 		throw ERR_RESTRICTED;
 
-    if (this->getUserFromArg() != nullptr)
-    {
-        // std::string tmp;
-        // tmp = _sender->getNick() + ": " + ;
+    if (this->getUserFromArg() != nullptr) {
         User* user = this->getUserFromArg();
         _sender->sendMessage(user,"PRIVMSG " + user->getNick() +  " :"+ this->makeString());
     }
-    else if (this->getChannelFromArg() != nullptr)
-    {
+    else if (this->getChannelFromArg() != nullptr) {
         Channel* tmp_channel =  this->getChannelFromArg();
         std::string tmp;
         tmp = this->makeString();
         std::cout << tmp << std::endl;
-        if (tmp_channel && !tmp.empty())
-        {
-            tmp_channel->sendMessageToChannel(_sender, "PRIVMSG " + tmp);
+        if (tmp_channel && !tmp.empty()) {
+            tmp_channel->sendMessageToChannel(_sender, tmp, this->_name);
         }
     }
-    else
-    {
+    else {
         _sender->getReply("error nick or channel not found");
     }
 	this->clearArg();
@@ -64,22 +58,17 @@ std::string PrivateMessageCommand::makeString() {
 }
 
 User *PrivateMessageCommand::getUserFromArg() {
-    if (_args.empty())
-    {
+    if (_args.empty()) {
         return nullptr;
     }
-    else
-    {
+    else {
         User* user = _server->getUser(_args[0]);
 
-        if (user == nullptr)
-        {
+        if (user == nullptr) {
             return  nullptr;
         }
-        else
-        {
-            if(user  != nullptr)
-            {
+        else {
+            if(user  != nullptr) {
                 return  user;
             }
         }
@@ -92,12 +81,10 @@ void PrivateMessageCommand::clearArg() {
 }
 
 Channel *PrivateMessageCommand::getChannelFromArg() {
-    if (_args.empty())
-    {
+    if (_args.empty()) {
         return nullptr;
     }
-    else
-    {
+    else {
         string getName = _args[0].substr(1, _args[0].size());
 
         Channel* channel = _server->getChannel(getName);
@@ -117,3 +104,5 @@ Channel *PrivateMessageCommand::getChannelFromArg() {
         return nullptr;
     }
 }
+
+// TODO: check for being in the channel

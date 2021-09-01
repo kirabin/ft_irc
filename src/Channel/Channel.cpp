@@ -27,12 +27,8 @@ void				Channel::removeUser(User *user)
 {
 	std::vector<User *>::iterator it;
 
-	for (it = _users.begin(); it < _users.end(); it++)
-	{
-		if (*it == user)
-		{
-			std::cout << "The user *" << (*it)->getName();
-			std::cout << "* has been removed from the channel *" << this->_name << "*" << std::endl;
+	for (it = _users.begin(); it < _users.end(); it++) {
+		if (*it == user) {
 			_users.erase(it);
 			break ;
 		}
@@ -46,19 +42,16 @@ void	Channel::sendMessageToUser(User* user, std::string message) {
 	send(user->getSockFd(), message.c_str(), message.length(), 0);
 }
 
-void	Channel::sendMessageToChannel(User *sender, std::string message) {
+void	Channel::sendMessageToChannel(User *sender, std::string message, std::string commandName) {
+	std::vector<User *>::iterator user;
 
-	for (std::vector<User *>::iterator iter = _users.begin(); iter != _users.end(); iter++)
-	{
-//        std::cout << "----" << sender->getSockFd() << "  -----" << std::endl;
-        if (*iter == sender)
-            ;
-        else
-            sendMessageToUser(*iter, sender->getNick() + ": " + message + "\n");
+	for (user = _users.begin(); user != _users.end(); user++) {
+		if (*user != sender)
+			sender->sendMessage(*user, commandName + " #" + this->getName() +  " :" + message + "\r\n");
 	}
 }
 
-void				Channel::sendServiceMessageToChannel(std::string message)
+void	Channel::sendServiceMessageToChannel(std::string message)
 {
 	std::string	fMessage = "* " + message + " *";
 

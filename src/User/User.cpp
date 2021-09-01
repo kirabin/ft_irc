@@ -65,11 +65,12 @@ string	User::getPrefix() const {
 
 void	User::sendMessage(Channel *channel, std::string message)
 {
-	if (!message.empty())
-    {
-        if (channel != nullptr)
-            channel->sendMessageToChannel(this, message);
-    }
+	std::cout << "111111" << std::endl;
+	// if (!message.empty())
+    // {
+    //     if (channel != nullptr)
+    //         channel->sendMessageToChannel(this, message, "");
+    // }
 }
 
 void	User::sendMessage(User *to, std::string message) {

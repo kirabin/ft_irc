@@ -18,6 +18,7 @@ void LeaveCommand::execute() {
 	if (_sender->getChannel() != _server->getChannel(_args[0]))
 		throw ERR_NOTONCHANNEL(_args[0]);
 
+	_server->getChannel(_args[0])->sendMessageToChannel(_sender, "left channel", this->_name);
 	_sender->removeUserFromChannel();
 	_sender->setChannel(nullptr);
 

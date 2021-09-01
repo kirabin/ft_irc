@@ -33,7 +33,7 @@ class Channel
 		void			removeUser(User *user);
 
 		void			sendMessageToUser(User* user, std::string message);
-		void			sendMessageToChannel(User *sender, std::string message);
+		void			sendMessageToChannel(User *sender, std::string message, std::string commandName);
 		void			sendServiceMessageToChannel(std::string message);
 
 		void			printShortInfo()const;
