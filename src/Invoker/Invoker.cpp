@@ -75,7 +75,7 @@ deque<string> Invoker::dataToArgs(string data) {
 
 	while (getline(ssMsg, av, ' '))
 	{
-		av.erase(av.find_last_not_of("\n\r") + 1);
+		av.erase(av.find_last_not_of(MSG_DELIMITER) + 1);
 		if (!av.empty())
 			arguments.push_back(av);
 	}

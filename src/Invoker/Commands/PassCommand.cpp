@@ -11,10 +11,11 @@ void PassCommand::execute() {
 
 	if (_sender->didEnter())
 		throw ERR_ALREADYREGISTRED;
-	if (_args.size() != 1)
+	if (_args.size() < 1)
 		throw ERR_NEEDMOREPARAMS(_name);
 
 	string password = _args[0];
+	std::cout << password << ":" << std::endl;
 	if (!_server->checkPassword(password))
 		throw ERR_PASSWDMISMATCH;
 

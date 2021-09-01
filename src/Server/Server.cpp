@@ -172,7 +172,7 @@ int				Server::recvMsg(User *user) {
 
 	user->clearMessage();
 	memset(message, '\0', sizeof(message));
-	while (!std::strstr(message, "\n\r"))
+	while (!std::strstr(message, MSG_DELIMITER))
 	{
 		memset(message, '\0', sizeof(message));
 		byteRecved = recv(user->getSockFd(), message, sizeof(message), RECV_FLAGS);

@@ -64,7 +64,7 @@ std::string PrivateMessageCommand::makeString() {
         }
 
     }
-    tmp.erase(tmp.find_last_not_of("\n\r") + 1);
+    tmp.erase(tmp.find_last_not_of(MSG_DELIMITER) + 1);
     return tmp;
 }
 
