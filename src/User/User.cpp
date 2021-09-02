@@ -103,6 +103,7 @@ std::string User::getId() const { return _id; }
 
 void	User::doRegister() {
 	if (_didEnter && _nick != "" && _username != "") {
+		this->getReply(RPL_WELCOME(_nick, _username, _host));
 		_didRegister = true;
 	}
 }
