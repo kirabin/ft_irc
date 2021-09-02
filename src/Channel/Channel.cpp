@@ -30,6 +30,7 @@ void				Channel::removeUser(User *user)
 	for (it = _users.begin(); it < _users.end(); it++) {
 		if (*it == user) {
 			_users.erase(it);
+			(*it)->setChannel(nullptr);
 			break ;
 		}
 	}

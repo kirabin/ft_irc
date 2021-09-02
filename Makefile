@@ -64,11 +64,11 @@ clean:
 	@rm -f *.gch
 	@rm -rf *.dSYM
 	@rm -rf */*.dSYM
-	@echo ${ORANGE}"Cleared..."$(NC)
+	@echo ${ORANGE}"Clearing"$(NC)
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo ${ORANGE}"All cleared"$(NC)
+	@echo ${GREEN}"Cleared"$(NC)
 
 re: fclean all
 
