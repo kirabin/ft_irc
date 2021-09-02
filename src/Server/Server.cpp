@@ -277,8 +277,9 @@ void Server::removeUserFromUsers(std::string id) {
 	{
 		if ((*it)->getId() == id)
 		{
-			_users.erase(it);
-			break ;
+            delete (*it);
+            _users.erase(it);
+            break ;
 		}
 	}
 }

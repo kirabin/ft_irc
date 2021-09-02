@@ -93,7 +93,7 @@ std::string User::get_id() {
 				"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 				"abcdefghijklmnopqrstuvwxyz";
 		srand( time( 0 ) ); // автоматическая рандомизация
-		for (int i = 0; i < 25; ++i) {
+		for (int i = 0; i < 10; ++i) {
 			s += alphanum[rand() % (sizeof(alphanum) - 1)];
 		}
 		return s;
