@@ -63,16 +63,6 @@ string	User::getPrefix() const {
 	return ":" + _nick;
 }
 
-void	User::sendMessage(Channel *channel, std::string message)
-{
-	std::cout << "111111" << std::endl;
-	// if (!message.empty())
-    // {
-    //     if (channel != nullptr)
-    //         channel->sendMessageToChannel(this, message, "");
-    // }
-}
-
 void	User::sendMessage(User *to, std::string message) {
 	to->getReply(this->getPrefix() + " " + message);
 }

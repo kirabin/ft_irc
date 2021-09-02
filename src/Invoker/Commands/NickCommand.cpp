@@ -20,10 +20,9 @@ void NickCommand::execute() {
 	if (_server->getUser(newNick))
 		throw ERR_NICKNAMEINUSE(newNick);
 
-	_sender->sendMessage(_sender, "NICK " + newNick.substr(0, 9));
-	_sender->setNick(newNick);
-	if (_sender->getChannel()) {
-		_sender->sendMessage(_sender->getChannel(), "@" + oldNick+ "set his nick to " + "@" + newNick);
+	if (oldNick != "") {
+		_sender->sendMessage(_sender, "NICK " + newNick.substr(0, 9));
 	}
+	_sender->setNick(newNick);
 	_sender->doRegister();
 }

@@ -43,20 +43,18 @@ INC		=	src/Channel/Channel.hpp \
 
 
 GREEN ='\033[1;32m'
-WHITE ='\033[0;37m'
-YELLOW ='\033[1;33m'
+ORANGE ='\033[1;33m'
 NC='\033[0m'
 
 .PHONY: bircd
 
-all: print_assembly $(NAME)
+all: assembling $(NAME) assembled
 
 %.o: %.cpp $(INC)
-	@$(COMPILER) $(FLAGS) -o $@ -c $<
+	$(COMPILER) $(FLAGS) -o $@ -c $<
 
 $(NAME): $(OBJ)
 	@$(COMPILER) $(FLAGS) $(OBJ) -o $(NAME)
-	@echo $(GREEN)"The project is assembled"$(NC)
 
 clean:
 	@rm -f $(OBJ)
@@ -66,11 +64,11 @@ clean:
 	@rm -f *.gch
 	@rm -rf *.dSYM
 	@rm -rf */*.dSYM
-	@echo ${YELLOW}"Cleared..."$(NC)
+	@echo ${ORANGE}"Cleared..."$(NC)
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo ${YELLOW}"All cleared"$(NC)
+	@echo ${ORANGE}"All cleared"$(NC)
 
 re: fclean all
 
@@ -82,8 +80,11 @@ nc:
 	@echo $(GREEN)"Enter to server new user"$(NC)
 	@nc 127.0.0.1 6667
 
-print_assembly:
-	@echo $(YELLOW)"The project is being assembled, please wait ... or it has already been assembled simply, I did not understand how to display this message when the project is already assembled"$(NC)
+assembling:
+	@echo $(ORANGE)"Assembling"$(NC)
+
+assembled:
+	@echo $(GREEN)"Assembled"$(NC)
 
 irssi:
 	irssi -c 127.0.0.1
