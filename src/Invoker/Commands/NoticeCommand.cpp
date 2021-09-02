@@ -2,14 +2,27 @@
 
 NoticeCommand::NoticeCommand() {
 	_name = "NOTICE";
-	_description = "";
+	_description = "NOTICE username message — sends message to user";
 }
 
 NoticeCommand::~NoticeCommand() {}
 
 void NoticeCommand::execute() {
 	if (!_sender->didRegister())
-		throw ERR_RESTRICTED;
+		return;
+	if (_args.size() < 2)
+		return;
 
-	// TODO: Notice command
+	User* user = _server->getUser(_args[0]);
+	if (!user || user == _sender)
+		return;
+
+	string message;
+	deque<string>::iterator word;
+
+	for (word = _args.begin() + 1; word != _args.end(); word++) {
+		message += " " + *word;
+	}
+
+	_sender->sendMessage(user,"NOTICE " + user->getNick() +  " :"+ message);
 }
