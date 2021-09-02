@@ -30,7 +30,7 @@
 # define ERR_PASSWDMISMATCH						"464 * :Password incorrect"
 # define ERR_NICKNAMEINUSE(nick)				("433 * " + nick + ":Nickname is already in use")
 # define ERR_RESTRICTED							"484 * :Your connection is restricted!"
-# define ERR_NOTONCHANNEL(channel)				("442 * #" + channel + ":You're not on that channel")
+# define ERR_NOTONCHANNEL(channel)				("442 * " + channel + ":You're not on that channel")
 # define ERR_NOSUCHCHANNEL(channel)				("403 * #" + channel + ":No such channel")
 # define ERR_CHANOPRIVSNEEDED(channel)			("482 * #" + channel + ":You're not channel operator")
 # define ERR_USERNOTINCHANNEL(nick, channel)	("441 * " + nick + " #" + channel + ":They aren't on that channel")

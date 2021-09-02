@@ -24,5 +24,5 @@ void NoticeCommand::execute() {
 		message += " " + *word;
 	}
 
-	_sender->sendMessage(user,"NOTICE " + user->getNick() +  " :"+ message);
+	_sender->sendMessage(user,"NOTICE " + user->getNick() + message);
 }
