@@ -9,6 +9,7 @@ class PartCommand: public Command {
 		PartCommand();
 		virtual ~PartCommand();
 		void execute();
+		void sendReplyToChannel(Channel* channel, string message) const;
 };
 
 #endif
