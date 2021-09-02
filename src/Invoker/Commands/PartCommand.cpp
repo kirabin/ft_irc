@@ -1,13 +1,13 @@
-#include "LeaveCommand.hpp"
+#include "PartCommand.hpp"
 
-LeaveCommand::LeaveCommand() {
+PartCommand::PartCommand() {
 	_name = "PART";
 	_description = "PART #channel - leave channel";
 }
 
-LeaveCommand::~LeaveCommand() {}
+PartCommand::~PartCommand() {}
 
-void LeaveCommand::execute() {
+void PartCommand::execute() {
 
 	if (!_sender->didRegister())
 		throw ERR_RESTRICTED;

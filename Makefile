@@ -6,7 +6,7 @@ SRC		=	src/Channel/Channel.cpp \
 			src/Invoker/Commands/HelpCommand.cpp \
 			src/Invoker/Commands/JoinCommand.cpp \
 			src/Invoker/Commands/KickCommand.cpp \
-			src/Invoker/Commands/LeaveCommand.cpp \
+			src/Invoker/Commands/PartCommand.cpp \
 			src/Invoker/Commands/ListCommand.cpp \
 			src/Invoker/Commands/UserCommand.cpp \
 			src/Invoker/Commands/NickCommand.cpp \
@@ -26,7 +26,7 @@ INC		=	src/Channel/Channel.hpp \
 			src/Invoker/Commands/HelpCommand.hpp \
 			src/Invoker/Commands/JoinCommand.hpp \
 			src/Invoker/Commands/KickCommand.hpp \
-			src/Invoker/Commands/LeaveCommand.hpp \
+			src/Invoker/Commands/PartCommand.hpp \
 			src/Invoker/Commands/ListCommand.hpp \
 			src/Invoker/Commands/UserCommand.hpp \
 			src/Invoker/Commands/NickCommand.hpp \

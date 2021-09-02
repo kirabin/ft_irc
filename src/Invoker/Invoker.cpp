@@ -3,7 +3,7 @@
 #include "Commands/HelpCommand.hpp"
 #include "Commands/JoinCommand.hpp"
 #include "Commands/KickCommand.hpp"
-#include "Commands/LeaveCommand.hpp"
+#include "Commands/PartCommand.hpp"
 #include "Commands/WhoCommand.hpp"
 #include "Commands/ListCommand.hpp"
 #include "Commands/PassCommand.hpp"
@@ -17,7 +17,7 @@ Invoker::Invoker(Server *server) : _server(server) {
 	_commands.push_back(new HelpCommand(_commands));
 	_commands.push_back(new NickCommand());
 	_commands.push_back(new JoinCommand());
-	_commands.push_back(new LeaveCommand());
+	_commands.push_back(new PartCommand());
 	_commands.push_back(new WhoCommand());
 	_commands.push_back(new KickCommand());
 	_commands.push_back(new ListCommand());
