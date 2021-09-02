@@ -9,6 +9,7 @@ class JoinCommand: public Command {
 		JoinCommand();
 		virtual ~JoinCommand();
 		void execute();
+		void sendReplyToChannel(Channel* channel, string message) const;
 };
 
 #endif

@@ -19,18 +19,19 @@ void JoinCommand::execute() {
 		throw ERR_BADCHANMASK(_args[0]);
 
 	Channel *channel = _server->getChannel(_args[0]);
-	if (channel) {
-		_sender->setChannel(channel);
-		channel->sendMessageToChannel(_sender, "joined a channel", "JOIN");
-		_server->sendMessage(_sender, "JOIN" + channel->getName());
-		channel->addUser(_sender);
-	} else {
-		Channel	*newChannel = _server->createChannel(_args[0], _sender);
-
-		_sender->setChannel(newChannel);
-		newChannel->sendMessageToChannel(_sender, "joined a channel", "JOIN");
-		_server->sendMessage(_sender, "JOIN You created a channel");
-		newChannel->addUser(_sender);
+	if (!channel) {
+		channel = _server->createChannel(_args[0], _sender);
 	}
+	_sender->setChannel(channel);
+	channel->addUser(_sender);
+	sendReplyToChannel(channel, _sender->getPrefix() + " " + this->_name + " #" + channel->getName());
+}
 
+void JoinCommand::sendReplyToChannel(Channel* channel, string message) const {
+	vector<User *>::iterator	user;
+	vector<User *>				users = channel->getUsers();
+
+	for (user = users.begin(); user != users.end(); user++) {
+		(*user)->getReply(message);
+	}
 }
